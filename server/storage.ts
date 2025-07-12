@@ -258,11 +258,17 @@ async unblockUsername(username: string): Promise<void> {
   }
 
     async getCitationCount(): Promise<number> {
+        // Return the actual count from the citations map if it's higher
+        const actualCount = this.citations.size;
+        this.citationCount = Math.max(this.citationCount, actualCount);
         return this.citationCount;
     }
 
     async getArrestCount(): Promise<number> {
-        return this.arrestCount; // Placeholder
+        // Return the actual count from the arrests map if it's higher
+        const actualCount = this.arrests.size;
+        this.arrestCount = Math.max(this.arrestCount, actualCount);
+        return this.arrestCount;
     }
 
     // Method to increment arrest count.  This would be called when an arrest is created.
