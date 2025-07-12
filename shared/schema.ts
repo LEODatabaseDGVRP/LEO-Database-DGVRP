@@ -118,7 +118,7 @@ export const insertArrestSchema = createInsertSchema(arrests).omit({
   // Single values
   arresteeUsername: z.string().min(1, "Arrestee username is required"),
   arresteeSignature: z.string().min(1, "Arrestee signature is required"),
-  mugshot: z.string().optional(),
+  mugshot: z.string().optional().nullable(),
   totalAmount: z.string().regex(/^\d+(\.\d{1,2})?$/, "Invalid total amount format"),
   additionalNotes: z.string().optional(),
 });

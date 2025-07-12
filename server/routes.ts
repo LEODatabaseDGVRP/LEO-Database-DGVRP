@@ -390,7 +390,7 @@ export function registerRoutes(app: Express) {
         // Map form fields to database fields
         arresteeUsername: formData.suspectSignature || "",
         arresteeSignature: formData.suspectSignature || "",
-        mugshot: formData.mugshotBase64 || null,
+        mugshot: formData.mugshotBase64 || "", // Use empty string instead of null
         // Remove form-specific fields
         suspectSignature: undefined,
         mugshotBase64: undefined,
@@ -499,6 +499,26 @@ export function registerRoutes(app: Express) {
     } catch (error) {
       console.error("Error fetching stats:", error);
       res.status(500).json({ message: "Failed to fetch stats" });
+    }
+  });
+
+  app.get("/api/admin/citations", requireAuth, requireAdmin, async (req, res) => {
+    try {
+      const citations = await storage.getAllCitations();
+      res.json(citations.sort((a, b) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime()));
+    } catch (error) {
+      console.error("Error fetching citations:", error);
+      res.status(500).json({ message: "Failed to fetch citations" });
+    }
+  });
+
+  app.get("/api/admin/arrests", requireAuth, requireAdmin, async (req, res) => {
+    try {
+      const arrests = await storage.getAllArrests();
+      res.json(arrests.sort((a, b) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime()));
+    } catch (error) {
+      console.error("Error fetching arrests:", error);
+      res.status(500).json({ message: "Failed to fetch arrests" });
     }
   });
 

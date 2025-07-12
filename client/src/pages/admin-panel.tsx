@@ -19,6 +19,117 @@ import {
   AlertDialogTitle,
 } from "@/components/ui/alert-dialog";
 
+// Citations Section Component
+function CitationsSection() {
+  const { data: citations } = useQuery({
+    queryKey: ["/api/admin/citations"],
+    queryFn: async () => {
+      const response = await apiRequest("GET", "/api/admin/citations");
+      if (!response.ok) {
+        throw new Error("Failed to fetch citations");
+      }
+      return response.json();
+    },
+  });
+
+  if (!citations || citations.length === 0) {
+    return (
+      <div className="text-center py-8">
+        <ShieldCheck className="h-12 w-12 text-gray-400 mx-auto mb-4" />
+        <p className="text-gray-400">No citations found</p>
+      </div>
+    );
+  }
+
+  return (
+    <div className="space-y-4 max-h-96 overflow-y-auto">
+      {citations.slice(0, 10).map((citation: any) => (
+        <div key={citation.id} className="p-4 border border-slate-700 rounded-lg">
+          <div className="flex justify-between items-start">
+            <div>
+              <h4 className="text-white font-medium">Citation #{citation.id.slice(-8)}</h4>
+              <p className="text-sm text-gray-400">
+                Issued by: {citation.officerUsernames?.[0] || 'Unknown'}
+              </p>
+              <p className="text-sm text-gray-400">
+                Violator: {citation.violatorUsername}
+              </p>
+              <p className="text-sm text-green-400">
+                Amount: ${citation.totalAmount}
+              </p>
+            </div>
+            <div className="text-right">
+              <p className="text-xs text-gray-500">
+                {new Date(citation.createdAt).toLocaleDateString()}
+              </p>
+              <p className="text-xs text-gray-500">
+                {new Date(citation.createdAt).toLocaleTimeString()}
+              </p>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  );
+}
+
+// Arrests Section Component
+function ArrestsSection() {
+  const { data: arrests } = useQuery({
+    queryKey: ["/api/admin/arrests"],
+    queryFn: async () => {
+      const response = await apiRequest("GET", "/api/admin/arrests");
+      if (!response.ok) {
+        throw new Error("Failed to fetch arrests");
+      }
+      return response.json();
+    },
+  });
+
+  if (!arrests || arrests.length === 0) {
+    return (
+      <div className="text-center py-8">
+        <Users className="h-12 w-12 text-gray-400 mx-auto mb-4" />
+        <p className="text-gray-400">No arrests found</p>
+      </div>
+    );
+  }
+
+  return (
+    <div className="space-y-4 max-h-96 overflow-y-auto">
+      {arrests.slice(0, 10).map((arrest: any) => (
+        <div key={arrest.id} className="p-4 border border-slate-700 rounded-lg">
+          <div className="flex justify-between items-start">
+            <div>
+              <h4 className="text-white font-medium">Arrest #{arrest.id.slice(-8)}</h4>
+              <p className="text-sm text-gray-400">
+                Arrested by: {arrest.officerUsernames?.[0] || 'Unknown'}
+              </p>
+              <p className="text-sm text-gray-400">
+                Arrestee: {arrest.arresteeUsername}
+              </p>
+              <p className="text-sm text-green-400">
+                Fine: ${arrest.totalAmount}
+              </p>
+              <p className="text-sm text-orange-400">
+                Jail Time: {arrest.totalJailTime}
+              </p>
+            </div>
+            <div className="text-right">
+              <p className="text-xs text-gray-500">
+                {new Date(arrest.createdAt).toLocaleDateString()}
+              </p>
+              <p className="text-xs text-gray-500">
+                {new Date(arrest.createdAt).toLocaleTimeString()}
+              </p>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  );
+}
+
 interface User {
   id: number;
   username: string;
@@ -548,6 +659,38 @@ export default function AdminPanel() {
                   ))}
                 </div>
               )}
+            </CardContent>
+          </Card>
+
+          {/* Citations Management */}
+          <Card className="law-card">
+            <CardHeader>
+              <CardTitle className="text-white flex items-center">
+                <ShieldCheck className="h-5 w-5 mr-2 text-blue-400" />
+                Recent Citations
+              </CardTitle>
+              <CardDescription className="text-gray-300">
+                View all citations issued by officers
+              </CardDescription>
+            </CardHeader>
+            <CardContent>
+              <CitationsSection />
+            </CardContent>
+          </Card>
+
+          {/* Arrests Management */}
+          <Card className="law-card">
+            <CardHeader>
+              <CardTitle className="text-white flex items-center">
+                <Users className="h-5 w-5 mr-2 text-orange-400" />
+                Recent Arrests
+              </CardTitle>
+              <CardDescription className="text-gray-300">
+                View all arrest reports filed by officers
+              </CardDescription>
+            </CardHeader>
+            <CardContent>
+              <ArrestsSection />
             </CardContent>
           </Card>
 
