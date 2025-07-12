@@ -4,7 +4,7 @@ import { apiRequest } from "@/lib/queryClient";
 interface User {
   id: number;
   username: string;
-  isAdmin: string;
+  isAdmin: boolean;
   badgeNumber: string;
   rpName: string | null;
   rank: string | null;

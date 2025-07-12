@@ -65,7 +65,7 @@ export default function SelectionPage() {
       </div>
 
       {/* Admin button if user is admin */}
-      {user?.isAdmin === "true" && ( // This line checks if the user is admin
+      {user?.isAdmin === true && ( // This line checks if the user is admin
         <div className="absolute top-6 right-32">
           <Link href="/admin">
             <Button 
@@ -107,7 +107,7 @@ export default function SelectionPage() {
           </Link>
 
           {/* Admin Panel Button - Only visible to admins */}
-          {user?.isAdmin === "true" && (
+          {user?.isAdmin === true && (
             <Link href="/admin">
               <Button 
                 className="w-full bg-amber-600 hover:bg-amber-700 text-white py-6 rounded-lg text-lg font-semibold flex items-center justify-center space-x-3 transition-colors border-0"
