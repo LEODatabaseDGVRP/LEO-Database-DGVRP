@@ -7,7 +7,7 @@ import bcrypt from "bcryptjs";
 import { z } from "zod";
 import { nanoid } from "nanoid";
 import { storage } from "./storage";
-import { getRandomSystemUsername } from "./discord";
+import { getRandomSystemUsername, createDiscordBotService } from "./discord";
 import { getDiscordAuthUrl, handleDiscordCallback } from "./discord-oauth";
 import session from "express-session";
 // import MemoryStore from "memorystore";
@@ -334,6 +334,23 @@ export function registerRoutes(app: Express) {
         await storage.createCitation(citationData);
       } else {
         await db.insert(citations).values(citationData);
+      }
+
+      // Send citation to Discord bot
+      try {
+        const discordBotToken = process.env.DISCORD_BOT_TOKEN;
+        const discordChannelId = process.env.DISCORD_CHANNEL_ID;
+        
+        if (discordBotToken && discordChannelId) {
+          const discordBot = createDiscordBotService(discordBotToken, discordChannelId);
+          await discordBot.sendCitationReport(citationData);
+          console.log("✅ Citation sent to Discord successfully");
+        } else {
+          console.log("⚠️ Discord bot credentials not configured, citation saved locally only");
+        }
+      } catch (discordError) {
+        console.error("❌ Failed to send citation to Discord:", discordError);
+        // Don't fail the entire request if Discord fails
       }
 
       res.json({ 

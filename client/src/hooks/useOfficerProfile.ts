@@ -28,7 +28,7 @@ export function useOfficerProfile() {
 
     return {
       badge: user.badgeNumber || '',
-      username: user.rpName || '',
+      username: user.fullName || user.rpName || '',
       rank: user.rank || '',
       userId: user.discordId || ''
     };
