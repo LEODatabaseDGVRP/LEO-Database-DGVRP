@@ -1,0 +1,75 @@
+2:13:43 AM [express] GET /api/auth/me 401 in 2ms :: {"message":"Not authenticated"}
+2:13:43 AM [express] GET /api/auth/me 401 in 1ms :: {"message":"Not authenticated"}
+Discord status check - Session ID: 05_6ZkrGqjkWYt1-9HPyOeAmWDxnHKX3
+Discord verification in session: false
+Full session: {
+  "cookie": {
+    "originalMaxAge": 3600000,
+    "expires": "2025-07-12T03:13:44.926Z",
+    "secure": true,
+    "httpOnly": true,
+    "path": "/",
+    "sameSite": "none"
+  }
+}
+2:13:44 AM [express] GET /api/auth/discord/status 304 in 2ms :: {"verified":false}
+Discord OAuth state generated: discord_1752286426099
+Generated Discord auth URL: https://discord.com/api/oauth2/authorize?client_id=1392657393724424313&redirect_uri=https%3A%2F%2Fleo-database-dgvrp.onrender.com%2Fapi%2Fauth%2Fdiscord%2Fcallback&response_type=code&scope=identify+guilds+guilds.members.read&state=discord_1752286426099
+2:13:46 AM [express] GET /api/auth/discord/url 200 in 2ms :: {"url":"https://discord.com/api/oauth2/…
+Discord callback received - Code: true State: discord_1752286426099
+Discord user info: { id: '1378267677134422016', username: 'dgvrp_58897' }
+Existing user found: false
+Total users in database: 1
+New Discord user, storing verification for signup
+About to save session with Discord verification: {
+  sessionId: '9C0flJ8R8rTXdEmz9VK4YR9qaGieto_p',
+  discordId: '1378267677134422016',
+  username: 'dgvrp_58897'
+}
+Discord verification saved successfully, session ID: 9C0flJ8R8rTXdEmz9VK4YR9qaGieto_p
+Redirecting to signup
+2:13:52 AM [express] GET /api/auth/discord/callback 302 in 1277ms
+2:13:52 AM [express] GET /api/auth/me 401 in 0ms :: {"message":"Not authenticated"}
+Discord status check - Session ID: 312SrH_-QAC7Y9Vw1qJtnvZ1teD4Yr_F
+Discord verification in session: false
+Full session: {
+  "cookie": {
+    "originalMaxAge": 3600000,
+    "expires": "2025-07-12T03:13:52.866Z",
+    "secure": true,
+    "httpOnly": true,
+    "path": "/",
+    "sameSite": "none"
+  }
+}
+2:13:52 AM [express] GET /api/auth/discord/status 304 in 1ms :: {"verified":false}
+Discord OAuth state generated: discord_1752286434490
+Generated Discord auth URL: https://discord.com/api/oauth2/authorize?client_id=1392657393724424313&redirect_uri=https%3A%2F%2Fleo-database-dgvrp.onrender.com%2Fapi%2Fauth%2Fdiscord%2Fcallback&response_type=code&scope=identify+guilds+guilds.members.read&state=discord_1752286434490
+2:13:54 AM [express] GET /api/auth/discord/url 200 in 2ms :: {"url":"https://discord.com/api/oauth2/…
+Discord callback received - Code: true State: discord_1752286434490
+Discord user info: { id: '1378267677134422016', username: 'dgvrp_58897' }
+Existing user found: false
+Total users in database: 1
+New Discord user, storing verification for signup
+About to save session with Discord verification: {
+  sessionId: 'p1psziEwCGRDTlE-A68mTPDHFCZCBEvR',
+  discordId: '1378267677134422016',
+  username: 'dgvrp_58897'
+}
+Discord verification saved successfully, session ID: p1psziEwCGRDTlE-A68mTPDHFCZCBEvR
+Redirecting to signup
+2:14:01 AM [express] GET /api/auth/discord/callback 302 in 1088ms
+2:14:02 AM [express] GET /api/auth/me 401 in 1ms :: {"message":"Not authenticated"}
+Discord status check - Session ID: zPFA4i03j-63amggnV_zhJ_IA8sHGrzt
+Discord verification in session: false
+Full session: {
+  "cookie": {
+    "originalMaxAge": 3599999,
+    "expires": "2025-07-12T03:14:02.168Z",
+    "secure": true,
+    "httpOnly": true,
+    "path": "/",
+    "sameSite": "none"
+  }
+}
+2:14:02 AM [express] GET /api/auth/discord/status 304 in 2ms :: {"verified":false}

@@ -1,0 +1,356 @@
+Generated new session ID: 938yqw3f8oo69v0k0bpp
+=== REQUEST SESSION DEBUG ===
+URL: /
+Method: GET
+Session ID: 938yqw3f8oo69v0k0bpp
+Session Cookie from header: undefined
+Session data keys: [ 'cookie' ]
+=== END SESSION DEBUG ===
+Generated new session ID: yih36mla0dguj852qk84j8
+=== REQUEST SESSION DEBUG ===
+URL: /
+Method: HEAD
+Session ID: yih36mla0dguj852qk84j8
+Session Cookie from header: undefined
+Session data keys: [ 'cookie' ]
+=== END SESSION DEBUG ===
+Generated new session ID: 603wp3xq19o725l21yiw3c
+=== REQUEST SESSION DEBUG ===
+URL: /
+Method: GET
+Session ID: 603wp3xq19o725l21yiw3c
+Session Cookie from header: undefined
+Session data keys: [ 'cookie' ]
+=== END SESSION DEBUG ===
+Generated new session ID: p549dbtgv6f2ep1cwp7s
+=== REQUEST SESSION DEBUG ===
+URL: /assets/index-C37kGR8N.js
+Method: GET
+Session ID: p549dbtgv6f2ep1cwp7s
+Session Cookie from header: undefined
+Session data keys: [ 'cookie' ]
+=== END SESSION DEBUG ===
+Generated new session ID: y7i8d08n4ydmizt8ri3k
+=== REQUEST SESSION DEBUG ===
+URL: /assets/index-D0phPA-x.css
+Method: GET
+Session ID: y7i8d08n4ydmizt8ri3k
+Session Cookie from header: undefined
+Session data keys: [ 'cookie' ]
+=== END SESSION DEBUG ===
+Generated new session ID: by5c45txq1pin7ws3c8i
+=== REQUEST SESSION DEBUG ===
+URL: /api/auth/me
+Method: GET
+Session ID: by5c45txq1pin7ws3c8i
+Session Cookie from header: undefined
+Session data keys: [ 'cookie' ]
+=== END SESSION DEBUG ===
+2:33:51 AM [express] GET /api/auth/me 401 in 3ms :: {"message":"Not authenticated"}
+Generated new session ID: n6v2li688aw6t598o9ik
+=== REQUEST SESSION DEBUG ===
+URL: /login
+Method: GET
+Session ID: n6v2li688aw6t598o9ik
+Session Cookie from header: undefined
+Session data keys: [ 'cookie' ]
+=== END SESSION DEBUG ===
+Generated new session ID: 3q32o0jpk5zbf8ygyshw2
+=== REQUEST SESSION DEBUG ===
+URL: /assets/index-C37kGR8N.js
+Method: GET
+Session ID: 3q32o0jpk5zbf8ygyshw2
+Session Cookie from header: undefined
+Session data keys: [ 'cookie' ]
+=== END SESSION DEBUG ===
+Generated new session ID: efs4exki54mrsm1t9k2x8
+=== REQUEST SESSION DEBUG ===
+URL: /assets/index-D0phPA-x.css
+Method: GET
+Session ID: efs4exki54mrsm1t9k2x8
+Session Cookie from header: undefined
+Session data keys: [ 'cookie' ]
+=== END SESSION DEBUG ===
+Generated new session ID: p4m8x3vik1szctjmls5bng
+=== REQUEST SESSION DEBUG ===
+URL: /api/auth/me
+Method: GET
+Session ID: p4m8x3vik1szctjmls5bng
+Session Cookie from header: undefined
+Session data keys: [ 'cookie' ]
+=== END SESSION DEBUG ===
+2:33:52 AM [express] GET /api/auth/me 401 in 1ms :: {"message":"Not authenticated"}
+Generated new session ID: zc0uw56pgs03qpgx765jmz
+=== REQUEST SESSION DEBUG ===
+URL: /favicon.ico
+Method: GET
+Session ID: zc0uw56pgs03qpgx765jmz
+Session Cookie from header: undefined
+Session data keys: [ 'cookie' ]
+=== END SESSION DEBUG ===
+Generated new session ID: 6sbtatk9iiedavm9y1lha
+=== REQUEST SESSION DEBUG ===
+URL: /api/auth/discord/status
+Method: GET
+Session ID: 6sbtatk9iiedavm9y1lha
+Session Cookie from header: undefined
+Session data keys: [ 'cookie' ]
+=== END SESSION DEBUG ===
+=== DISCORD STATUS CHECK ===
+Session ID: 6sbtatk9iiedavm9y1lha
+Cookie header: undefined
+Session cookie name: 6sbtatk9iiedavm9y1lha
+Discord verification in session: false
+Full session data: {
+  "cookie": {
+    "originalMaxAge": 7200000,
+    "expires": "2025-07-12T04:33:54.262Z",
+    "secure": true,
+    "httpOnly": true,
+    "path": "/",
+    "sameSite": "none"
+  }
+}
+Session store has: MemoryStore {
+  _events: [Object: null prototype] {
+    disconnect: [Function: ondisconnect],
+    connect: [Function: onconnect]
+  },
+  _eventsCount: 2,
+  _maxListeners: undefined,
+  options: {
+    checkPeriod: 86400000,
+    max: 100000,
+    ttl: undefined,
+    dispose: [Function: dispose],
+    stale: true,
+    noDisposeOnSet: undefined
+  },
+  serializer: Object [JSON] {},
+  store: LRUCache {
+    [Symbol(max)]: 100000,
+    [Symbol(lengthCalculator)]: [Function: naiveLength],
+    [Symbol(allowStale)]: true,
+    [Symbol(maxAge)]: 0,
+    [Symbol(dispose)]: [Function: dispose],
+    [Symbol(noDisposeOnSet)]: false,
+    [Symbol(cache)]: Map(12) {
+      'uh1z1oxy73e8jmoph82jc' => [Node],
+      '938yqw3f8oo69v0k0bpp' => [Node],
+      'yih36mla0dguj852qk84j8' => [Node],
+      '603wp3xq19o725l21yiw3c' => [Node],
+      'p549dbtgv6f2ep1cwp7s' => [Node],
+      'y7i8d08n4ydmizt8ri3k' => [Node],
+      'by5c45txq1pin7ws3c8i' => [Node],
+      'n6v2li688aw6t598o9ik' => [Node],
+      '3q32o0jpk5zbf8ygyshw2' => [Node],
+      'efs4exki54mrsm1t9k2x8' => [Node],
+      'p4m8x3vik1szctjmls5bng' => [Node],
+      'zc0uw56pgs03qpgx765jmz' => [Node]
+    },
+    [Symbol(lruList)]: Yallist { tail: [Node], head: [Node], length: 12 },
+    [Symbol(length)]: 12
+  },
+  _checkInterval: Timeout {
+    _idleTimeout: 86400000,
+    _idlePrev: [TimersList],
+    _idleNext: [TimersList],
+    _idleStart: 10801,
+    _onTimeout: [Function (anonymous)],
+    _timerArgs: undefined,
+    _repeat: 86400000,
+    _destroyed: false,
+    [Symbol(refed)]: false,
+    [Symbol(kHasPrimitive)]: false,
+    [Symbol(asyncId)]: 975,
+    [Symbol(triggerId)]: 0,
+    [Symbol(kAsyncContextFrame)]: undefined
+  },
+  generate: [Function (anonymous)],
+  [Symbol(shapeMode)]: false,
+  [Symbol(kCapture)]: false
+}
+No Discord verification found in session
+2:33:54 AM [express] GET /api/auth/discord/status 304 in 3ms :: {"verified":false}
+Generated new session ID: b58gq10x3xgi89vlvnt1k
+=== REQUEST SESSION DEBUG ===
+URL: /favicon.ico
+Method: GET
+Session ID: b58gq10x3xgi89vlvnt1k
+Session Cookie from header: undefined
+Session data keys: [ 'cookie' ]
+=== END SESSION DEBUG ===
+Generated new session ID: ovhdnfpmf4hnads7cu1mvg
+=== REQUEST SESSION DEBUG ===
+URL: /api/auth/discord/url
+Method: GET
+Session ID: ovhdnfpmf4hnads7cu1mvg
+Session Cookie from header: undefined
+Session data keys: [ 'cookie' ]
+=== END SESSION DEBUG ===
+Discord OAuth state generated: discord_1752287635626
+Generated Discord auth URL: https://discord.com/api/oauth2/authorize?client_id=1392657393724424313&redirect_uri=https%3A%2F%2Fleo-database-dgvrp.onrender.com%2Fapi%2Fauth%2Fdiscord%2Fcallback&response_type=code&scope=identify+guilds+guilds.members.read&state=discord_1752287635626
+2:33:55 AM [express] GET /api/auth/discord/url 200 in 1ms :: {"url":"https://discord.com/api/oauth2/…
+Generated new session ID: uesg1nv4qc8vf97bd0g3p
+=== REQUEST SESSION DEBUG ===
+URL: /api/auth/discord/callback?code=s2cZ9n4LmUTASCgtnyFS392nujGerT&state=discord_1752287635626
+Method: GET
+Session ID: uesg1nv4qc8vf97bd0g3p
+Session Cookie from header: undefined
+Session data keys: [ 'cookie' ]
+=== END SESSION DEBUG ===
+Discord callback received - Code: true State: discord_1752287635626
+Discord user info: { id: '1378267677134422016', username: 'dgvrp_58897' }
+Existing user found: false
+Total users in database: 1
+New Discord user, storing verification for signup
+About to save session with Discord verification: {
+  sessionId: 'uesg1nv4qc8vf97bd0g3p',
+  discordId: '1378267677134422016',
+  username: 'dgvrp_58897'
+}
+Discord verification saved successfully, session ID: uesg1nv4qc8vf97bd0g3p
+Session cookie being sent: {
+  path: '/',
+  _expires: 2025-07-12T04:33:59.852Z,
+  originalMaxAge: 7200000,
+  httpOnly: true,
+  secure: true,
+  sameSite: 'none'
+}
+Redirecting to signup with session ID: uesg1nv4qc8vf97bd0g3p
+2:34:00 AM [express] GET /api/auth/discord/callback 302 in 1140ms
+Generated new session ID: k84l14nbsy8kwi6wtd15nc
+=== REQUEST SESSION DEBUG ===
+URL: /signup?sid=uesg1nv4qc8vf97bd0g3p
+Method: GET
+Session ID: k84l14nbsy8kwi6wtd15nc
+Session Cookie from header: leo.sid=uesg1nv4qc8vf97bd0g3p
+Session data keys: [ 'cookie' ]
+=== END SESSION DEBUG ===
+Generated new session ID: b6gkyc2hrf92dzp1zak81
+=== REQUEST SESSION DEBUG ===
+URL: /assets/index-C37kGR8N.js
+Method: GET
+Session ID: b6gkyc2hrf92dzp1zak81
+Session Cookie from header: leo.sid=uesg1nv4qc8vf97bd0g3p
+Session data keys: [ 'cookie' ]
+=== END SESSION DEBUG ===
+Generated new session ID: q3bw0wypjac6bj3s98wo5
+=== REQUEST SESSION DEBUG ===
+URL: /assets/index-D0phPA-x.css
+Method: GET
+Session ID: q3bw0wypjac6bj3s98wo5
+Session Cookie from header: leo.sid=uesg1nv4qc8vf97bd0g3p
+Session data keys: [ 'cookie' ]
+=== END SESSION DEBUG ===
+Generated new session ID: zxgl3mze1weby57yb0fh4h
+=== REQUEST SESSION DEBUG ===
+URL: /api/auth/me
+Method: GET
+Session ID: zxgl3mze1weby57yb0fh4h
+Session Cookie from header: leo.sid=uesg1nv4qc8vf97bd0g3p
+Session data keys: [ 'cookie' ]
+=== END SESSION DEBUG ===
+2:34:01 AM [express] GET /api/auth/me 401 in 1ms :: {"message":"Not authenticated"}
+Generated new session ID: 4cho371a9dtoptaki4ckc
+=== REQUEST SESSION DEBUG ===
+URL: /favicon.ico
+Method: GET
+Session ID: 4cho371a9dtoptaki4ckc
+Session Cookie from header: leo.sid=uesg1nv4qc8vf97bd0g3p
+Session data keys: [ 'cookie' ]
+=== END SESSION DEBUG ===
+Generated new session ID: oabr3qk16k8h04oo26jxs
+=== REQUEST SESSION DEBUG ===
+URL: /api/auth/discord/status
+Method: GET
+Session ID: oabr3qk16k8h04oo26jxs
+Session Cookie from header: leo.sid=uesg1nv4qc8vf97bd0g3p
+Session data keys: [ 'cookie' ]
+=== END SESSION DEBUG ===
+=== DISCORD STATUS CHECK ===
+Session ID: oabr3qk16k8h04oo26jxs
+Cookie header: leo.sid=uesg1nv4qc8vf97bd0g3p
+Session cookie name: oabr3qk16k8h04oo26jxs
+Discord verification in session: false
+Full session data: {
+  "cookie": {
+    "originalMaxAge": 7200000,
+    "expires": "2025-07-12T04:34:01.553Z",
+    "secure": true,
+    "httpOnly": true,
+    "path": "/",
+    "sameSite": "none"
+  }
+}
+Session store has: MemoryStore {
+  _events: [Object: null prototype] {
+    disconnect: [Function: ondisconnect],
+    connect: [Function: onconnect]
+  },
+  _eventsCount: 2,
+  _maxListeners: undefined,
+  options: {
+    checkPeriod: 86400000,
+    max: 100000,
+    ttl: undefined,
+    dispose: [Function: dispose],
+    stale: true,
+    noDisposeOnSet: undefined
+  },
+  serializer: Object [JSON] {},
+  store: LRUCache {
+    [Symbol(max)]: 100000,
+    [Symbol(lengthCalculator)]: [Function: naiveLength],
+    [Symbol(allowStale)]: true,
+    [Symbol(maxAge)]: 0,
+    [Symbol(dispose)]: [Function: dispose],
+    [Symbol(noDisposeOnSet)]: false,
+    [Symbol(cache)]: Map(21) {
+      'uh1z1oxy73e8jmoph82jc' => [Node],
+      '938yqw3f8oo69v0k0bpp' => [Node],
+      'yih36mla0dguj852qk84j8' => [Node],
+      '603wp3xq19o725l21yiw3c' => [Node],
+      'p549dbtgv6f2ep1cwp7s' => [Node],
+      'y7i8d08n4ydmizt8ri3k' => [Node],
+      'by5c45txq1pin7ws3c8i' => [Node],
+      'n6v2li688aw6t598o9ik' => [Node],
+      '3q32o0jpk5zbf8ygyshw2' => [Node],
+      'efs4exki54mrsm1t9k2x8' => [Node],
+      'p4m8x3vik1szctjmls5bng' => [Node],
+      'zc0uw56pgs03qpgx765jmz' => [Node],
+      '6sbtatk9iiedavm9y1lha' => [Node],
+      'b58gq10x3xgi89vlvnt1k' => [Node],
+      'ovhdnfpmf4hnads7cu1mvg' => [Node],
+      'uesg1nv4qc8vf97bd0g3p' => [Node],
+      'k84l14nbsy8kwi6wtd15nc' => [Node],
+      'b6gkyc2hrf92dzp1zak81' => [Node],
+      'q3bw0wypjac6bj3s98wo5' => [Node],
+      'zxgl3mze1weby57yb0fh4h' => [Node],
+      '4cho371a9dtoptaki4ckc' => [Node]
+    },
+    [Symbol(lruList)]: Yallist { tail: [Node], head: [Node], length: 21 },
+    [Symbol(length)]: 21
+  },
+  _checkInterval: Timeout {
+    _idleTimeout: 86400000,
+    _idlePrev: [TimersList],
+    _idleNext: [TimersList],
+    _idleStart: 10801,
+    _onTimeout: [Function (anonymous)],
+    _timerArgs: undefined,
+    _repeat: 86400000,
+    _destroyed: false,
+    [Symbol(refed)]: false,
+    [Symbol(kHasPrimitive)]: false,
+    [Symbol(asyncId)]: 975,
+    [Symbol(triggerId)]: 0,
+    [Symbol(kAsyncContextFrame)]: undefined
+  },
+  generate: [Function (anonymous)],
+  [Symbol(shapeMode)]: false,
+  [Symbol(kCapture)]: false
+}
+No Discord verification found in session
+2:34:01 AM [express] GET /api/auth/discord/status 304 in 2ms :: {"verified":false}

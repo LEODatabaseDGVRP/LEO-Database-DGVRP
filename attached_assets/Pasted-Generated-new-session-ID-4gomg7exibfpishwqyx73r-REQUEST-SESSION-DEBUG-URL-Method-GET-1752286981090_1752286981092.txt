@@ -1,0 +1,3542 @@
+Generated new session ID: 4gomg7exibfpishwqyx73r
+=== REQUEST SESSION DEBUG ===
+URL: /
+Method: GET
+Session ID: 4gomg7exibfpishwqyx73r
+Session Cookie from header: undefined
+Session data keys: [ 'cookie' ]
+=== END SESSION DEBUG ===
+Generated new session ID: 3jdtjhfl2z1ij9fsk3189
+=== REQUEST SESSION DEBUG ===
+URL: /
+Method: GET
+Session ID: 3jdtjhfl2z1ij9fsk3189
+Session Cookie from header: undefined
+Session data keys: [ 'cookie' ]
+=== END SESSION DEBUG ===
+Generated new session ID: c162qje8247wdwvr6ky6b
+=== REQUEST SESSION DEBUG ===
+URL: /assets/index-TymH6GOP.css
+Method: GET
+Session ID: c162qje8247wdwvr6ky6b
+Session Cookie from header: undefined
+Session data keys: [ 'cookie' ]
+=== END SESSION DEBUG ===
+Generated new session ID: 7zy0ypsj5kxa2d0j2q9r9j
+=== REQUEST SESSION DEBUG ===
+URL: /assets/index-DNVsD-tD.js
+Method: GET
+Session ID: 7zy0ypsj5kxa2d0j2q9r9j
+Session Cookie from header: undefined
+Session data keys: [ 'cookie' ]
+=== END SESSION DEBUG ===
+Generated new session ID: 63xcjdiotghtqzzuz7ptz
+=== REQUEST SESSION DEBUG ===
+URL: /api/auth/me
+Method: GET
+Session ID: 63xcjdiotghtqzzuz7ptz
+Session Cookie from header: undefined
+Session data keys: [ 'cookie' ]
+=== END SESSION DEBUG ===
+2:19:42 AM [express] GET /api/auth/me 401 in 3ms :: {"message":"Not authenticated"}
+Generated new session ID: y1kggfjnuwffpxddnngcn
+=== REQUEST SESSION DEBUG ===
+URL: /favicon.ico
+Method: GET
+Session ID: y1kggfjnuwffpxddnngcn
+Session Cookie from header: undefined
+Session data keys: [ 'cookie' ]
+=== END SESSION DEBUG ===
+Generated new session ID: 7g03a3oaq3cgah2arsuuof
+=== REQUEST SESSION DEBUG ===
+URL: /login
+Method: GET
+Session ID: 7g03a3oaq3cgah2arsuuof
+Session Cookie from header: undefined
+Session data keys: [ 'cookie' ]
+=== END SESSION DEBUG ===
+Generated new session ID: to9ltxxsqtprwgyizf5mh
+=== REQUEST SESSION DEBUG ===
+URL: /assets/index-TymH6GOP.css
+Method: GET
+Session ID: to9ltxxsqtprwgyizf5mh
+Session Cookie from header: undefined
+Session data keys: [ 'cookie' ]
+=== END SESSION DEBUG ===
+Generated new session ID: vwtgd5hjrw95qay23ryzhb
+=== REQUEST SESSION DEBUG ===
+URL: /assets/index-DNVsD-tD.js
+Method: GET
+Session ID: vwtgd5hjrw95qay23ryzhb
+Session Cookie from header: undefined
+Session data keys: [ 'cookie' ]
+=== END SESSION DEBUG ===
+Generated new session ID: j4yt4u006478zmm00ty0r
+=== REQUEST SESSION DEBUG ===
+URL: /api/auth/me
+Method: GET
+Session ID: j4yt4u006478zmm00ty0r
+Session Cookie from header: undefined
+Session data keys: [ 'cookie' ]
+=== END SESSION DEBUG ===
+2:19:42 AM [express] GET /api/auth/me 401 in 2ms :: {"message":"Not authenticated"}
+Generated new session ID: e44npzqdg1g71cttfrub42
+=== REQUEST SESSION DEBUG ===
+URL: /favicon.ico
+Method: GET
+Session ID: e44npzqdg1g71cttfrub42
+Session Cookie from header: undefined
+Session data keys: [ 'cookie' ]
+=== END SESSION DEBUG ===
+Generated new session ID: 7622adq6v64x7z3kpz1vr
+=== REQUEST SESSION DEBUG ===
+URL: /api/auth/discord/status
+Method: GET
+Session ID: 7622adq6v64x7z3kpz1vr
+Session Cookie from header: undefined
+Session data keys: [ 'cookie' ]
+=== END SESSION DEBUG ===
+=== DISCORD STATUS CHECK ===
+Session ID: 7622adq6v64x7z3kpz1vr
+Cookie header: undefined
+Session cookie name: 7622adq6v64x7z3kpz1vr
+Discord verification in session: false
+Full session data: {
+  "cookie": {
+    "originalMaxAge": 7200000,
+    "expires": "2025-07-12T04:19:44.039Z",
+    "secure": true,
+    "httpOnly": true,
+    "path": "/",
+    "sameSite": "none"
+  }
+}
+Session store has: MemoryStore {
+  _events: [Object: null prototype] {
+    disconnect: [Function: ondisconnect],
+    connect: [Function: onconnect]
+  },
+  _eventsCount: 2,
+  _maxListeners: undefined,
+  options: {
+    checkPeriod: 86400000,
+    max: 100000,
+    ttl: undefined,
+    dispose: [Function: dispose],
+    stale: true,
+    noDisposeOnSet: undefined
+  },
+  serializer: Object [JSON] {},
+  store: LRUCache {
+    [Symbol(max)]: 100000,
+    [Symbol(lengthCalculator)]: [Function: naiveLength],
+    [Symbol(allowStale)]: true,
+    [Symbol(maxAge)]: 0,
+    [Symbol(dispose)]: [Function: dispose],
+    [Symbol(noDisposeOnSet)]: false,
+    [Symbol(cache)]: Map(12) {
+      '0zale44fcbfes0o08z5gkdc' => [Node],
+      '4gomg7exibfpishwqyx73r' => [Node],
+      '3jdtjhfl2z1ij9fsk3189' => [Node],
+      'c162qje8247wdwvr6ky6b' => [Node],
+      '7zy0ypsj5kxa2d0j2q9r9j' => [Node],
+      '63xcjdiotghtqzzuz7ptz' => [Node],
+      'y1kggfjnuwffpxddnngcn' => [Node],
+      '7g03a3oaq3cgah2arsuuof' => [Node],
+      'to9ltxxsqtprwgyizf5mh' => [Node],
+      'vwtgd5hjrw95qay23ryzhb' => [Node],
+      'j4yt4u006478zmm00ty0r' => [Node],
+      'e44npzqdg1g71cttfrub42' => [Node]
+    },
+    [Symbol(lruList)]: Yallist { tail: [Node], head: [Node], length: 12 },
+    [Symbol(length)]: 12
+  },
+  _checkInterval: Timeout {
+    _idleTimeout: 86400000,
+    _idlePrev: [TimersList],
+    _idleNext: [TimersList],
+    _idleStart: 10907,
+    _onTimeout: [Function (anonymous)],
+    _timerArgs: undefined,
+    _repeat: 86400000,
+    _destroyed: false,
+    [Symbol(refed)]: false,
+    [Symbol(kHasPrimitive)]: false,
+    [Symbol(asyncId)]: 975,
+    [Symbol(triggerId)]: 0,
+    [Symbol(kAsyncContextFrame)]: undefined
+  },
+  generate: [Function (anonymous)],
+  [Symbol(shapeMode)]: false,
+  [Symbol(kCapture)]: false
+}
+No Discord verification found in session
+2:19:44 AM [express] GET /api/auth/discord/status 304 in 2ms :: {"verified":false}
+Generated new session ID: ak92jimukwrlug7knco3
+=== REQUEST SESSION DEBUG ===
+URL: /favicon.ico
+Method: GET
+Session ID: ak92jimukwrlug7knco3
+Session Cookie from header: undefined
+Session data keys: [ 'cookie' ]
+=== END SESSION DEBUG ===
+Generated new session ID: qc5hdqskz0jmxf1wq53yg
+=== REQUEST SESSION DEBUG ===
+URL: /api/auth/discord/url
+Method: GET
+Session ID: qc5hdqskz0jmxf1wq53yg
+Session Cookie from header: undefined
+Session data keys: [ 'cookie' ]
+=== END SESSION DEBUG ===
+Discord OAuth state generated: discord_1752286784803
+Generated Discord auth URL: https://discord.com/api/oauth2/authorize?client_id=1392657393724424313&redirect_uri=https%3A%2F%2Fleo-database-dgvrp.onrender.com%2Fapi%2Fauth%2Fdiscord%2Fcallback&response_type=code&scope=identify+guilds+guilds.members.read&state=discord_1752286784803
+2:19:44 AM [express] GET /api/auth/discord/url 200 in 2ms :: {"url":"https://discord.com/api/oauth2/…
+Generated new session ID: 89cn9vbdr6tf4ngisf7x5g
+=== REQUEST SESSION DEBUG ===
+URL: /api/auth/discord/callback?code=7Dw0G6n44KedS0DcmkztqP1eRgXfPw&state=discord_1752286784803
+Method: GET
+Session ID: 89cn9vbdr6tf4ngisf7x5g
+Session Cookie from header: undefined
+Session data keys: [ 'cookie' ]
+=== END SESSION DEBUG ===
+Discord callback received - Code: true State: discord_1752286784803
+Discord user info: { id: '1378267677134422016', username: 'dgvrp_58897' }
+Existing user found: false
+Total users in database: 1
+New Discord user, storing verification for signup
+About to save session with Discord verification: {
+  sessionId: '89cn9vbdr6tf4ngisf7x5g',
+  discordId: '1378267677134422016',
+  username: 'dgvrp_58897'
+}
+Discord verification saved successfully, session ID: 89cn9vbdr6tf4ngisf7x5g
+Session cookie being sent: {
+  path: '/',
+  _expires: 2025-07-12T04:19:49.572Z,
+  originalMaxAge: 7200000,
+  httpOnly: true,
+  secure: true,
+  sameSite: 'none'
+}
+file:///opt/render/project/src/dist/index.js:1191
+            secure: isProduction,
+                    ^
+ReferenceError: isProduction is not defined
+    at Immediate.<anonymous> (file:///opt/render/project/src/dist/index.js:1191:21)
+    at process.processImmediate (node:internal/timers:487:21)
+Node.js v22.16.0
+==> Running 'npm run start'
+> rest-express@1.0.0 start
+> NODE_ENV=production node dist/index.js
+Using Discord redirect URI: https://leo-database-dgvrp.onrender.com/api/auth/discord/callback
+Discord bot logged in as DGVRP Citation Payoff#2062
+Discord bot initialized successfully
+2:20:11 AM [express] serving on port 5000
+Generated new session ID: qzwvzis7wlpsh8nfsootgf
+=== REQUEST SESSION DEBUG ===
+URL: /
+Method: HEAD
+Session ID: qzwvzis7wlpsh8nfsootgf
+Session Cookie from header: undefined
+Session data keys: [ 'cookie' ]
+=== END SESSION DEBUG ===
+Generated new session ID: w8c7m33hjqpq4a55j9yshe
+=== REQUEST SESSION DEBUG ===
+URL: /api/auth/discord/callback?code=7Dw0G6n44KedS0DcmkztqP1eRgXfPw&state=discord_1752286784803
+Method: HEAD
+Session ID: w8c7m33hjqpq4a55j9yshe
+Session Cookie from header: undefined
+Session data keys: [ 'cookie' ]
+=== END SESSION DEBUG ===
+Discord callback received - Code: true State: discord_1752286784803
+Generated new session ID: atq9w43gko8alc7k9djx7e
+=== REQUEST SESSION DEBUG ===
+URL: /api/auth/discord/callback?code=7Dw0G6n44KedS0DcmkztqP1eRgXfPw&state=discord_1752286784803
+Method: HEAD
+Session ID: atq9w43gko8alc7k9djx7e
+Session Cookie from header: undefined
+Session data keys: [ 'cookie' ]
+=== END SESSION DEBUG ===
+Discord callback received - Code: true State: discord_1752286784803
+Discord OAuth error: AxiosError: Request failed with status code 400
+    at settle (file:///opt/render/project/src/node_modules/axios/lib/core/settle.js:19:12)
+    at IncomingMessage.handleStreamEnd (file:///opt/render/project/src/node_modules/axios/lib/adapters/http.js:599:11)
+    at IncomingMessage.emit (node:events:530:35)
+    at endReadableNT (node:internal/streams/readable:1698:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21)
+    at Axios.request (file:///opt/render/project/src/node_modules/axios/lib/core/Axios.js:45:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async DiscordOAuthServiceImpl.exchangeCode (file:///opt/render/project/src/dist/index.js:789:29)
+    at async file:///opt/render/project/src/dist/index.js:1144:37 {
+  code: 'ERR_BAD_REQUEST',
+  config: {
+    transitional: {
+      silentJSONParsing: true,
+      forcedJSONParsing: true,
+      clarifyTimeoutError: false
+    },
+    adapter: [ 'xhr', 'http', 'fetch' ],
+    transformRequest: [ [Function: transformRequest] ],
+    transformResponse: [ [Function: transformResponse] ],
+    timeout: 0,
+    xsrfCookieName: 'XSRF-TOKEN',
+    xsrfHeaderName: 'X-XSRF-TOKEN',
+    maxContentLength: -1,
+    maxBodyLength: -1,
+    env: { FormData: [Function [FormData]], Blob: [class Blob] },
+    validateStatus: [Function: validateStatus],
+    headers: Object [AxiosHeaders] {
+      Accept: 'application/json, text/plain, */*',
+      'Content-Type': 'application/x-www-form-urlencoded',
+      'User-Agent': 'axios/1.10.0',
+      'Content-Length': '235',
+      'Accept-Encoding': 'gzip, compress, deflate, br'
+    },
+    method: 'post',
+    url: 'https://discord.com/api/oauth2/token',
+    data: 'client_id=1392657393724424313&client_secret=P4y9r1pTFi8ux-4UhIlwUdKK0GEphvCb&grant_type=authorization_code&code=7Dw0G6n44KedS0DcmkztqP1eRgXfPw&redirect_uri=https%3A%2F%2Fleo-database-dgvrp.onrender.com%2Fapi%2Fauth%2Fdiscord%2Fcallback',
+    allowAbsoluteUrls: true
+  },
+  request: <ref *1> ClientRequest {
+    _events: [Object: null prototype] {
+      abort: [Function (anonymous)],
+      aborted: [Function (anonymous)],
+      connect: [Function (anonymous)],
+      error: [Function (anonymous)],
+      socket: [Function (anonymous)],
+      timeout: [Function (anonymous)],
+      finish: [Function: requestOnFinish]
+    },
+    _eventsCount: 7,
+    _maxListeners: undefined,
+    outputData: [],
+    outputSize: 0,
+    writable: true,
+    destroyed: true,
+    _last: false,
+    chunkedEncoding: false,
+    shouldKeepAlive: true,
+    maxRequestsOnConnectionReached: false,
+    _defaultKeepAlive: true,
+    useChunkedEncodingByDefault: true,
+    sendDate: false,
+    _removedConnection: false,
+    _removedContLen: false,
+    _removedTE: false,
+    strictContentLength: false,
+    _contentLength: 235,
+    _hasBody: true,
+    _trailer: '',
+    finished: true,
+    _headerSent: true,
+    _closed: true,
+    _header: 'POST /api/oauth2/token HTTP/1.1\r\n' +
+      'Accept: application/json, text/plain, */*\r\n' +
+      'Content-Type: application/x-www-form-urlencoded\r\n' +
+      'User-Agent: axios/1.10.0\r\n' +
+      'Content-Length: 235\r\n' +
+      'Accept-Encoding: gzip, compress, deflate, br\r\n' +
+      'Host: discord.com\r\n' +
+      'Connection: keep-alive\r\n' +
+      '\r\n',
+    _keepAliveTimeout: 0,
+    _onPendingData: [Function: nop],
+    agent: Agent {
+      _events: [Object: null prototype],
+      _eventsCount: 2,
+      _maxListeners: undefined,
+      defaultPort: 443,
+      protocol: 'https:',
+      options: [Object: null prototype],
+      requests: [Object: null prototype] {},
+      sockets: [Object: null prototype],
+      freeSockets: [Object: null prototype],
+      keepAliveMsecs: 1000,
+      keepAlive: true,
+      maxSockets: Infinity,
+      maxFreeSockets: 256,
+      scheduling: 'lifo',
+      maxTotalSockets: Infinity,
+      totalSocketCount: 2,
+      maxCachedSessions: 100,
+      _sessionCache: [Object],
+      [Symbol(shapeMode)]: false,
+      [Symbol(kCapture)]: false
+    },
+    socketPath: undefined,
+    method: 'POST',
+    maxHeaderSize: undefined,
+    insecureHTTPParser: undefined,
+    joinDuplicateHeaders: undefined,
+    path: '/api/oauth2/token',
+    _ended: true,
+    res: IncomingMessage {
+      _events: [Object],
+      _readableState: [ReadableState],
+      _maxListeners: undefined,
+      socket: null,
+      httpVersionMajor: 1,
+      httpVersionMinor: 1,
+      httpVersion: '1.1',
+      complete: true,
+      rawHeaders: [Array],
+      rawTrailers: [],
+      joinDuplicateHeaders: undefined,
+      aborted: false,
+      upgrade: false,
+      url: '',
+      method: null,
+      statusCode: 400,
+      statusMessage: 'Bad Request',
+      client: [TLSSocket],
+      _consuming: false,
+      _dumped: false,
+      req: [Circular *1],
+      _eventsCount: 4,
+      responseUrl: 'https://discord.com/api/oauth2/token',
+      redirects: [],
+      [Symbol(shapeMode)]: true,
+      [Symbol(kCapture)]: false,
+      [Symbol(kHeaders)]: [Object],
+      [Symbol(kHeadersCount)]: 44,
+      [Symbol(kTrailers)]: null,
+      [Symbol(kTrailersCount)]: 0
+    },
+    aborted: false,
+    timeoutCb: null,
+    upgradeOrConnect: false,
+    parser: null,
+    maxHeadersCount: null,
+    reusedSocket: false,
+    host: 'discord.com',
+    protocol: 'https:',
+    _redirectable: Writable {
+      _events: [Object],
+      _writableState: [WritableState],
+      _maxListeners: undefined,
+      _options: [Object],
+      _ended: true,
+      _ending: true,
+      _redirectCount: 0,
+      _redirects: [],
+      _requestBodyLength: 235,
+      _requestBodyBuffers: [],
+      _eventsCount: 3,
+      _onNativeResponse: [Function (anonymous)],
+      _currentRequest: [Circular *1],
+      _currentUrl: 'https://discord.com/api/oauth2/token',
+      [Symbol(shapeMode)]: true,
+      [Symbol(kCapture)]: false
+    },
+    [Symbol(shapeMode)]: false,
+    [Symbol(kCapture)]: false,
+    [Symbol(kBytesWritten)]: 0,
+    [Symbol(kNeedDrain)]: false,
+    [Symbol(corked)]: 0,
+    [Symbol(kChunkedBuffer)]: [],
+    [Symbol(kChunkedLength)]: 0,
+    [Symbol(kSocket)]: TLSSocket {
+      _tlsOptions: [Object],
+      _secureEstablished: true,
+      _securePending: false,
+      _newSessionPending: false,
+      _controlReleased: true,
+      secureConnecting: false,
+      _SNICallback: null,
+      servername: 'discord.com',
+      alpnProtocol: false,
+      authorized: true,
+      authorizationError: null,
+      encrypted: true,
+      _events: [Object: null prototype],
+      _eventsCount: 9,
+      connecting: false,
+      _hadError: false,
+      _parent: null,
+      _host: 'discord.com',
+      _closeAfterHandlingError: false,
+      _readableState: [ReadableState],
+      _writableState: [WritableState],
+      allowHalfOpen: false,
+      _maxListeners: undefined,
+      _sockname: null,
+      _pendingData: null,
+      _pendingEncoding: '',
+      server: undefined,
+      _server: null,
+      ssl: [TLSWrap],
+      _requestCert: true,
+      _rejectUnauthorized: true,
+      timeout: 5000,
+      parser: null,
+      _httpMessage: null,
+      autoSelectFamilyAttemptedAddresses: [Array],
+      [Symbol(alpncallback)]: null,
+      [Symbol(res)]: [TLSWrap],
+      [Symbol(verified)]: true,
+      [Symbol(pendingSession)]: null,
+      [Symbol(async_id_symbol)]: -1,
+      [Symbol(kHandle)]: [TLSWrap],
+      [Symbol(lastWriteQueueSize)]: 0,
+      [Symbol(timeout)]: Timeout {
+        _idleTimeout: 5000,
+        _idlePrev: [TimersList],
+        _idleNext: [Timeout],
+        _idleStart: 19791,
+        _onTimeout: [Function: bound ],
+        _timerArgs: undefined,
+        _repeat: null,
+        _destroyed: false,
+        [Symbol(refed)]: false,
+        [Symbol(kHasPrimitive)]: false,
+        [Symbol(asyncId)]: 1125,
+        [Symbol(triggerId)]: 1123,
+        [Symbol(kAsyncContextFrame)]: undefined
+      },
+      [Symbol(kBuffer)]: null,
+      [Symbol(kBufferCb)]: null,
+      [Symbol(kBufferGen)]: null,
+      [Symbol(shapeMode)]: true,
+      [Symbol(kCapture)]: false,
+      [Symbol(kSetNoDelay)]: false,
+      [Symbol(kSetKeepAlive)]: true,
+      [Symbol(kSetKeepAliveInitialDelay)]: 1,
+      [Symbol(kBytesRead)]: 0,
+      [Symbol(kBytesWritten)]: 0,
+      [Symbol(connect-options)]: [Object]
+    },
+    [Symbol(kOutHeaders)]: [Object: null prototype] {
+      accept: [Array],
+      'content-type': [Array],
+      'user-agent': [Array],
+      'content-length': [Array],
+      'accept-encoding': [Array],
+      host: [Array]
+    },
+    [Symbol(errored)]: null,
+    [Symbol(kHighWaterMark)]: 65536,
+    [Symbol(kRejectNonStandardBodyWrites)]: false,
+    [Symbol(kUniqueHeaders)]: null
+  },
+  response: {
+    status: 400,
+    statusText: 'Bad Request',
+    headers: Object [AxiosHeaders] {
+      date: 'Sat, 12 Jul 2025 02:20:18 GMT',
+      'content-type': 'application/json',
+      'content-length': '79',
+      connection: 'keep-alive',
+      'cache-control': 'no-store',
+      pragma: 'no-cache',
+      'set-cookie': [Array],
+      'strict-transport-security': 'max-age=31536000; includeSubDomains; preload',
+      'x-discord-features': 'oauth',
+      via: '1.1 google',
+      'alt-svc': 'h3=":443"; ma=86400',
+      'cf-cache-status': 'DYNAMIC',
+      'report-to': '{"endpoints":[{"url":"https:\\/\\/a.nel.cloudflare.com\\/report\\/v4?s=TOYgAI8Hn7VQQJnPQqZkn5hAwcGzwBIEQRyEc%2FHdcX6%2FKVoNN1yaM%2FtjgRGyt%2FrVprL7wnpsNStcshgkB5fVDSRJD5drmgalKczopFAQyfJeelrxdkjfcMWt79GQ"}],"group":"cf-nel","max_age":604800}',
+      nel: '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}',
+      'x-content-type-options': 'nosniff',
+      'reporting-endpoints': 'csp-sentry="https://o64374.ingest.sentry.io/api/5441894/security/?sentry_key=8fbbce30bf5244ec9429546beef21870&sentry_environment=stable"',
+      'content-security-policy': "frame-ancestors 'none'; default-src https://o64374.ingest.sentry.io; report-to csp-sentry; report-uri https://o64374.ingest.sentry.io/api/5441894/security/?sentry_key=8fbbce30bf5244ec9429546beef21870&sentry_environment=stable",
+      server: 'cloudflare',
+      'cf-ray': '95dd0f87efcc8e62-PDX'
+    },
+    config: {
+      transitional: [Object],
+      adapter: [Array],
+      transformRequest: [Array],
+      transformResponse: [Array],
+      timeout: 0,
+      xsrfCookieName: 'XSRF-TOKEN',
+      xsrfHeaderName: 'X-XSRF-TOKEN',
+      maxContentLength: -1,
+      maxBodyLength: -1,
+      env: [Object],
+      validateStatus: [Function: validateStatus],
+      headers: [Object [AxiosHeaders]],
+      method: 'post',
+      url: 'https://discord.com/api/oauth2/token',
+      data: 'client_id=1392657393724424313&client_secret=P4y9r1pTFi8ux-4UhIlwUdKK0GEphvCb&grant_type=authorization_code&code=7Dw0G6n44KedS0DcmkztqP1eRgXfPw&redirect_uri=https%3A%2F%2Fleo-database-dgvrp.onrender.com%2Fapi%2Fauth%2Fdiscord%2Fcallback',
+      allowAbsoluteUrls: true
+    },
+    request: <ref *1> ClientRequest {
+      _events: [Object: null prototype],
+      _eventsCount: 7,
+      _maxListeners: undefined,
+      outputData: [],
+      outputSize: 0,
+      writable: true,
+      destroyed: true,
+      _last: false,
+      chunkedEncoding: false,
+      shouldKeepAlive: true,
+      maxRequestsOnConnectionReached: false,
+      _defaultKeepAlive: true,
+      useChunkedEncodingByDefault: true,
+      sendDate: false,
+      _removedConnection: false,
+      _removedContLen: false,
+      _removedTE: false,
+      strictContentLength: false,
+      _contentLength: 235,
+      _hasBody: true,
+      _trailer: '',
+      finished: true,
+      _headerSent: true,
+      _closed: true,
+      _header: 'POST /api/oauth2/token HTTP/1.1\r\n' +
+        'Accept: application/json, text/plain, */*\r\n' +
+        'Content-Type: application/x-www-form-urlencoded\r\n' +
+        'User-Agent: axios/1.10.0\r\n' +
+        'Content-Length: 235\r\n' +
+        'Accept-Encoding: gzip, compress, deflate, br\r\n' +
+        'Host: discord.com\r\n' +
+        'Connection: keep-alive\r\n' +
+        '\r\n',
+      _keepAliveTimeout: 0,
+      _onPendingData: [Function: nop],
+      agent: [Agent],
+      socketPath: undefined,
+      method: 'POST',
+      maxHeaderSize: undefined,
+      insecureHTTPParser: undefined,
+      joinDuplicateHeaders: undefined,
+      path: '/api/oauth2/token',
+      _ended: true,
+      res: [IncomingMessage],
+      aborted: false,
+      timeoutCb: null,
+      upgradeOrConnect: false,
+      parser: null,
+      maxHeadersCount: null,
+      reusedSocket: false,
+      host: 'discord.com',
+      protocol: 'https:',
+      _redirectable: [Writable],
+      [Symbol(shapeMode)]: false,
+      [Symbol(kCapture)]: false,
+      [Symbol(kBytesWritten)]: 0,
+      [Symbol(kNeedDrain)]: false,
+      [Symbol(corked)]: 0,
+      [Symbol(kChunkedBuffer)]: [],
+      [Symbol(kChunkedLength)]: 0,
+      [Symbol(kSocket)]: [TLSSocket],
+      [Symbol(kOutHeaders)]: [Object: null prototype],
+      [Symbol(errored)]: null,
+      [Symbol(kHighWaterMark)]: 65536,
+      [Symbol(kRejectNonStandardBodyWrites)]: false,
+      [Symbol(kUniqueHeaders)]: null
+    },
+    data: {
+      error: 'invalid_grant',
+      error_description: 'Invalid "code" in request.'
+    }
+  },
+  status: 400
+}
+Discord OAuth callback error: Error: Failed to authenticate with Discord
+    at DiscordOAuthServiceImpl.exchangeCode (file:///opt/render/project/src/dist/index.js:816:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async file:///opt/render/project/src/dist/index.js:1144:37
+2:20:18 AM [express] HEAD /api/auth/discord/callback 500 in 201ms
+Discord OAuth error: AxiosError: Request failed with status code 400
+    at settle (file:///opt/render/project/src/node_modules/axios/lib/core/settle.js:19:12)
+    at IncomingMessage.handleStreamEnd (file:///opt/render/project/src/node_modules/axios/lib/adapters/http.js:599:11)
+    at IncomingMessage.emit (node:events:530:35)
+    at endReadableNT (node:internal/streams/readable:1698:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21)
+    at Axios.request (file:///opt/render/project/src/node_modules/axios/lib/core/Axios.js:45:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async DiscordOAuthServiceImpl.exchangeCode (file:///opt/render/project/src/dist/index.js:789:29)
+    at async file:///opt/render/project/src/dist/index.js:1144:37 {
+  code: 'ERR_BAD_REQUEST',
+  config: {
+    transitional: {
+      silentJSONParsing: true,
+      forcedJSONParsing: true,
+      clarifyTimeoutError: false
+    },
+    adapter: [ 'xhr', 'http', 'fetch' ],
+    transformRequest: [ [Function: transformRequest] ],
+    transformResponse: [ [Function: transformResponse] ],
+    timeout: 0,
+    xsrfCookieName: 'XSRF-TOKEN',
+    xsrfHeaderName: 'X-XSRF-TOKEN',
+    maxContentLength: -1,
+    maxBodyLength: -1,
+    env: { FormData: [Function [FormData]], Blob: [class Blob] },
+    validateStatus: [Function: validateStatus],
+    headers: Object [AxiosHeaders] {
+      Accept: 'application/json, text/plain, */*',
+      'Content-Type': 'application/x-www-form-urlencoded',
+      'User-Agent': 'axios/1.10.0',
+      'Content-Length': '235',
+      'Accept-Encoding': 'gzip, compress, deflate, br'
+    },
+    method: 'post',
+    url: 'https://discord.com/api/oauth2/token',
+    data: 'client_id=1392657393724424313&client_secret=P4y9r1pTFi8ux-4UhIlwUdKK0GEphvCb&grant_type=authorization_code&code=7Dw0G6n44KedS0DcmkztqP1eRgXfPw&redirect_uri=https%3A%2F%2Fleo-database-dgvrp.onrender.com%2Fapi%2Fauth%2Fdiscord%2Fcallback',
+    allowAbsoluteUrls: true
+  },
+  request: <ref *1> ClientRequest {
+    _events: [Object: null prototype] {
+      abort: [Function (anonymous)],
+      aborted: [Function (anonymous)],
+      connect: [Function (anonymous)],
+      error: [Function (anonymous)],
+      socket: [Function (anonymous)],
+      timeout: [Function (anonymous)],
+      finish: [Function: requestOnFinish]
+    },
+    _eventsCount: 7,
+    _maxListeners: undefined,
+    outputData: [],
+    outputSize: 0,
+    writable: true,
+    destroyed: true,
+    _last: false,
+    chunkedEncoding: false,
+    shouldKeepAlive: true,
+    maxRequestsOnConnectionReached: false,
+    _defaultKeepAlive: true,
+    useChunkedEncodingByDefault: true,
+    sendDate: false,
+    _removedConnection: false,
+    _removedContLen: false,
+    _removedTE: false,
+    strictContentLength: false,
+    _contentLength: 235,
+    _hasBody: true,
+    _trailer: '',
+    finished: true,
+    _headerSent: true,
+    _closed: true,
+    _header: 'POST /api/oauth2/token HTTP/1.1\r\n' +
+      'Accept: application/json, text/plain, */*\r\n' +
+      'Content-Type: application/x-www-form-urlencoded\r\n' +
+      'User-Agent: axios/1.10.0\r\n' +
+      'Content-Length: 235\r\n' +
+      'Accept-Encoding: gzip, compress, deflate, br\r\n' +
+      'Host: discord.com\r\n' +
+      'Connection: keep-alive\r\n' +
+      '\r\n',
+    _keepAliveTimeout: 0,
+    _onPendingData: [Function: nop],
+    agent: Agent {
+      _events: [Object: null prototype],
+      _eventsCount: 2,
+      _maxListeners: undefined,
+      defaultPort: 443,
+      protocol: 'https:',
+      options: [Object: null prototype],
+      requests: [Object: null prototype] {},
+      sockets: [Object: null prototype] {},
+      freeSockets: [Object: null prototype],
+      keepAliveMsecs: 1000,
+      keepAlive: true,
+      maxSockets: Infinity,
+      maxFreeSockets: 256,
+      scheduling: 'lifo',
+      maxTotalSockets: Infinity,
+      totalSocketCount: 2,
+      maxCachedSessions: 100,
+      _sessionCache: [Object],
+      [Symbol(shapeMode)]: false,
+      [Symbol(kCapture)]: false
+    },
+    socketPath: undefined,
+    method: 'POST',
+    maxHeaderSize: undefined,
+    insecureHTTPParser: undefined,
+    joinDuplicateHeaders: undefined,
+    path: '/api/oauth2/token',
+    _ended: true,
+    res: IncomingMessage {
+      _events: [Object],
+      _readableState: [ReadableState],
+      _maxListeners: undefined,
+      socket: null,
+      httpVersionMajor: 1,
+      httpVersionMinor: 1,
+      httpVersion: '1.1',
+      complete: true,
+      rawHeaders: [Array],
+      rawTrailers: [],
+      joinDuplicateHeaders: undefined,
+      aborted: false,
+      upgrade: false,
+      url: '',
+      method: null,
+      statusCode: 400,
+      statusMessage: 'Bad Request',
+      client: [TLSSocket],
+      _consuming: false,
+      _dumped: false,
+      req: [Circular *1],
+      _eventsCount: 4,
+      responseUrl: 'https://discord.com/api/oauth2/token',
+      redirects: [],
+      [Symbol(shapeMode)]: true,
+      [Symbol(kCapture)]: false,
+      [Symbol(kHeaders)]: [Object],
+      [Symbol(kHeadersCount)]: 44,
+      [Symbol(kTrailers)]: null,
+      [Symbol(kTrailersCount)]: 0
+    },
+    aborted: false,
+    timeoutCb: null,
+    upgradeOrConnect: false,
+    parser: null,
+    maxHeadersCount: null,
+    reusedSocket: false,
+    host: 'discord.com',
+    protocol: 'https:',
+    _redirectable: Writable {
+      _events: [Object],
+      _writableState: [WritableState],
+      _maxListeners: undefined,
+      _options: [Object],
+      _ended: true,
+      _ending: true,
+      _redirectCount: 0,
+      _redirects: [],
+      _requestBodyLength: 235,
+      _requestBodyBuffers: [],
+      _eventsCount: 3,
+      _onNativeResponse: [Function (anonymous)],
+      _currentRequest: [Circular *1],
+      _currentUrl: 'https://discord.com/api/oauth2/token',
+      [Symbol(shapeMode)]: true,
+      [Symbol(kCapture)]: false
+    },
+    [Symbol(shapeMode)]: false,
+    [Symbol(kCapture)]: false,
+    [Symbol(kBytesWritten)]: 0,
+    [Symbol(kNeedDrain)]: false,
+    [Symbol(corked)]: 0,
+    [Symbol(kChunkedBuffer)]: [],
+    [Symbol(kChunkedLength)]: 0,
+    [Symbol(kSocket)]: TLSSocket {
+      _tlsOptions: [Object],
+      _secureEstablished: true,
+      _securePending: false,
+      _newSessionPending: false,
+      _controlReleased: true,
+      secureConnecting: false,
+      _SNICallback: null,
+      servername: 'discord.com',
+      alpnProtocol: false,
+      authorized: true,
+      authorizationError: null,
+      encrypted: true,
+      _events: [Object: null prototype],
+      _eventsCount: 9,
+      connecting: false,
+      _hadError: false,
+      _parent: null,
+      _host: 'discord.com',
+      _closeAfterHandlingError: false,
+      _readableState: [ReadableState],
+      _writableState: [WritableState],
+      allowHalfOpen: false,
+      _maxListeners: undefined,
+      _sockname: null,
+      _pendingData: null,
+      _pendingEncoding: '',
+      server: undefined,
+      _server: null,
+      ssl: [TLSWrap],
+      _requestCert: true,
+      _rejectUnauthorized: true,
+      timeout: 5000,
+      parser: null,
+      _httpMessage: null,
+      autoSelectFamilyAttemptedAddresses: [Array],
+      [Symbol(alpncallback)]: null,
+      [Symbol(res)]: [TLSWrap],
+      [Symbol(verified)]: true,
+      [Symbol(pendingSession)]: null,
+      [Symbol(async_id_symbol)]: -1,
+      [Symbol(kHandle)]: [TLSWrap],
+      [Symbol(lastWriteQueueSize)]: 0,
+      [Symbol(timeout)]: Timeout {
+        _idleTimeout: 5000,
+        _idlePrev: [TimersList],
+        _idleNext: [Timeout],
+        _idleStart: 19853,
+        _onTimeout: [Function: bound ],
+        _timerArgs: undefined,
+        _repeat: null,
+        _destroyed: false,
+        [Symbol(refed)]: false,
+        [Symbol(kHasPrimitive)]: false,
+        [Symbol(asyncId)]: 1151,
+        [Symbol(triggerId)]: 1149,
+        [Symbol(kAsyncContextFrame)]: undefined
+      },
+      [Symbol(kBuffer)]: null,
+      [Symbol(kBufferCb)]: null,
+      [Symbol(kBufferGen)]: null,
+      [Symbol(shapeMode)]: true,
+      [Symbol(kCapture)]: false,
+      [Symbol(kSetNoDelay)]: false,
+      [Symbol(kSetKeepAlive)]: true,
+      [Symbol(kSetKeepAliveInitialDelay)]: 1,
+      [Symbol(kBytesRead)]: 0,
+      [Symbol(kBytesWritten)]: 0,
+      [Symbol(connect-options)]: [Object]
+    },
+    [Symbol(kOutHeaders)]: [Object: null prototype] {
+      accept: [Array],
+      'content-type': [Array],
+      'user-agent': [Array],
+      'content-length': [Array],
+      'accept-encoding': [Array],
+      host: [Array]
+    },
+    [Symbol(errored)]: null,
+    [Symbol(kHighWaterMark)]: 65536,
+    [Symbol(kRejectNonStandardBodyWrites)]: false,
+    [Symbol(kUniqueHeaders)]: null
+  },
+  response: {
+    status: 400,
+    statusText: 'Bad Request',
+    headers: Object [AxiosHeaders] {
+      date: 'Sat, 12 Jul 2025 02:20:18 GMT',
+      'content-type': 'application/json',
+      'content-length': '79',
+      connection: 'keep-alive',
+      'cache-control': 'no-store',
+      pragma: 'no-cache',
+      'set-cookie': [Array],
+      'strict-transport-security': 'max-age=31536000; includeSubDomains; preload',
+      'x-discord-features': 'oauth',
+      via: '1.1 google',
+      'alt-svc': 'h3=":443"; ma=86400',
+      'cf-cache-status': 'DYNAMIC',
+      'report-to': '{"endpoints":[{"url":"https:\\/\\/a.nel.cloudflare.com\\/report\\/v4?s=Kz30Vq1BkZdbFGyamDuAK7iCQA4tRP0nB%2FjFOjhFohmiKjIngfqwt35Q8Nn7uTjD4WdLzUw9Vk5IHDJsml4V5fLTUW2S%2FYzIs7OUWdt6ncsflKHIhwbdleJK4Dhl"}],"group":"cf-nel","max_age":604800}',
+      nel: '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}',
+      'x-content-type-options': 'nosniff',
+      'reporting-endpoints': 'csp-sentry="https://o64374.ingest.sentry.io/api/5441894/security/?sentry_key=8fbbce30bf5244ec9429546beef21870&sentry_environment=stable"',
+      'content-security-policy': "frame-ancestors 'none'; default-src https://o64374.ingest.sentry.io; report-to csp-sentry; report-uri https://o64374.ingest.sentry.io/api/5441894/security/?sentry_key=8fbbce30bf5244ec9429546beef21870&sentry_environment=stable",
+      server: 'cloudflare',
+      'cf-ray': '95dd0f885886efc6-PDX'
+    },
+    config: {
+      transitional: [Object],
+      adapter: [Array],
+      transformRequest: [Array],
+      transformResponse: [Array],
+      timeout: 0,
+      xsrfCookieName: 'XSRF-TOKEN',
+      xsrfHeaderName: 'X-XSRF-TOKEN',
+      maxContentLength: -1,
+      maxBodyLength: -1,
+      env: [Object],
+      validateStatus: [Function: validateStatus],
+      headers: [Object [AxiosHeaders]],
+      method: 'post',
+      url: 'https://discord.com/api/oauth2/token',
+      data: 'client_id=1392657393724424313&client_secret=P4y9r1pTFi8ux-4UhIlwUdKK0GEphvCb&grant_type=authorization_code&code=7Dw0G6n44KedS0DcmkztqP1eRgXfPw&redirect_uri=https%3A%2F%2Fleo-database-dgvrp.onrender.com%2Fapi%2Fauth%2Fdiscord%2Fcallback',
+      allowAbsoluteUrls: true
+    },
+    request: <ref *1> ClientRequest {
+      _events: [Object: null prototype],
+      _eventsCount: 7,
+      _maxListeners: undefined,
+      outputData: [],
+      outputSize: 0,
+      writable: true,
+      destroyed: true,
+      _last: false,
+      chunkedEncoding: false,
+      shouldKeepAlive: true,
+      maxRequestsOnConnectionReached: false,
+      _defaultKeepAlive: true,
+      useChunkedEncodingByDefault: true,
+      sendDate: false,
+      _removedConnection: false,
+      _removedContLen: false,
+      _removedTE: false,
+      strictContentLength: false,
+      _contentLength: 235,
+      _hasBody: true,
+      _trailer: '',
+      finished: true,
+      _headerSent: true,
+      _closed: true,
+      _header: 'POST /api/oauth2/token HTTP/1.1\r\n' +
+        'Accept: application/json, text/plain, */*\r\n' +
+        'Content-Type: application/x-www-form-urlencoded\r\n' +
+        'User-Agent: axios/1.10.0\r\n' +
+        'Content-Length: 235\r\n' +
+        'Accept-Encoding: gzip, compress, deflate, br\r\n' +
+        'Host: discord.com\r\n' +
+        'Connection: keep-alive\r\n' +
+        '\r\n',
+      _keepAliveTimeout: 0,
+      _onPendingData: [Function: nop],
+      agent: [Agent],
+      socketPath: undefined,
+      method: 'POST',
+      maxHeaderSize: undefined,
+      insecureHTTPParser: undefined,
+      joinDuplicateHeaders: undefined,
+      path: '/api/oauth2/token',
+      _ended: true,
+      res: [IncomingMessage],
+      aborted: false,
+      timeoutCb: null,
+      upgradeOrConnect: false,
+      parser: null,
+      maxHeadersCount: null,
+      reusedSocket: false,
+      host: 'discord.com',
+      protocol: 'https:',
+      _redirectable: [Writable],
+      [Symbol(shapeMode)]: false,
+      [Symbol(kCapture)]: false,
+      [Symbol(kBytesWritten)]: 0,
+      [Symbol(kNeedDrain)]: false,
+      [Symbol(corked)]: 0,
+      [Symbol(kChunkedBuffer)]: [],
+      [Symbol(kChunkedLength)]: 0,
+      [Symbol(kSocket)]: [TLSSocket],
+      [Symbol(kOutHeaders)]: [Object: null prototype],
+      [Symbol(errored)]: null,
+      [Symbol(kHighWaterMark)]: 65536,
+      [Symbol(kRejectNonStandardBodyWrites)]: false,
+      [Symbol(kUniqueHeaders)]: null
+    },
+    data: {
+      error: 'invalid_grant',
+      error_description: 'Invalid "code" in request.'
+    }
+  },
+  status: 400
+}
+Discord OAuth callback error: Error: Failed to authenticate with Discord
+    at DiscordOAuthServiceImpl.exchangeCode (file:///opt/render/project/src/dist/index.js:816:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async file:///opt/render/project/src/dist/index.js:1144:37
+2:20:18 AM [express] HEAD /api/auth/discord/callback 500 in 201ms
+Generated new session ID: 3eva0xgxpjybb0ucz28l3
+=== REQUEST SESSION DEBUG ===
+URL: /api/auth/discord/callback?code=7Dw0G6n44KedS0DcmkztqP1eRgXfPw&state=discord_1752286784803
+Method: HEAD
+Session ID: 3eva0xgxpjybb0ucz28l3
+Session Cookie from header: undefined
+Session data keys: [ 'cookie' ]
+=== END SESSION DEBUG ===
+Discord callback received - Code: true State: discord_1752286784803
+Discord OAuth error: AxiosError: Request failed with status code 400
+    at settle (file:///opt/render/project/src/node_modules/axios/lib/core/settle.js:19:12)
+    at IncomingMessage.handleStreamEnd (file:///opt/render/project/src/node_modules/axios/lib/adapters/http.js:599:11)
+    at IncomingMessage.emit (node:events:530:35)
+    at endReadableNT (node:internal/streams/readable:1698:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21)
+    at Axios.request (file:///opt/render/project/src/node_modules/axios/lib/core/Axios.js:45:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async DiscordOAuthServiceImpl.exchangeCode (file:///opt/render/project/src/dist/index.js:789:29)
+    at async file:///opt/render/project/src/dist/index.js:1144:37 {
+  code: 'ERR_BAD_REQUEST',
+  config: {
+    transitional: {
+      silentJSONParsing: true,
+      forcedJSONParsing: true,
+      clarifyTimeoutError: false
+    },
+    adapter: [ 'xhr', 'http', 'fetch' ],
+    transformRequest: [ [Function: transformRequest] ],
+    transformResponse: [ [Function: transformResponse] ],
+    timeout: 0,
+    xsrfCookieName: 'XSRF-TOKEN',
+    xsrfHeaderName: 'X-XSRF-TOKEN',
+    maxContentLength: -1,
+    maxBodyLength: -1,
+    env: { FormData: [Function [FormData]], Blob: [class Blob] },
+    validateStatus: [Function: validateStatus],
+    headers: Object [AxiosHeaders] {
+      Accept: 'application/json, text/plain, */*',
+      'Content-Type': 'application/x-www-form-urlencoded',
+      'User-Agent': 'axios/1.10.0',
+      'Content-Length': '235',
+      'Accept-Encoding': 'gzip, compress, deflate, br'
+    },
+    method: 'post',
+    url: 'https://discord.com/api/oauth2/token',
+    data: 'client_id=1392657393724424313&client_secret=P4y9r1pTFi8ux-4UhIlwUdKK0GEphvCb&grant_type=authorization_code&code=7Dw0G6n44KedS0DcmkztqP1eRgXfPw&redirect_uri=https%3A%2F%2Fleo-database-dgvrp.onrender.com%2Fapi%2Fauth%2Fdiscord%2Fcallback',
+    allowAbsoluteUrls: true
+  },
+  request: <ref *1> ClientRequest {
+    _events: [Object: null prototype] {
+      abort: [Function (anonymous)],
+      aborted: [Function (anonymous)],
+      connect: [Function (anonymous)],
+      error: [Function (anonymous)],
+      socket: [Function (anonymous)],
+      timeout: [Function (anonymous)],
+      finish: [Function: requestOnFinish]
+    },
+    _eventsCount: 7,
+    _maxListeners: undefined,
+    outputData: [],
+    outputSize: 0,
+    writable: true,
+    destroyed: true,
+    _last: false,
+    chunkedEncoding: false,
+    shouldKeepAlive: true,
+    maxRequestsOnConnectionReached: false,
+    _defaultKeepAlive: true,
+    useChunkedEncodingByDefault: true,
+    sendDate: false,
+    _removedConnection: false,
+    _removedContLen: false,
+    _removedTE: false,
+    strictContentLength: false,
+    _contentLength: 235,
+    _hasBody: true,
+    _trailer: '',
+    finished: true,
+    _headerSent: true,
+    _closed: true,
+    _header: 'POST /api/oauth2/token HTTP/1.1\r\n' +
+      'Accept: application/json, text/plain, */*\r\n' +
+      'Content-Type: application/x-www-form-urlencoded\r\n' +
+      'User-Agent: axios/1.10.0\r\n' +
+      'Content-Length: 235\r\n' +
+      'Accept-Encoding: gzip, compress, deflate, br\r\n' +
+      'Host: discord.com\r\n' +
+      'Connection: keep-alive\r\n' +
+      '\r\n',
+    _keepAliveTimeout: 0,
+    _onPendingData: [Function: nop],
+    agent: Agent {
+      _events: [Object: null prototype],
+      _eventsCount: 2,
+      _maxListeners: undefined,
+      defaultPort: 443,
+      protocol: 'https:',
+      options: [Object: null prototype],
+      requests: [Object: null prototype] {},
+      sockets: [Object: null prototype] {},
+      freeSockets: [Object: null prototype],
+      keepAliveMsecs: 1000,
+      keepAlive: true,
+      maxSockets: Infinity,
+      maxFreeSockets: 256,
+      scheduling: 'lifo',
+      maxTotalSockets: Infinity,
+      totalSocketCount: 2,
+      maxCachedSessions: 100,
+      _sessionCache: [Object],
+      [Symbol(shapeMode)]: false,
+      [Symbol(kCapture)]: false
+    },
+    socketPath: undefined,
+    method: 'POST',
+    maxHeaderSize: undefined,
+    insecureHTTPParser: undefined,
+    joinDuplicateHeaders: undefined,
+    path: '/api/oauth2/token',
+    _ended: true,
+    res: IncomingMessage {
+      _events: [Object],
+      _readableState: [ReadableState],
+      _maxListeners: undefined,
+      socket: null,
+      httpVersionMajor: 1,
+      httpVersionMinor: 1,
+      httpVersion: '1.1',
+      complete: true,
+      rawHeaders: [Array],
+      rawTrailers: [],
+      joinDuplicateHeaders: undefined,
+      aborted: false,
+      upgrade: false,
+      url: '',
+      method: null,
+      statusCode: 400,
+      statusMessage: 'Bad Request',
+      client: [TLSSocket],
+      _consuming: false,
+      _dumped: false,
+      req: [Circular *1],
+      _eventsCount: 4,
+      responseUrl: 'https://discord.com/api/oauth2/token',
+      redirects: [],
+      [Symbol(shapeMode)]: true,
+      [Symbol(kCapture)]: false,
+      [Symbol(kHeaders)]: [Object],
+      [Symbol(kHeadersCount)]: 44,
+      [Symbol(kTrailers)]: null,
+      [Symbol(kTrailersCount)]: 0
+    },
+    aborted: false,
+    timeoutCb: null,
+    upgradeOrConnect: false,
+    parser: null,
+    maxHeadersCount: null,
+    reusedSocket: true,
+    host: 'discord.com',
+    protocol: 'https:',
+    _redirectable: Writable {
+      _events: [Object],
+      _writableState: [WritableState],
+      _maxListeners: undefined,
+      _options: [Object],
+      _ended: true,
+      _ending: true,
+      _redirectCount: 0,
+      _redirects: [],
+      _requestBodyLength: 235,
+      _requestBodyBuffers: [],
+      _eventsCount: 3,
+      _onNativeResponse: [Function (anonymous)],
+      _currentRequest: [Circular *1],
+      _currentUrl: 'https://discord.com/api/oauth2/token',
+      [Symbol(shapeMode)]: true,
+      [Symbol(kCapture)]: false
+    },
+    [Symbol(shapeMode)]: false,
+    [Symbol(kCapture)]: false,
+    [Symbol(kBytesWritten)]: 0,
+    [Symbol(kNeedDrain)]: false,
+    [Symbol(corked)]: 0,
+    [Symbol(kChunkedBuffer)]: [],
+    [Symbol(kChunkedLength)]: 0,
+    [Symbol(kSocket)]: TLSSocket {
+      _tlsOptions: [Object],
+      _secureEstablished: true,
+      _securePending: false,
+      _newSessionPending: false,
+      _controlReleased: true,
+      secureConnecting: false,
+      _SNICallback: null,
+      servername: 'discord.com',
+      alpnProtocol: false,
+      authorized: true,
+      authorizationError: null,
+      encrypted: true,
+      _events: [Object: null prototype],
+      _eventsCount: 9,
+      connecting: false,
+      _hadError: false,
+      _parent: null,
+      _host: 'discord.com',
+      _closeAfterHandlingError: false,
+      _readableState: [ReadableState],
+      _writableState: [WritableState],
+      allowHalfOpen: false,
+      _maxListeners: undefined,
+      _sockname: null,
+      _pendingData: null,
+      _pendingEncoding: '',
+      server: undefined,
+      _server: null,
+      ssl: [TLSWrap],
+      _requestCert: true,
+      _rejectUnauthorized: true,
+      timeout: 5000,
+      parser: null,
+      _httpMessage: null,
+      autoSelectFamilyAttemptedAddresses: [Array],
+      [Symbol(alpncallback)]: null,
+      [Symbol(res)]: [TLSWrap],
+      [Symbol(verified)]: true,
+      [Symbol(pendingSession)]: null,
+      [Symbol(async_id_symbol)]: -1,
+      [Symbol(kHandle)]: [TLSWrap],
+      [Symbol(lastWriteQueueSize)]: 0,
+      [Symbol(timeout)]: Timeout {
+        _idleTimeout: 5000,
+        _idlePrev: [TimersList],
+        _idleNext: [Timeout],
+        _idleStart: 20462,
+        _onTimeout: [Function: bound ],
+        _timerArgs: undefined,
+        _repeat: null,
+        _destroyed: false,
+        [Symbol(refed)]: false,
+        [Symbol(kHasPrimitive)]: false,
+        [Symbol(asyncId)]: 1183,
+        [Symbol(triggerId)]: 1181,
+        [Symbol(kAsyncContextFrame)]: undefined
+      },
+      [Symbol(kBuffer)]: null,
+      [Symbol(kBufferCb)]: null,
+      [Symbol(kBufferGen)]: null,
+      [Symbol(shapeMode)]: true,
+      [Symbol(kCapture)]: false,
+      [Symbol(kSetNoDelay)]: false,
+      [Symbol(kSetKeepAlive)]: true,
+      [Symbol(kSetKeepAliveInitialDelay)]: 1,
+      [Symbol(kBytesRead)]: 0,
+      [Symbol(kBytesWritten)]: 0,
+      [Symbol(connect-options)]: [Object]
+    },
+    [Symbol(kOutHeaders)]: [Object: null prototype] {
+      accept: [Array],
+      'content-type': [Array],
+      'user-agent': [Array],
+      'content-length': [Array],
+      'accept-encoding': [Array],
+      host: [Array]
+    },
+    [Symbol(errored)]: null,
+    [Symbol(kHighWaterMark)]: 65536,
+    [Symbol(kRejectNonStandardBodyWrites)]: false,
+    [Symbol(kUniqueHeaders)]: null
+  },
+  response: {
+    status: 400,
+    statusText: 'Bad Request',
+    headers: Object [AxiosHeaders] {
+      date: 'Sat, 12 Jul 2025 02:20:19 GMT',
+      'content-type': 'application/json',
+      'content-length': '79',
+      connection: 'keep-alive',
+      'cache-control': 'no-store',
+      pragma: 'no-cache',
+      'set-cookie': [Array],
+      'strict-transport-security': 'max-age=31536000; includeSubDomains; preload',
+      'x-discord-features': 'oauth',
+      via: '1.1 google',
+      'alt-svc': 'h3=":443"; ma=86400',
+      'cf-cache-status': 'DYNAMIC',
+      'report-to': '{"endpoints":[{"url":"https:\\/\\/a.nel.cloudflare.com\\/report\\/v4?s=g3VHgV8BgsejPfHfOhGkZNzhCgsp3rWKdwHkG4lAbFABcB1pwfjq3Lef055qBl9VN4yC2JmlF3CqB50mdVsGIu%2BN8BmRoZoJ83m1IX6FG5d5bi0HtsQ784SZ%2Fq34"}],"group":"cf-nel","max_age":604800}',
+      nel: '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}',
+      'x-content-type-options': 'nosniff',
+      'reporting-endpoints': 'csp-sentry="https://o64374.ingest.sentry.io/api/5441894/security/?sentry_key=8fbbce30bf5244ec9429546beef21870&sentry_environment=stable"',
+      'content-security-policy': "frame-ancestors 'none'; default-src https://o64374.ingest.sentry.io; report-to csp-sentry; report-uri https://o64374.ingest.sentry.io/api/5441894/security/?sentry_key=8fbbce30bf5244ec9429546beef21870&sentry_environment=stable",
+      server: 'cloudflare',
+      'cf-ray': '95dd0f8c3c37efc6-PDX'
+    },
+    config: {
+      transitional: [Object],
+      adapter: [Array],
+      transformRequest: [Array],
+      transformResponse: [Array],
+      timeout: 0,
+      xsrfCookieName: 'XSRF-TOKEN',
+      xsrfHeaderName: 'X-XSRF-TOKEN',
+      maxContentLength: -1,
+      maxBodyLength: -1,
+      env: [Object],
+      validateStatus: [Function: validateStatus],
+      headers: [Object [AxiosHeaders]],
+      method: 'post',
+      url: 'https://discord.com/api/oauth2/token',
+      data: 'client_id=1392657393724424313&client_secret=P4y9r1pTFi8ux-4UhIlwUdKK0GEphvCb&grant_type=authorization_code&code=7Dw0G6n44KedS0DcmkztqP1eRgXfPw&redirect_uri=https%3A%2F%2Fleo-database-dgvrp.onrender.com%2Fapi%2Fauth%2Fdiscord%2Fcallback',
+      allowAbsoluteUrls: true
+    },
+    request: <ref *1> ClientRequest {
+      _events: [Object: null prototype],
+      _eventsCount: 7,
+      _maxListeners: undefined,
+      outputData: [],
+      outputSize: 0,
+      writable: true,
+      destroyed: true,
+      _last: false,
+      chunkedEncoding: false,
+      shouldKeepAlive: true,
+      maxRequestsOnConnectionReached: false,
+      _defaultKeepAlive: true,
+      useChunkedEncodingByDefault: true,
+      sendDate: false,
+      _removedConnection: false,
+      _removedContLen: false,
+      _removedTE: false,
+      strictContentLength: false,
+      _contentLength: 235,
+      _hasBody: true,
+      _trailer: '',
+      finished: true,
+      _headerSent: true,
+      _closed: true,
+      _header: 'POST /api/oauth2/token HTTP/1.1\r\n' +
+        'Accept: application/json, text/plain, */*\r\n' +
+        'Content-Type: application/x-www-form-urlencoded\r\n' +
+        'User-Agent: axios/1.10.0\r\n' +
+        'Content-Length: 235\r\n' +
+        'Accept-Encoding: gzip, compress, deflate, br\r\n' +
+        'Host: discord.com\r\n' +
+        'Connection: keep-alive\r\n' +
+        '\r\n',
+      _keepAliveTimeout: 0,
+      _onPendingData: [Function: nop],
+      agent: [Agent],
+      socketPath: undefined,
+      method: 'POST',
+      maxHeaderSize: undefined,
+      insecureHTTPParser: undefined,
+      joinDuplicateHeaders: undefined,
+      path: '/api/oauth2/token',
+      _ended: true,
+      res: [IncomingMessage],
+      aborted: false,
+      timeoutCb: null,
+      upgradeOrConnect: false,
+      parser: null,
+      maxHeadersCount: null,
+      reusedSocket: true,
+      host: 'discord.com',
+      protocol: 'https:',
+      _redirectable: [Writable],
+      [Symbol(shapeMode)]: false,
+      [Symbol(kCapture)]: false,
+      [Symbol(kBytesWritten)]: 0,
+      [Symbol(kNeedDrain)]: false,
+      [Symbol(corked)]: 0,
+      [Symbol(kChunkedBuffer)]: [],
+      [Symbol(kChunkedLength)]: 0,
+      [Symbol(kSocket)]: [TLSSocket],
+      [Symbol(kOutHeaders)]: [Object: null prototype],
+      [Symbol(errored)]: null,
+      [Symbol(kHighWaterMark)]: 65536,
+      [Symbol(kRejectNonStandardBodyWrites)]: false,
+      [Symbol(kUniqueHeaders)]: null
+    },
+    data: {
+      error: 'invalid_grant',
+      error_description: 'Invalid "code" in request.'
+    }
+  },
+  status: 400
+}
+Discord OAuth callback error: Error: Failed to authenticate with Discord
+    at DiscordOAuthServiceImpl.exchangeCode (file:///opt/render/project/src/dist/index.js:816:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async file:///opt/render/project/src/dist/index.js:1144:37
+2:20:19 AM [express] HEAD /api/auth/discord/callback 500 in 132ms
+Generated new session ID: tay1d23shfz27rb74xmgm
+=== REQUEST SESSION DEBUG ===
+URL: /api/auth/discord/callback?code=7Dw0G6n44KedS0DcmkztqP1eRgXfPw&state=discord_1752286784803
+Method: HEAD
+Session ID: tay1d23shfz27rb74xmgm
+Session Cookie from header: undefined
+Session data keys: [ 'cookie' ]
+=== END SESSION DEBUG ===
+Discord callback received - Code: true State: discord_1752286784803
+Generated new session ID: 3oma3c3d57yg46re2s03r
+=== REQUEST SESSION DEBUG ===
+URL: /favicon.ico
+Method: GET
+Session ID: 3oma3c3d57yg46re2s03r
+Session Cookie from header: undefined
+Session data keys: [ 'cookie' ]
+=== END SESSION DEBUG ===
+Generated new session ID: v95q0pjeyots3ceoppwy
+=== REQUEST SESSION DEBUG ===
+URL: /api/auth/discord/callback?code=7Dw0G6n44KedS0DcmkztqP1eRgXfPw&state=discord_1752286784803
+Method: HEAD
+Session ID: v95q0pjeyots3ceoppwy
+Session Cookie from header: undefined
+Session data keys: [ 'cookie' ]
+=== END SESSION DEBUG ===
+Discord callback received - Code: true State: discord_1752286784803
+Discord OAuth error: AxiosError: Request failed with status code 400
+    at settle (file:///opt/render/project/src/node_modules/axios/lib/core/settle.js:19:12)
+    at IncomingMessage.handleStreamEnd (file:///opt/render/project/src/node_modules/axios/lib/adapters/http.js:599:11)
+    at IncomingMessage.emit (node:events:530:35)
+    at endReadableNT (node:internal/streams/readable:1698:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21)
+    at Axios.request (file:///opt/render/project/src/node_modules/axios/lib/core/Axios.js:45:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async DiscordOAuthServiceImpl.exchangeCode (file:///opt/render/project/src/dist/index.js:789:29)
+    at async file:///opt/render/project/src/dist/index.js:1144:37 {
+  code: 'ERR_BAD_REQUEST',
+  config: {
+    transitional: {
+      silentJSONParsing: true,
+      forcedJSONParsing: true,
+      clarifyTimeoutError: false
+    },
+    adapter: [ 'xhr', 'http', 'fetch' ],
+    transformRequest: [ [Function: transformRequest] ],
+    transformResponse: [ [Function: transformResponse] ],
+    timeout: 0,
+    xsrfCookieName: 'XSRF-TOKEN',
+    xsrfHeaderName: 'X-XSRF-TOKEN',
+    maxContentLength: -1,
+    maxBodyLength: -1,
+    env: { FormData: [Function [FormData]], Blob: [class Blob] },
+    validateStatus: [Function: validateStatus],
+    headers: Object [AxiosHeaders] {
+      Accept: 'application/json, text/plain, */*',
+      'Content-Type': 'application/x-www-form-urlencoded',
+      'User-Agent': 'axios/1.10.0',
+      'Content-Length': '235',
+      'Accept-Encoding': 'gzip, compress, deflate, br'
+    },
+    method: 'post',
+    url: 'https://discord.com/api/oauth2/token',
+    data: 'client_id=1392657393724424313&client_secret=P4y9r1pTFi8ux-4UhIlwUdKK0GEphvCb&grant_type=authorization_code&code=7Dw0G6n44KedS0DcmkztqP1eRgXfPw&redirect_uri=https%3A%2F%2Fleo-database-dgvrp.onrender.com%2Fapi%2Fauth%2Fdiscord%2Fcallback',
+    allowAbsoluteUrls: true
+  },
+  request: <ref *1> ClientRequest {
+    _events: [Object: null prototype] {
+      abort: [Function (anonymous)],
+      aborted: [Function (anonymous)],
+      connect: [Function (anonymous)],
+      error: [Function (anonymous)],
+      socket: [Function (anonymous)],
+      timeout: [Function (anonymous)],
+      finish: [Function: requestOnFinish]
+    },
+    _eventsCount: 7,
+    _maxListeners: undefined,
+    outputData: [],
+    outputSize: 0,
+    writable: true,
+    destroyed: true,
+    _last: false,
+    chunkedEncoding: false,
+    shouldKeepAlive: true,
+    maxRequestsOnConnectionReached: false,
+    _defaultKeepAlive: true,
+    useChunkedEncodingByDefault: true,
+    sendDate: false,
+    _removedConnection: false,
+    _removedContLen: false,
+    _removedTE: false,
+    strictContentLength: false,
+    _contentLength: 235,
+    _hasBody: true,
+    _trailer: '',
+    finished: true,
+    _headerSent: true,
+    _closed: true,
+    _header: 'POST /api/oauth2/token HTTP/1.1\r\n' +
+      'Accept: application/json, text/plain, */*\r\n' +
+      'Content-Type: application/x-www-form-urlencoded\r\n' +
+      'User-Agent: axios/1.10.0\r\n' +
+      'Content-Length: 235\r\n' +
+      'Accept-Encoding: gzip, compress, deflate, br\r\n' +
+      'Host: discord.com\r\n' +
+      'Connection: keep-alive\r\n' +
+      '\r\n',
+    _keepAliveTimeout: 0,
+    _onPendingData: [Function: nop],
+    agent: Agent {
+      _events: [Object: null prototype],
+      _eventsCount: 2,
+      _maxListeners: undefined,
+      defaultPort: 443,
+      protocol: 'https:',
+      options: [Object: null prototype],
+      requests: [Object: null prototype] {},
+      sockets: [Object: null prototype],
+      freeSockets: [Object: null prototype],
+      keepAliveMsecs: 1000,
+      keepAlive: true,
+      maxSockets: Infinity,
+      maxFreeSockets: 256,
+      scheduling: 'lifo',
+      maxTotalSockets: Infinity,
+      totalSocketCount: 2,
+      maxCachedSessions: 100,
+      _sessionCache: [Object],
+      [Symbol(shapeMode)]: false,
+      [Symbol(kCapture)]: false
+    },
+    socketPath: undefined,
+    method: 'POST',
+    maxHeaderSize: undefined,
+    insecureHTTPParser: undefined,
+    joinDuplicateHeaders: undefined,
+    path: '/api/oauth2/token',
+    _ended: true,
+    res: IncomingMessage {
+      _events: [Object],
+      _readableState: [ReadableState],
+      _maxListeners: undefined,
+      socket: null,
+      httpVersionMajor: 1,
+      httpVersionMinor: 1,
+      httpVersion: '1.1',
+      complete: true,
+      rawHeaders: [Array],
+      rawTrailers: [],
+      joinDuplicateHeaders: undefined,
+      aborted: false,
+      upgrade: false,
+      url: '',
+      method: null,
+      statusCode: 400,
+      statusMessage: 'Bad Request',
+      client: [TLSSocket],
+      _consuming: false,
+      _dumped: false,
+      req: [Circular *1],
+      _eventsCount: 4,
+      responseUrl: 'https://discord.com/api/oauth2/token',
+      redirects: [],
+      [Symbol(shapeMode)]: true,
+      [Symbol(kCapture)]: false,
+      [Symbol(kHeaders)]: [Object],
+      [Symbol(kHeadersCount)]: 44,
+      [Symbol(kTrailers)]: null,
+      [Symbol(kTrailersCount)]: 0
+    },
+    aborted: false,
+    timeoutCb: null,
+    upgradeOrConnect: false,
+    parser: null,
+    maxHeadersCount: null,
+    reusedSocket: true,
+    host: 'discord.com',
+    protocol: 'https:',
+    _redirectable: Writable {
+      _events: [Object],
+      _writableState: [WritableState],
+      _maxListeners: undefined,
+      _options: [Object],
+      _ended: true,
+      _ending: true,
+      _redirectCount: 0,
+      _redirects: [],
+      _requestBodyLength: 235,
+      _requestBodyBuffers: [],
+      _eventsCount: 3,
+      _onNativeResponse: [Function (anonymous)],
+      _currentRequest: [Circular *1],
+      _currentUrl: 'https://discord.com/api/oauth2/token',
+      [Symbol(shapeMode)]: true,
+      [Symbol(kCapture)]: false
+    },
+    [Symbol(shapeMode)]: false,
+    [Symbol(kCapture)]: false,
+    [Symbol(kBytesWritten)]: 0,
+    [Symbol(kNeedDrain)]: false,
+    [Symbol(corked)]: 0,
+    [Symbol(kChunkedBuffer)]: [],
+    [Symbol(kChunkedLength)]: 0,
+    [Symbol(kSocket)]: TLSSocket {
+      _tlsOptions: [Object],
+      _secureEstablished: true,
+      _securePending: false,
+      _newSessionPending: false,
+      _controlReleased: true,
+      secureConnecting: false,
+      _SNICallback: null,
+      servername: 'discord.com',
+      alpnProtocol: false,
+      authorized: true,
+      authorizationError: null,
+      encrypted: true,
+      _events: [Object: null prototype],
+      _eventsCount: 9,
+      connecting: false,
+      _hadError: false,
+      _parent: null,
+      _host: 'discord.com',
+      _closeAfterHandlingError: false,
+      _readableState: [ReadableState],
+      _writableState: [WritableState],
+      allowHalfOpen: false,
+      _maxListeners: undefined,
+      _sockname: null,
+      _pendingData: null,
+      _pendingEncoding: '',
+      server: undefined,
+      _server: null,
+      ssl: [TLSWrap],
+      _requestCert: true,
+      _rejectUnauthorized: true,
+      timeout: 5000,
+      parser: null,
+      _httpMessage: null,
+      autoSelectFamilyAttemptedAddresses: [Array],
+      [Symbol(alpncallback)]: null,
+      [Symbol(res)]: [TLSWrap],
+      [Symbol(verified)]: true,
+      [Symbol(pendingSession)]: null,
+      [Symbol(async_id_symbol)]: -1,
+      [Symbol(kHandle)]: [TLSWrap],
+      [Symbol(lastWriteQueueSize)]: 0,
+      [Symbol(timeout)]: Timeout {
+        _idleTimeout: 5000,
+        _idlePrev: [TimersList],
+        _idleNext: [Timeout],
+        _idleStart: 20608,
+        _onTimeout: [Function: bound ],
+        _timerArgs: undefined,
+        _repeat: null,
+        _destroyed: false,
+        [Symbol(refed)]: false,
+        [Symbol(kHasPrimitive)]: false,
+        [Symbol(asyncId)]: 1239,
+        [Symbol(triggerId)]: 1237,
+        [Symbol(kAsyncContextFrame)]: undefined
+      },
+      [Symbol(kBuffer)]: null,
+      [Symbol(kBufferCb)]: null,
+      [Symbol(kBufferGen)]: null,
+      [Symbol(shapeMode)]: true,
+      [Symbol(kCapture)]: false,
+      [Symbol(kSetNoDelay)]: false,
+      [Symbol(kSetKeepAlive)]: true,
+      [Symbol(kSetKeepAliveInitialDelay)]: 1,
+      [Symbol(kBytesRead)]: 0,
+      [Symbol(kBytesWritten)]: 0,
+      [Symbol(connect-options)]: [Object]
+    },
+    [Symbol(kOutHeaders)]: [Object: null prototype] {
+      accept: [Array],
+      'content-type': [Array],
+      'user-agent': [Array],
+      'content-length': [Array],
+      'accept-encoding': [Array],
+      host: [Array]
+    },
+    [Symbol(errored)]: null,
+    [Symbol(kHighWaterMark)]: 65536,
+    [Symbol(kRejectNonStandardBodyWrites)]: false,
+    [Symbol(kUniqueHeaders)]: null
+  },
+  response: {
+    status: 400,
+    statusText: 'Bad Request',
+    headers: Object [AxiosHeaders] {
+      date: 'Sat, 12 Jul 2025 02:20:19 GMT',
+      'content-type': 'application/json',
+      'content-length': '79',
+      connection: 'keep-alive',
+      'cache-control': 'no-store',
+      pragma: 'no-cache',
+      'set-cookie': [Array],
+      'strict-transport-security': 'max-age=31536000; includeSubDomains; preload',
+      'x-discord-features': 'oauth',
+      via: '1.1 google',
+      'alt-svc': 'h3=":443"; ma=86400',
+      'cf-cache-status': 'DYNAMIC',
+      'report-to': '{"endpoints":[{"url":"https:\\/\\/a.nel.cloudflare.com\\/report\\/v4?s=4KE65UPPwR5BC%2FbJrhZwO94rS6HeMA2Un35O7sJO3zQ1QwlPClEv89eADtLqjLN3qS%2B8wPrlgURBLZ6VlDMYGZSBmSKvSvlQLAXJZ5588iUME72ydCHenPjLvTy8"}],"group":"cf-nel","max_age":604800}',
+      nel: '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}',
+      'x-content-type-options': 'nosniff',
+      'reporting-endpoints': 'csp-sentry="https://o64374.ingest.sentry.io/api/5441894/security/?sentry_key=8fbbce30bf5244ec9429546beef21870&sentry_environment=stable"',
+      'content-security-policy': "frame-ancestors 'none'; default-src https://o64374.ingest.sentry.io; report-to csp-sentry; report-uri https://o64374.ingest.sentry.io/api/5441894/security/?sentry_key=8fbbce30bf5244ec9429546beef21870&sentry_environment=stable",
+      server: 'cloudflare',
+      'cf-ray': '95dd0f8d1d2eefc6-PDX'
+    },
+    config: {
+      transitional: [Object],
+      adapter: [Array],
+      transformRequest: [Array],
+      transformResponse: [Array],
+      timeout: 0,
+      xsrfCookieName: 'XSRF-TOKEN',
+      xsrfHeaderName: 'X-XSRF-TOKEN',
+      maxContentLength: -1,
+2:20:19 AM [express] HEAD /api/auth/discord/callback 500 in 135ms
+      maxBodyLength: -1,
+      env: [Object],
+      validateStatus: [Function: validateStatus],
+      headers: [Object [AxiosHeaders]],
+      method: 'post',
+      url: 'https://discord.com/api/oauth2/token',
+      data: 'client_id=1392657393724424313&client_secret=P4y9r1pTFi8ux-4UhIlwUdKK0GEphvCb&grant_type=authorization_code&code=7Dw0G6n44KedS0DcmkztqP1eRgXfPw&redirect_uri=https%3A%2F%2Fleo-database-dgvrp.onrender.com%2Fapi%2Fauth%2Fdiscord%2Fcallback',
+      allowAbsoluteUrls: true
+    },
+    request: <ref *1> ClientRequest {
+      _events: [Object: null prototype],
+      _eventsCount: 7,
+      _maxListeners: undefined,
+      outputData: [],
+      outputSize: 0,
+      writable: true,
+      destroyed: true,
+      _last: false,
+      chunkedEncoding: false,
+      shouldKeepAlive: true,
+      maxRequestsOnConnectionReached: false,
+      _defaultKeepAlive: true,
+      useChunkedEncodingByDefault: true,
+      sendDate: false,
+      _removedConnection: false,
+      _removedContLen: false,
+      _removedTE: false,
+      strictContentLength: false,
+      _contentLength: 235,
+      _hasBody: true,
+      _trailer: '',
+      finished: true,
+      _headerSent: true,
+      _closed: true,
+      _header: 'POST /api/oauth2/token HTTP/1.1\r\n' +
+        'Accept: application/json, text/plain, */*\r\n' +
+        'Content-Type: application/x-www-form-urlencoded\r\n' +
+        'User-Agent: axios/1.10.0\r\n' +
+        'Content-Length: 235\r\n' +
+        'Accept-Encoding: gzip, compress, deflate, br\r\n' +
+        'Host: discord.com\r\n' +
+        'Connection: keep-alive\r\n' +
+        '\r\n',
+      _keepAliveTimeout: 0,
+      _onPendingData: [Function: nop],
+      agent: [Agent],
+      socketPath: undefined,
+      method: 'POST',
+      maxHeaderSize: undefined,
+      insecureHTTPParser: undefined,
+      joinDuplicateHeaders: undefined,
+      path: '/api/oauth2/token',
+      _ended: true,
+      res: [IncomingMessage],
+      aborted: false,
+      timeoutCb: null,
+      upgradeOrConnect: false,
+      parser: null,
+      maxHeadersCount: null,
+      reusedSocket: true,
+      host: 'discord.com',
+      protocol: 'https:',
+      _redirectable: [Writable],
+      [Symbol(shapeMode)]: false,
+      [Symbol(kCapture)]: false,
+      [Symbol(kBytesWritten)]: 0,
+      [Symbol(kNeedDrain)]: false,
+      [Symbol(corked)]: 0,
+      [Symbol(kChunkedBuffer)]: [],
+      [Symbol(kChunkedLength)]: 0,
+      [Symbol(kSocket)]: [TLSSocket],
+      [Symbol(kOutHeaders)]: [Object: null prototype],
+      [Symbol(errored)]: null,
+      [Symbol(kHighWaterMark)]: 65536,
+      [Symbol(kRejectNonStandardBodyWrites)]: false,
+      [Symbol(kUniqueHeaders)]: null
+    },
+    data: {
+      error: 'invalid_grant',
+      error_description: 'Invalid "code" in request.'
+    }
+  },
+  status: 400
+}
+Discord OAuth callback error: Error: Failed to authenticate with Discord
+    at DiscordOAuthServiceImpl.exchangeCode (file:///opt/render/project/src/dist/index.js:816:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async file:///opt/render/project/src/dist/index.js:1144:37
+Discord OAuth error: AxiosError: Request failed with status code 400
+    at settle (file:///opt/render/project/src/node_modules/axios/lib/core/settle.js:19:12)
+    at IncomingMessage.handleStreamEnd (file:///opt/render/project/src/node_modules/axios/lib/adapters/http.js:599:11)
+    at IncomingMessage.emit (node:events:530:35)
+    at endReadableNT (node:internal/streams/readable:1698:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21)
+    at Axios.request (file:///opt/render/project/src/node_modules/axios/lib/core/Axios.js:45:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async DiscordOAuthServiceImpl.exchangeCode (file:///opt/render/project/src/dist/index.js:789:29)
+    at async file:///opt/render/project/src/dist/index.js:1144:37 {
+  code: 'ERR_BAD_REQUEST',
+    maxContentLength: -1,
+    maxBodyLength: -1,
+    env: { FormData: [Function [FormData]], Blob: [class Blob] },
+    validateStatus: [Function: validateStatus],
+    headers: Object [AxiosHeaders] {
+      Accept: 'application/json, text/plain, */*',
+      'Content-Type': 'application/x-www-form-urlencoded',
+      'User-Agent': 'axios/1.10.0',
+      'Content-Length': '235',
+      'Accept-Encoding': 'gzip, compress, deflate, br'
+    },
+    method: 'post',
+    url: 'https://discord.com/api/oauth2/token',
+    data: 'client_id=1392657393724424313&client_secret=P4y9r1pTFi8ux-4UhIlwUdKK0GEphvCb&grant_type=authorization_code&code=7Dw0G6n44KedS0DcmkztqP1eRgXfPw&redirect_uri=https%3A%2F%2Fleo-database-dgvrp.onrender.com%2Fapi%2Fauth%2Fdiscord%2Fcallback',
+    allowAbsoluteUrls: true
+  },
+  request: <ref *1> ClientRequest {
+    _events: [Object: null prototype] {
+      abort: [Function (anonymous)],
+      aborted: [Function (anonymous)],
+      connect: [Function (anonymous)],
+      error: [Function (anonymous)],
+      socket: [Function (anonymous)],
+      timeout: [Function (anonymous)],
+      finish: [Function: requestOnFinish]
+    },
+    _eventsCount: 7,
+    _maxListeners: undefined,
+    outputData: [],
+    outputSize: 0,
+    writable: true,
+    destroyed: true,
+    _last: false,
+    chunkedEncoding: false,
+    shouldKeepAlive: true,
+    maxRequestsOnConnectionReached: false,
+    _defaultKeepAlive: true,
+    useChunkedEncodingByDefault: true,
+    sendDate: false,
+    _removedConnection: false,
+    _removedContLen: false,
+    _removedTE: false,
+    strictContentLength: false,
+    _contentLength: 235,
+    _hasBody: true,
+    _trailer: '',
+    finished: true,
+    _headerSent: true,
+    _closed: true,
+    _header: 'POST /api/oauth2/token HTTP/1.1\r\n' +
+      'Accept: application/json, text/plain, */*\r\n' +
+      'Content-Type: application/x-www-form-urlencoded\r\n' +
+      'User-Agent: axios/1.10.0\r\n' +
+      'Content-Length: 235\r\n' +
+      'Accept-Encoding: gzip, compress, deflate, br\r\n' +
+      'Host: discord.com\r\n' +
+      'Connection: keep-alive\r\n' +
+      '\r\n',
+    _keepAliveTimeout: 0,
+    _onPendingData: [Function: nop],
+    agent: Agent {
+      _events: [Object: null prototype],
+      _eventsCount: 2,
+      _maxListeners: undefined,
+      defaultPort: 443,
+      protocol: 'https:',
+      options: [Object: null prototype],
+      requests: [Object: null prototype] {},
+      sockets: [Object: null prototype] {},
+      freeSockets: [Object: null prototype],
+      keepAliveMsecs: 1000,
+      keepAlive: true,
+      maxSockets: Infinity,
+      maxFreeSockets: 256,
+      scheduling: 'lifo',
+      maxTotalSockets: Infinity,
+      totalSocketCount: 2,
+      maxCachedSessions: 100,
+      _sessionCache: [Object],
+      [Symbol(shapeMode)]: false,
+      [Symbol(kCapture)]: false
+    },
+    socketPath: undefined,
+    method: 'POST',
+    maxHeaderSize: undefined,
+    insecureHTTPParser: undefined,
+    joinDuplicateHeaders: undefined,
+    path: '/api/oauth2/token',
+    _ended: true,
+    res: IncomingMessage {
+      _events: [Object],
+      _readableState: [ReadableState],
+      _maxListeners: undefined,
+      socket: null,
+      httpVersionMajor: 1,
+      httpVersionMinor: 1,
+      httpVersion: '1.1',
+      complete: true,
+      rawHeaders: [Array],
+      rawTrailers: [],
+      joinDuplicateHeaders: undefined,
+      aborted: false,
+      upgrade: false,
+      url: '',
+      method: null,
+      statusCode: 400,
+      statusMessage: 'Bad Request',
+      client: [TLSSocket],
+      _consuming: false,
+      _dumped: false,
+      req: [Circular *1],
+      _eventsCount: 4,
+      responseUrl: 'https://discord.com/api/oauth2/token',
+      redirects: [],
+      [Symbol(shapeMode)]: true,
+      [Symbol(kCapture)]: false,
+      [Symbol(kHeaders)]: [Object],
+      [Symbol(kHeadersCount)]: 44,
+      [Symbol(kTrailers)]: null,
+      [Symbol(kTrailersCount)]: 0
+    },
+    aborted: false,
+    timeoutCb: null,
+    upgradeOrConnect: false,
+    parser: null,
+    maxHeadersCount: null,
+    reusedSocket: true,
+    host: 'discord.com',
+    protocol: 'https:',
+    _redirectable: Writable {
+      _events: [Object],
+      _writableState: [WritableState],
+      _maxListeners: undefined,
+      _options: [Object],
+      _ended: true,
+      _ending: true,
+      _redirectCount: 0,
+      _redirects: [],
+      _requestBodyLength: 235,
+      _requestBodyBuffers: [],
+      _eventsCount: 3,
+      _onNativeResponse: [Function (anonymous)],
+      _currentRequest: [Circular *1],
+      _currentUrl: 'https://discord.com/api/oauth2/token',
+      [Symbol(shapeMode)]: true,
+      [Symbol(kCapture)]: false
+    },
+    [Symbol(shapeMode)]: false,
+    [Symbol(kCapture)]: false,
+    [Symbol(kBytesWritten)]: 0,
+    [Symbol(kNeedDrain)]: false,
+    [Symbol(corked)]: 0,
+    [Symbol(kChunkedBuffer)]: [],
+    [Symbol(kChunkedLength)]: 0,
+    [Symbol(kSocket)]: TLSSocket {
+      _tlsOptions: [Object],
+      _secureEstablished: true,
+      _securePending: false,
+      _newSessionPending: false,
+      _controlReleased: true,
+      secureConnecting: false,
+      _SNICallback: null,
+      servername: 'discord.com',
+      alpnProtocol: false,
+      authorized: true,
+      authorizationError: null,
+      encrypted: true,
+      _events: [Object: null prototype],
+      _eventsCount: 9,
+      connecting: false,
+      _hadError: false,
+      _parent: null,
+      _host: 'discord.com',
+      _closeAfterHandlingError: false,
+      _readableState: [ReadableState],
+      _writableState: [WritableState],
+      allowHalfOpen: false,
+      _maxListeners: undefined,
+      _sockname: null,
+      _pendingData: null,
+      _pendingEncoding: '',
+      server: undefined,
+      _server: null,
+      ssl: [TLSWrap],
+      _requestCert: true,
+      _rejectUnauthorized: true,
+      timeout: 5000,
+      parser: null,
+      _httpMessage: null,
+      autoSelectFamilyAttemptedAddresses: [Array],
+      [Symbol(alpncallback)]: null,
+      [Symbol(res)]: [TLSWrap],
+      [Symbol(verified)]: true,
+      [Symbol(pendingSession)]: null,
+      [Symbol(async_id_symbol)]: -1,
+      [Symbol(kHandle)]: [TLSWrap],
+      [Symbol(lastWriteQueueSize)]: 0,
+      [Symbol(timeout)]: Timeout {
+        _idleTimeout: 5000,
+        _idlePrev: [TimersList],
+        _idleNext: [Timeout],
+        _idleStart: 20631,
+        _onTimeout: [Function: bound ],
+        _timerArgs: undefined,
+        _repeat: null,
+        _destroyed: false,
+        [Symbol(refed)]: false,
+        [Symbol(kHasPrimitive)]: false,
+        [Symbol(asyncId)]: 1264,
+        [Symbol(triggerId)]: 1262,
+        [Symbol(kAsyncContextFrame)]: undefined
+      },
+      [Symbol(kBuffer)]: null,
+      [Symbol(kBufferCb)]: null,
+      [Symbol(kBufferGen)]: null,
+      [Symbol(shapeMode)]: true,
+      [Symbol(kCapture)]: false,
+      [Symbol(kSetNoDelay)]: false,
+      [Symbol(kSetKeepAlive)]: true,
+      [Symbol(kSetKeepAliveInitialDelay)]: 1,
+      [Symbol(kBytesRead)]: 0,
+      [Symbol(kBytesWritten)]: 0,
+      [Symbol(connect-options)]: [Object]
+    },
+    [Symbol(kOutHeaders)]: [Object: null prototype] {
+      accept: [Array],
+      'content-type': [Array],
+      'user-agent': [Array],
+      'content-length': [Array],
+      'accept-encoding': [Array],
+      host: [Array]
+    },
+    [Symbol(errored)]: null,
+    [Symbol(kHighWaterMark)]: 65536,
+    [Symbol(kRejectNonStandardBodyWrites)]: false,
+    [Symbol(kUniqueHeaders)]: null
+  },
+  response: {
+    status: 400,
+    statusText: 'Bad Request',
+    headers: Object [AxiosHeaders] {
+      date: 'Sat, 12 Jul 2025 02:20:19 GMT',
+      'content-type': 'application/json',
+      'content-length': '79',
+      connection: 'keep-alive',
+      'cache-control': 'no-store',
+      pragma: 'no-cache',
+      'set-cookie': [Array],
+      'strict-transport-security': 'max-age=31536000; includeSubDomains; preload',
+      'x-discord-features': 'oauth',
+      via: '1.1 google',
+2:20:19 AM [express] HEAD /api/auth/discord/callback 500 in 122ms
+      'alt-svc': 'h3=":443"; ma=86400',
+      'cf-cache-status': 'DYNAMIC',
+      'report-to': '{"endpoints":[{"url":"https:\\/\\/a.nel.cloudflare.com\\/report\\/v4?s=Vy7IDyeCTsmo5CJ5hVlgPu5W1HQKuprt8J52GPxfKgrrR1RPFXBl5N2Miz4OdcN98SprtObrt2JJZudBdMpazorQdXG0IGn%2FMjZ%2FUwhfhItL%2FY6%2BLz08yRqww8e6"}],"group":"cf-nel","max_age":604800}',
+      nel: '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}',
+      'x-content-type-options': 'nosniff',
+      'reporting-endpoints': 'csp-sentry="https://o64374.ingest.sentry.io/api/5441894/security/?sentry_key=8fbbce30bf5244ec9429546beef21870&sentry_environment=stable"',
+      'content-security-policy': "frame-ancestors 'none'; default-src https://o64374.ingest.sentry.io; report-to csp-sentry; report-uri https://o64374.ingest.sentry.io/api/5441894/security/?sentry_key=8fbbce30bf5244ec9429546beef21870&sentry_environment=stable",
+      server: 'cloudflare',
+      'cf-ray': '95dd0f8d4cd88e62-PDX'
+    },
+    config: {
+      transitional: [Object],
+      adapter: [Array],
+      transformRequest: [Array],
+      transformResponse: [Array],
+      timeout: 0,
+      xsrfCookieName: 'XSRF-TOKEN',
+      xsrfHeaderName: 'X-XSRF-TOKEN',
+      maxContentLength: -1,
+      maxBodyLength: -1,
+      env: [Object],
+      validateStatus: [Function: validateStatus],
+      headers: [Object [AxiosHeaders]],
+      method: 'post',
+      url: 'https://discord.com/api/oauth2/token',
+      data: 'client_id=1392657393724424313&client_secret=P4y9r1pTFi8ux-4UhIlwUdKK0GEphvCb&grant_type=authorization_code&code=7Dw0G6n44KedS0DcmkztqP1eRgXfPw&redirect_uri=https%3A%2F%2Fleo-database-dgvrp.onrender.com%2Fapi%2Fauth%2Fdiscord%2Fcallback',
+      allowAbsoluteUrls: true
+    },
+    request: <ref *1> ClientRequest {
+      _events: [Object: null prototype],
+      _eventsCount: 7,
+      _maxListeners: undefined,
+      outputData: [],
+      outputSize: 0,
+      writable: true,
+      destroyed: true,
+      _last: false,
+      chunkedEncoding: false,
+      shouldKeepAlive: true,
+      maxRequestsOnConnectionReached: false,
+      _defaultKeepAlive: true,
+      useChunkedEncodingByDefault: true,
+      sendDate: false,
+      _removedConnection: false,
+      _removedContLen: false,
+      _removedTE: false,
+      strictContentLength: false,
+      _contentLength: 235,
+      _hasBody: true,
+      _trailer: '',
+      finished: true,
+      _headerSent: true,
+      _closed: true,
+      _header: 'POST /api/oauth2/token HTTP/1.1\r\n' +
+        'Accept: application/json, text/plain, */*\r\n' +
+        'Content-Type: application/x-www-form-urlencoded\r\n' +
+        'User-Agent: axios/1.10.0\r\n' +
+        'Content-Length: 235\r\n' +
+        'Accept-Encoding: gzip, compress, deflate, br\r\n' +
+        'Host: discord.com\r\n' +
+        'Connection: keep-alive\r\n' +
+        '\r\n',
+      _keepAliveTimeout: 0,
+      _onPendingData: [Function: nop],
+      agent: [Agent],
+      socketPath: undefined,
+      method: 'POST',
+      maxHeaderSize: undefined,
+      insecureHTTPParser: undefined,
+      joinDuplicateHeaders: undefined,
+      path: '/api/oauth2/token',
+      _ended: true,
+      res: [IncomingMessage],
+      aborted: false,
+      timeoutCb: null,
+      upgradeOrConnect: false,
+      parser: null,
+      maxHeadersCount: null,
+      reusedSocket: true,
+      host: 'discord.com',
+      protocol: 'https:',
+      _redirectable: [Writable],
+      [Symbol(shapeMode)]: false,
+      [Symbol(kCapture)]: false,
+      [Symbol(kBytesWritten)]: 0,
+      [Symbol(kNeedDrain)]: false,
+      [Symbol(corked)]: 0,
+      [Symbol(kChunkedBuffer)]: [],
+      [Symbol(kChunkedLength)]: 0,
+      [Symbol(kSocket)]: [TLSSocket],
+      [Symbol(kOutHeaders)]: [Object: null prototype],
+      [Symbol(errored)]: null,
+      [Symbol(kHighWaterMark)]: 65536,
+      [Symbol(kRejectNonStandardBodyWrites)]: false,
+      [Symbol(kUniqueHeaders)]: null
+    },
+    data: {
+      error: 'invalid_grant',
+      error_description: 'Invalid "code" in request.'
+    }
+  },
+  status: 400
+}
+Discord OAuth callback error: Error: Failed to authenticate with Discord
+    at DiscordOAuthServiceImpl.exchangeCode (file:///opt/render/project/src/dist/index.js:816:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async file:///opt/render/project/src/dist/index.js:1144:37
+Generated new session ID: k4xoym67vkeh2sphv30qx
+=== REQUEST SESSION DEBUG ===
+URL: /api/auth/discord/callback?code=7Dw0G6n44KedS0DcmkztqP1eRgXfPw&state=discord_1752286784803
+Method: GET
+Session ID: k4xoym67vkeh2sphv30qx
+Session Cookie from header: undefined
+Session data keys: [ 'cookie' ]
+=== END SESSION DEBUG ===
+Discord callback received - Code: true State: discord_1752286784803
+Discord OAuth error: AxiosError: Request failed with status code 400
+    at settle (file:///opt/render/project/src/node_modules/axios/lib/core/settle.js:19:12)
+    at IncomingMessage.handleStreamEnd (file:///opt/render/project/src/node_modules/axios/lib/adapters/http.js:599:11)
+    at IncomingMessage.emit (node:events:530:35)
+    at endReadableNT (node:internal/streams/readable:1698:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21)
+    at Axios.request (file:///opt/render/project/src/node_modules/axios/lib/core/Axios.js:45:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async DiscordOAuthServiceImpl.exchangeCode (file:///opt/render/project/src/dist/index.js:789:29)
+    at async file:///opt/render/project/src/dist/index.js:1144:37 {
+  code: 'ERR_BAD_REQUEST',
+  config: {
+    transitional: {
+      silentJSONParsing: true,
+      forcedJSONParsing: true,
+      clarifyTimeoutError: false
+    },
+    adapter: [ 'xhr', 'http', 'fetch' ],
+    transformRequest: [ [Function: transformRequest] ],
+    transformResponse: [ [Function: transformResponse] ],
+    timeout: 0,
+    xsrfCookieName: 'XSRF-TOKEN',
+    xsrfHeaderName: 'X-XSRF-TOKEN',
+    maxContentLength: -1,
+    maxBodyLength: -1,
+    env: { FormData: [Function [FormData]], Blob: [class Blob] },
+    validateStatus: [Function: validateStatus],
+    headers: Object [AxiosHeaders] {
+      Accept: 'application/json, text/plain, */*',
+      'Content-Type': 'application/x-www-form-urlencoded',
+      'User-Agent': 'axios/1.10.0',
+      'Content-Length': '235',
+      'Accept-Encoding': 'gzip, compress, deflate, br'
+    },
+    method: 'post',
+    url: 'https://discord.com/api/oauth2/token',
+    data: 'client_id=1392657393724424313&client_secret=P4y9r1pTFi8ux-4UhIlwUdKK0GEphvCb&grant_type=authorization_code&code=7Dw0G6n44KedS0DcmkztqP1eRgXfPw&redirect_uri=https%3A%2F%2Fleo-database-dgvrp.onrender.com%2Fapi%2Fauth%2Fdiscord%2Fcallback',
+    allowAbsoluteUrls: true
+  },
+  request: <ref *1> ClientRequest {
+    _events: [Object: null prototype] {
+      abort: [Function (anonymous)],
+      aborted: [Function (anonymous)],
+      connect: [Function (anonymous)],
+      error: [Function (anonymous)],
+      socket: [Function (anonymous)],
+      timeout: [Function (anonymous)],
+      finish: [Function: requestOnFinish]
+    },
+    _eventsCount: 7,
+    _maxListeners: undefined,
+    outputData: [],
+    outputSize: 0,
+    writable: true,
+    destroyed: true,
+    _last: false,
+    chunkedEncoding: false,
+    shouldKeepAlive: true,
+    maxRequestsOnConnectionReached: false,
+    _defaultKeepAlive: true,
+    useChunkedEncodingByDefault: true,
+    sendDate: false,
+    _removedConnection: false,
+    _removedContLen: false,
+    _removedTE: false,
+    strictContentLength: false,
+    _contentLength: 235,
+    _hasBody: true,
+    _trailer: '',
+    finished: true,
+    _headerSent: true,
+    _closed: true,
+    _header: 'POST /api/oauth2/token HTTP/1.1\r\n' +
+      'Accept: application/json, text/plain, */*\r\n' +
+      'Content-Type: application/x-www-form-urlencoded\r\n' +
+      'User-Agent: axios/1.10.0\r\n' +
+      'Content-Length: 235\r\n' +
+      'Accept-Encoding: gzip, compress, deflate, br\r\n' +
+      'Host: discord.com\r\n' +
+      'Connection: keep-alive\r\n' +
+      '\r\n',
+    _keepAliveTimeout: 0,
+    _onPendingData: [Function: nop],
+    agent: Agent {
+      _events: [Object: null prototype],
+      _eventsCount: 2,
+      _maxListeners: undefined,
+      defaultPort: 443,
+      protocol: 'https:',
+      options: [Object: null prototype],
+      requests: [Object: null prototype] {},
+      sockets: [Object: null prototype] {},
+      freeSockets: [Object: null prototype],
+      keepAliveMsecs: 1000,
+      keepAlive: true,
+      maxSockets: Infinity,
+      maxFreeSockets: 256,
+      scheduling: 'lifo',
+      maxTotalSockets: Infinity,
+      totalSocketCount: 2,
+      maxCachedSessions: 100,
+      _sessionCache: [Object],
+      [Symbol(shapeMode)]: false,
+      [Symbol(kCapture)]: false
+    },
+    socketPath: undefined,
+    method: 'POST',
+    maxHeaderSize: undefined,
+    insecureHTTPParser: undefined,
+    joinDuplicateHeaders: undefined,
+    path: '/api/oauth2/token',
+    _ended: true,
+    res: IncomingMessage {
+      _events: [Object],
+      _readableState: [ReadableState],
+      _maxListeners: undefined,
+      socket: null,
+      httpVersionMajor: 1,
+      httpVersionMinor: 1,
+      httpVersion: '1.1',
+      complete: true,
+      rawHeaders: [Array],
+      rawTrailers: [],
+      joinDuplicateHeaders: undefined,
+      aborted: false,
+      upgrade: false,
+      url: '',
+      method: null,
+      statusCode: 400,
+      statusMessage: 'Bad Request',
+      client: [TLSSocket],
+      _consuming: true,
+      _dumped: false,
+      req: [Circular *1],
+      _eventsCount: 4,
+      responseUrl: 'https://discord.com/api/oauth2/token',
+      redirects: [],
+      [Symbol(shapeMode)]: true,
+      [Symbol(kCapture)]: false,
+      [Symbol(kHeaders)]: [Object],
+      [Symbol(kHeadersCount)]: 44,
+      [Symbol(kTrailers)]: null,
+      [Symbol(kTrailersCount)]: 0
+    },
+    aborted: false,
+    timeoutCb: null,
+    upgradeOrConnect: false,
+    parser: null,
+    maxHeadersCount: null,
+    reusedSocket: true,
+    host: 'discord.com',
+    protocol: 'https:',
+    _redirectable: Writable {
+      _events: [Object],
+      _writableState: [WritableState],
+      _maxListeners: undefined,
+      _options: [Object],
+      _ended: true,
+      _ending: true,
+      _redirectCount: 0,
+      _redirects: [],
+      _requestBodyLength: 235,
+      _requestBodyBuffers: [],
+      _eventsCount: 3,
+      _onNativeResponse: [Function (anonymous)],
+      _currentRequest: [Circular *1],
+      _currentUrl: 'https://discord.com/api/oauth2/token',
+      [Symbol(shapeMode)]: true,
+      [Symbol(kCapture)]: false
+    },
+    [Symbol(shapeMode)]: false,
+    [Symbol(kCapture)]: false,
+    [Symbol(kBytesWritten)]: 0,
+    [Symbol(kNeedDrain)]: false,
+    [Symbol(corked)]: 0,
+    [Symbol(kChunkedBuffer)]: [],
+    [Symbol(kChunkedLength)]: 0,
+    [Symbol(kSocket)]: TLSSocket {
+      _tlsOptions: [Object],
+      _secureEstablished: true,
+      _securePending: false,
+      _newSessionPending: false,
+      _controlReleased: true,
+      secureConnecting: false,
+      _SNICallback: null,
+      servername: 'discord.com',
+      alpnProtocol: false,
+      authorized: true,
+      authorizationError: null,
+      encrypted: true,
+      _events: [Object: null prototype],
+      _eventsCount: 9,
+      connecting: false,
+      _hadError: false,
+      _parent: null,
+      _host: 'discord.com',
+      _closeAfterHandlingError: false,
+      _readableState: [ReadableState],
+      _writableState: [WritableState],
+      allowHalfOpen: false,
+      _maxListeners: undefined,
+      _sockname: null,
+      _pendingData: null,
+      _pendingEncoding: '',
+      server: undefined,
+      _server: null,
+      ssl: [TLSWrap],
+      _requestCert: true,
+      _rejectUnauthorized: true,
+      timeout: 5000,
+      parser: null,
+      _httpMessage: null,
+      autoSelectFamilyAttemptedAddresses: [Array],
+      [Symbol(alpncallback)]: null,
+      [Symbol(res)]: [TLSWrap],
+      [Symbol(verified)]: true,
+      [Symbol(pendingSession)]: null,
+      [Symbol(async_id_symbol)]: -1,
+      [Symbol(kHandle)]: [TLSWrap],
+      [Symbol(lastWriteQueueSize)]: 0,
+      [Symbol(timeout)]: Timeout {
+        _idleTimeout: 5000,
+        _idlePrev: [TimersList],
+        _idleNext: [Timeout],
+        _idleStart: 20876,
+        _onTimeout: [Function: bound ],
+        _timerArgs: undefined,
+        _repeat: null,
+        _destroyed: false,
+        [Symbol(refed)]: false,
+        [Symbol(kHasPrimitive)]: false,
+        [Symbol(asyncId)]: 1294,
+        [Symbol(triggerId)]: 1292,
+        [Symbol(kAsyncContextFrame)]: undefined
+      },
+      [Symbol(kBuffer)]: null,
+      [Symbol(kBufferCb)]: null,
+      [Symbol(kBufferGen)]: null,
+      [Symbol(shapeMode)]: true,
+      [Symbol(kCapture)]: false,
+      [Symbol(kSetNoDelay)]: false,
+      [Symbol(kSetKeepAlive)]: true,
+      [Symbol(kSetKeepAliveInitialDelay)]: 1,
+      [Symbol(kBytesRead)]: 0,
+      [Symbol(kBytesWritten)]: 0,
+      [Symbol(connect-options)]: [Object]
+    },
+    [Symbol(kOutHeaders)]: [Object: null prototype] {
+      accept: [Array],
+      'content-type': [Array],
+      'user-agent': [Array],
+      'content-length': [Array],
+      'accept-encoding': [Array],
+      host: [Array]
+    },
+    [Symbol(errored)]: null,
+    [Symbol(kHighWaterMark)]: 65536,
+    [Symbol(kRejectNonStandardBodyWrites)]: false,
+    [Symbol(kUniqueHeaders)]: null
+  },
+  response: {
+    status: 400,
+    statusText: 'Bad Request',
+    headers: Object [AxiosHeaders] {
+      date: 'Sat, 12 Jul 2025 02:20:19 GMT',
+      'content-type': 'application/json',
+      'content-length': '79',
+      connection: 'keep-alive',
+      'cache-control': 'no-store',
+      pragma: 'no-cache',
+      'set-cookie': [Array],
+      'strict-transport-security': 'max-age=31536000; includeSubDomains; preload',
+      'x-discord-features': 'oauth',
+      via: '1.1 google',
+      'alt-svc': 'h3=":443"; ma=86400',
+      'cf-cache-status': 'DYNAMIC',
+      'report-to': '{"endpoints":[{"url":"https:\\/\\/a.nel.cloudflare.com\\/report\\/v4?s=f7MygAdstwUh2OYLdJONBTW66WPrh3pIZMiHUxp3aqFawNg4H2ROTpsMdLUCEhj36b54vzg17RkJaw0uVJJJaDo%2Bidkza%2FEt6O2BoE1xpJLCTUJ4QiucVve%2Bnh5P"}],"group":"cf-nel","max_age":604800}',
+      nel: '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}',
+      'x-content-type-options': 'nosniff',
+      'reporting-endpoints': 'csp-sentry="https://o64374.ingest.sentry.io/api/5441894/security/?sentry_key=8fbbce30bf5244ec9429546beef21870&sentry_environment=stable"',
+      'content-security-policy': "frame-ancestors 'none'; default-src https://o64374.ingest.sentry.io; report-to csp-sentry; report-uri https://o64374.ingest.sentry.io/api/5441894/security/?sentry_key=8fbbce30bf5244ec9429546beef21870&sentry_environment=stable",
+      server: 'cloudflare',
+      'cf-ray': '95dd0f8ebe348e62-PDX'
+    },
+    config: {
+      transitional: [Object],
+      adapter: [Array],
+      transformRequest: [Array],
+      transformResponse: [Array],
+      timeout: 0,
+      xsrfCookieName: 'XSRF-TOKEN',
+      xsrfHeaderName: 'X-XSRF-TOKEN',
+      maxContentLength: -1,
+      maxBodyLength: -1,
+      env: [Object],
+      validateStatus: [Function: validateStatus],
+      headers: [Object [AxiosHeaders]],
+      method: 'post',
+      url: 'https://discord.com/api/oauth2/token',
+      data: 'client_id=1392657393724424313&client_secret=P4y9r1pTFi8ux-4UhIlwUdKK0GEphvCb&grant_type=authorization_code&code=7Dw0G6n44KedS0DcmkztqP1eRgXfPw&redirect_uri=https%3A%2F%2Fleo-database-dgvrp.onrender.com%2Fapi%2Fauth%2Fdiscord%2Fcallback',
+      allowAbsoluteUrls: true
+    },
+    request: <ref *1> ClientRequest {
+      _events: [Object: null prototype],
+      _eventsCount: 7,
+      _maxListeners: undefined,
+      outputData: [],
+      outputSize: 0,
+      writable: true,
+      destroyed: true,
+      _last: false,
+      chunkedEncoding: false,
+      shouldKeepAlive: true,
+      maxRequestsOnConnectionReached: false,
+      _defaultKeepAlive: true,
+      useChunkedEncodingByDefault: true,
+      sendDate: false,
+      _removedConnection: false,
+      _removedContLen: false,
+      _removedTE: false,
+      strictContentLength: false,
+      _contentLength: 235,
+      _hasBody: true,
+      _trailer: '',
+      finished: true,
+      _headerSent: true,
+      _closed: true,
+      _header: 'POST /api/oauth2/token HTTP/1.1\r\n' +
+        'Accept: application/json, text/plain, */*\r\n' +
+        'Content-Type: application/x-www-form-urlencoded\r\n' +
+        'User-Agent: axios/1.10.0\r\n' +
+        'Content-Length: 235\r\n' +
+        'Accept-Encoding: gzip, compress, deflate, br\r\n' +
+        'Host: discord.com\r\n' +
+        'Connection: keep-alive\r\n' +
+        '\r\n',
+      _keepAliveTimeout: 0,
+      _onPendingData: [Function: nop],
+      agent: [Agent],
+      socketPath: undefined,
+      method: 'POST',
+      maxHeaderSize: undefined,
+      insecureHTTPParser: undefined,
+      joinDuplicateHeaders: undefined,
+      path: '/api/oauth2/token',
+      _ended: true,
+      res: [IncomingMessage],
+      aborted: false,
+      timeoutCb: null,
+      upgradeOrConnect: false,
+      parser: null,
+      maxHeadersCount: null,
+      reusedSocket: true,
+      host: 'discord.com',
+      protocol: 'https:',
+      _redirectable: [Writable],
+      [Symbol(shapeMode)]: false,
+      [Symbol(kCapture)]: false,
+      [Symbol(kBytesWritten)]: 0,
+      [Symbol(kNeedDrain)]: false,
+      [Symbol(corked)]: 0,
+      [Symbol(kChunkedBuffer)]: [],
+      [Symbol(kChunkedLength)]: 0,
+      [Symbol(kSocket)]: [TLSSocket],
+      [Symbol(kOutHeaders)]: [Object: null prototype],
+      [Symbol(errored)]: null,
+      [Symbol(kHighWaterMark)]: 65536,
+      [Symbol(kRejectNonStandardBodyWrites)]: false,
+      [Symbol(kUniqueHeaders)]: null
+    },
+    data: {
+      error: 'invalid_grant',
+      error_description: 'Invalid "code" in request.'
+    }
+  },
+  status: 400
+}
+Discord OAuth callback error: Error: Failed to authenticate with Discord
+    at DiscordOAuthServiceImpl.exchangeCode (file:///opt/render/project/src/dist/index.js:816:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async file:///opt/render/project/src/dist/index.js:1144:37
+2:20:19 AM [express] GET /api/auth/discord/callback 500 in 144ms
+Generated new session ID: h3zrizqvaqmou3mgx617so
+=== REQUEST SESSION DEBUG ===
+URL: /favicon.ico
+Method: GET
+Session ID: h3zrizqvaqmou3mgx617so
+Session Cookie from header: undefined
+Session data keys: [ 'cookie' ]
+=== END SESSION DEBUG ===
+Generated new session ID: znw3qpwl2xj4qijj4yz24g
+=== REQUEST SESSION DEBUG ===
+URL: /api/auth/me
+Method: GET
+Session ID: znw3qpwl2xj4qijj4yz24g
+Session Cookie from header: undefined
+Session data keys: [ 'cookie' ]
+=== END SESSION DEBUG ===
+2:20:24 AM [express] GET /api/auth/me 401 in 2ms :: {"message":"Not authenticated"}
+Generated new session ID: dcpgyrxz8at3v2vdi39wia
+=== REQUEST SESSION DEBUG ===
+URL: /favicon.ico
+Method: GET
+Session ID: dcpgyrxz8at3v2vdi39wia
+Session Cookie from header: undefined
+Session data keys: [ 'cookie' ]
+=== END SESSION DEBUG ===
+Generated new session ID: dkdmi87u0fh3fv2qcsgpw3
+=== REQUEST SESSION DEBUG ===
+URL: /api/auth/discord/status
+Method: GET
+Session ID: dkdmi87u0fh3fv2qcsgpw3
+Session Cookie from header: undefined
+Session data keys: [ 'cookie' ]
+=== END SESSION DEBUG ===
+=== DISCORD STATUS CHECK ===
+Session ID: dkdmi87u0fh3fv2qcsgpw3
+Cookie header: undefined
+Session cookie name: dkdmi87u0fh3fv2qcsgpw3
+Discord verification in session: false
+Full session data: {
+  "cookie": {
+    "originalMaxAge": 7200000,
+    "expires": "2025-07-12T04:20:24.486Z",
+    "secure": true,
+    "httpOnly": true,
+    "path": "/",
+    "sameSite": "none"
+  }
+}
+Session store has: MemoryStore {
+  _events: [Object: null prototype] {
+    disconnect: [Function: ondisconnect],
+    connect: [Function: onconnect]
+  },
+  _eventsCount: 2,
+  _maxListeners: undefined,
+  options: {
+    checkPeriod: 86400000,
+    max: 100000,
+    ttl: undefined,
+    dispose: [Function: dispose],
+    stale: true,
+    noDisposeOnSet: undefined
+  },
+  serializer: Object [JSON] {},
+  store: LRUCache {
+    [Symbol(max)]: 100000,
+    [Symbol(lengthCalculator)]: [Function: naiveLength],
+    [Symbol(allowStale)]: true,
+    [Symbol(maxAge)]: 0,
+    [Symbol(dispose)]: [Function: dispose],
+    [Symbol(noDisposeOnSet)]: false,
+    [Symbol(cache)]: Map(11) {
+      'qzwvzis7wlpsh8nfsootgf' => [Node],
+      'w8c7m33hjqpq4a55j9yshe' => [Node],
+      'atq9w43gko8alc7k9djx7e' => [Node],
+      '3eva0xgxpjybb0ucz28l3' => [Node],
+      '3oma3c3d57yg46re2s03r' => [Node],
+      'tay1d23shfz27rb74xmgm' => [Node],
+      'v95q0pjeyots3ceoppwy' => [Node],
+      'k4xoym67vkeh2sphv30qx' => [Node],
+      'h3zrizqvaqmou3mgx617so' => [Node],
+      'znw3qpwl2xj4qijj4yz24g' => [Node],
+      'dcpgyrxz8at3v2vdi39wia' => [Node]
+    },
+    [Symbol(lruList)]: Yallist { tail: [Node], head: [Node], length: 11 },
+    [Symbol(length)]: 11
+  },
+  _checkInterval: Timeout {
+    _idleTimeout: 86400000,
+    _idlePrev: [TimersList],
+    _idleNext: [TimersList],
+    _idleStart: 11108,
+    _onTimeout: [Function (anonymous)],
+    _timerArgs: undefined,
+    _repeat: 86400000,
+    _destroyed: false,
+    [Symbol(refed)]: false,
+    [Symbol(kHasPrimitive)]: false,
+    [Symbol(asyncId)]: 975,
+    [Symbol(triggerId)]: 0,
+    [Symbol(kAsyncContextFrame)]: undefined
+  },
+  generate: [Function (anonymous)],
+  [Symbol(shapeMode)]: false,
+  [Symbol(kCapture)]: false
+}
+No Discord verification found in session
+2:20:24 AM [express] GET /api/auth/discord/status 304 in 3ms :: {"verified":false}
+Generated new session ID: vxuw3nid0gl0lxluyoqf4ib
+=== REQUEST SESSION DEBUG ===
+URL: /api/auth/discord/url
+Method: GET
+Session ID: vxuw3nid0gl0lxluyoqf4ib
+Session Cookie from header: undefined
+Session data keys: [ 'cookie' ]
+=== END SESSION DEBUG ===
+Discord OAuth state generated: discord_1752286825797
+Generated Discord auth URL: https://discord.com/api/oauth2/authorize?client_id=1392657393724424313&redirect_uri=https%3A%2F%2Fleo-database-dgvrp.onrender.com%2Fapi%2Fauth%2Fdiscord%2Fcallback&response_type=code&scope=identify+guilds+guilds.members.read&state=discord_1752286825797
+2:20:25 AM [express] GET /api/auth/discord/url 200 in 1ms :: {"url":"https://discord.com/api/oauth2/…
+Generated new session ID: 6uewrbxs8jaybhnpa71ya
+=== REQUEST SESSION DEBUG ===
+URL: /api/auth/discord/callback?code=AZwggbVCRgZ6RSfU511vtgnridRDJj&state=discord_1752286825797
+Method: GET
+Session ID: 6uewrbxs8jaybhnpa71ya
+Session Cookie from header: undefined
+Session data keys: [ 'cookie' ]
+=== END SESSION DEBUG ===
+Discord callback received - Code: true State: discord_1752286825797
+Discord user info: { id: '1378267677134422016', username: 'dgvrp_58897' }
+Existing user found: false
+Total users in database: 1
+New Discord user, storing verification for signup
+About to save session with Discord verification: {
+  sessionId: '6uewrbxs8jaybhnpa71ya',
+  discordId: '1378267677134422016',
+  username: 'dgvrp_58897'
+}
+Discord verification saved successfully, session ID: 6uewrbxs8jaybhnpa71ya
+Session cookie being sent: {
+  path: '/',
+  _expires: 2025-07-12T04:20:30.964Z,
+  originalMaxAge: 7200000,
+  httpOnly: true,
+  secure: true,
+  sameSite: 'none'
+}
+file:///opt/render/project/src/dist/index.js:1191
+            secure: isProduction,
+                    ^
+ReferenceError: isProduction is not defined
+    at Immediate.<anonymous> (file:///opt/render/project/src/dist/index.js:1191:21)
+    at process.processImmediate (node:internal/timers:487:21)
+Node.js v22.16.0
+==> Running 'npm run start'
+> rest-express@1.0.0 start
+> NODE_ENV=production node dist/index.js
+Using Discord redirect URI: https://leo-database-dgvrp.onrender.com/api/auth/discord/callback
+Discord bot logged in as DGVRP Citation Payoff#2062
+Discord bot initialized successfully
+2:21:04 AM [express] serving on port 5000
+Generated new session ID: ve264pgdcxks5jh5ml3uvh
+=== REQUEST SESSION DEBUG ===
+URL: /
+Method: HEAD
+Session ID: ve264pgdcxks5jh5ml3uvh
+Session Cookie from header: undefined
+Session data keys: [ 'cookie' ]
+=== END SESSION DEBUG ===
+Generated new session ID: 5kcrp9zpwwrl2ekoe2u9j
+=== REQUEST SESSION DEBUG ===
+URL: /favicon.ico
+Method: GET
+Session ID: 5kcrp9zpwwrl2ekoe2u9j
+Session Cookie from header: undefined
+Session data keys: [ 'cookie' ]
+=== END SESSION DEBUG ===
+Generated new session ID: jtbpqj6dxbabjf8aljq8i9
+=== REQUEST SESSION DEBUG ===
+URL: /api/auth/discord/callback?code=AZwggbVCRgZ6RSfU511vtgnridRDJj&state=discord_1752286825797
+Method: HEAD
+Session ID: jtbpqj6dxbabjf8aljq8i9
+Session Cookie from header: undefined
+Session data keys: [ 'cookie' ]
+=== END SESSION DEBUG ===
+Discord callback received - Code: true State: discord_1752286825797
+Generated new session ID: vv3jzscb7qk13rg2c8jub6n
+=== REQUEST SESSION DEBUG ===
+URL: /api/auth/discord/callback?code=AZwggbVCRgZ6RSfU511vtgnridRDJj&state=discord_1752286825797
+Method: HEAD
+Session ID: vv3jzscb7qk13rg2c8jub6n
+Session Cookie from header: undefined
+Session data keys: [ 'cookie' ]
+=== END SESSION DEBUG ===
+Discord callback received - Code: true State: discord_1752286825797
+Discord OAuth error: AxiosError: Request failed with status code 400
+    at settle (file:///opt/render/project/src/node_modules/axios/lib/core/settle.js:19:12)
+    at IncomingMessage.handleStreamEnd (file:///opt/render/project/src/node_modules/axios/lib/adapters/http.js:599:11)
+    at IncomingMessage.emit (node:events:530:35)
+    at endReadableNT (node:internal/streams/readable:1698:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21)
+    at Axios.request (file:///opt/render/project/src/node_modules/axios/lib/core/Axios.js:45:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async DiscordOAuthServiceImpl.exchangeCode (file:///opt/render/project/src/dist/index.js:789:29)
+    at async file:///opt/render/project/src/dist/index.js:1144:37 {
+  code: 'ERR_BAD_REQUEST',
+  config: {
+    transitional: {
+      silentJSONParsing: true,
+      forcedJSONParsing: true,
+      clarifyTimeoutError: false
+    },
+    adapter: [ 'xhr', 'http', 'fetch' ],
+    transformRequest: [ [Function: transformRequest] ],
+    transformResponse: [ [Function: transformResponse] ],
+    timeout: 0,
+    xsrfCookieName: 'XSRF-TOKEN',
+    xsrfHeaderName: 'X-XSRF-TOKEN',
+    maxContentLength: -1,
+    maxBodyLength: -1,
+    env: { FormData: [Function [FormData]], Blob: [class Blob] },
+    validateStatus: [Function: validateStatus],
+    headers: Object [AxiosHeaders] {
+      Accept: 'application/json, text/plain, */*',
+      'Content-Type': 'application/x-www-form-urlencoded',
+      'User-Agent': 'axios/1.10.0',
+      'Content-Length': '235',
+      'Accept-Encoding': 'gzip, compress, deflate, br'
+    },
+    method: 'post',
+    url: 'https://discord.com/api/oauth2/token',
+    data: 'client_id=1392657393724424313&client_secret=P4y9r1pTFi8ux-4UhIlwUdKK0GEphvCb&grant_type=authorization_code&code=AZwggbVCRgZ6RSfU511vtgnridRDJj&redirect_uri=https%3A%2F%2Fleo-database-dgvrp.onrender.com%2Fapi%2Fauth%2Fdiscord%2Fcallback',
+    allowAbsoluteUrls: true
+  },
+  request: <ref *1> ClientRequest {
+    _events: [Object: null prototype] {
+      abort: [Function (anonymous)],
+      aborted: [Function (anonymous)],
+      connect: [Function (anonymous)],
+      error: [Function (anonymous)],
+      socket: [Function (anonymous)],
+      timeout: [Function (anonymous)],
+      finish: [Function: requestOnFinish]
+    },
+    _eventsCount: 7,
+    _maxListeners: undefined,
+    outputData: [],
+    outputSize: 0,
+    writable: true,
+    destroyed: true,
+    _last: false,
+    chunkedEncoding: false,
+    shouldKeepAlive: true,
+    maxRequestsOnConnectionReached: false,
+    _defaultKeepAlive: true,
+    useChunkedEncodingByDefault: true,
+    sendDate: false,
+    _removedConnection: false,
+    _removedContLen: false,
+    _removedTE: false,
+    strictContentLength: false,
+    _contentLength: 235,
+    _hasBody: true,
+    _trailer: '',
+    finished: true,
+    _headerSent: true,
+    _closed: true,
+    _header: 'POST /api/oauth2/token HTTP/1.1\r\n' +
+      'Accept: application/json, text/plain, */*\r\n' +
+      'Content-Type: application/x-www-form-urlencoded\r\n' +
+      'User-Agent: axios/1.10.0\r\n' +
+      'Content-Length: 235\r\n' +
+      'Accept-Encoding: gzip, compress, deflate, br\r\n' +
+      'Host: discord.com\r\n' +
+      'Connection: keep-alive\r\n' +
+      '\r\n',
+    _keepAliveTimeout: 0,
+    _onPendingData: [Function: nop],
+    agent: Agent {
+      _events: [Object: null prototype],
+      _eventsCount: 2,
+      _maxListeners: undefined,
+      defaultPort: 443,
+      protocol: 'https:',
+      options: [Object: null prototype],
+      requests: [Object: null prototype] {},
+      sockets: [Object: null prototype],
+      freeSockets: [Object: null prototype],
+      keepAliveMsecs: 1000,
+      keepAlive: true,
+      maxSockets: Infinity,
+      maxFreeSockets: 256,
+      scheduling: 'lifo',
+      maxTotalSockets: Infinity,
+      totalSocketCount: 2,
+      maxCachedSessions: 100,
+      _sessionCache: [Object],
+      [Symbol(shapeMode)]: false,
+      [Symbol(kCapture)]: false
+    },
+    socketPath: undefined,
+    method: 'POST',
+    maxHeaderSize: undefined,
+    insecureHTTPParser: undefined,
+    joinDuplicateHeaders: undefined,
+    path: '/api/oauth2/token',
+    _ended: true,
+    res: IncomingMessage {
+      _events: [Object],
+      _readableState: [ReadableState],
+      _maxListeners: undefined,
+      socket: null,
+      httpVersionMajor: 1,
+      httpVersionMinor: 1,
+      httpVersion: '1.1',
+      complete: true,
+      rawHeaders: [Array],
+      rawTrailers: [],
+      joinDuplicateHeaders: undefined,
+      aborted: false,
+      upgrade: false,
+      url: '',
+      method: null,
+      statusCode: 400,
+      statusMessage: 'Bad Request',
+      client: [TLSSocket],
+      _consuming: false,
+      _dumped: false,
+      req: [Circular *1],
+      _eventsCount: 4,
+      responseUrl: 'https://discord.com/api/oauth2/token',
+      redirects: [],
+      [Symbol(shapeMode)]: true,
+      [Symbol(kCapture)]: false,
+      [Symbol(kHeaders)]: [Object],
+      [Symbol(kHeadersCount)]: 44,
+      [Symbol(kTrailers)]: null,
+      [Symbol(kTrailersCount)]: 0
+    },
+    aborted: false,
+    timeoutCb: null,
+    upgradeOrConnect: false,
+    parser: null,
+    maxHeadersCount: null,
+    reusedSocket: false,
+    host: 'discord.com',
+    protocol: 'https:',
+    _redirectable: Writable {
+      _events: [Object],
+      _writableState: [WritableState],
+      _maxListeners: undefined,
+      _options: [Object],
+      _ended: true,
+      _ending: true,
+      _redirectCount: 0,
+      _redirects: [],
+      _requestBodyLength: 235,
+      _requestBodyBuffers: [],
+      _eventsCount: 3,
+      _onNativeResponse: [Function (anonymous)],
+      _currentRequest: [Circular *1],
+      _currentUrl: 'https://discord.com/api/oauth2/token',
+      [Symbol(shapeMode)]: true,
+      [Symbol(kCapture)]: false
+    },
+    [Symbol(shapeMode)]: false,
+    [Symbol(kCapture)]: false,
+    [Symbol(kBytesWritten)]: 0,
+    [Symbol(kNeedDrain)]: false,
+    [Symbol(corked)]: 0,
+    [Symbol(kChunkedBuffer)]: [],
+    [Symbol(kChunkedLength)]: 0,
+    [Symbol(kSocket)]: TLSSocket {
+      _tlsOptions: [Object],
+      _secureEstablished: true,
+      _securePending: false,
+      _newSessionPending: false,
+      _controlReleased: true,
+      secureConnecting: false,
+      _SNICallback: null,
+      servername: 'discord.com',
+      alpnProtocol: false,
+      authorized: true,
+      authorizationError: null,
+      encrypted: true,
+      _events: [Object: null prototype],
+      _eventsCount: 9,
+      connecting: false,
+      _hadError: false,
+      _parent: null,
+      _host: 'discord.com',
+      _closeAfterHandlingError: false,
+      _readableState: [ReadableState],
+      _writableState: [WritableState],
+      allowHalfOpen: false,
+      _maxListeners: undefined,
+      _sockname: null,
+      _pendingData: null,
+      _pendingEncoding: '',
+      server: undefined,
+      _server: null,
+      ssl: [TLSWrap],
+      _requestCert: true,
+      _rejectUnauthorized: true,
+      timeout: 5000,
+      parser: null,
+      _httpMessage: null,
+      autoSelectFamilyAttemptedAddresses: [Array],
+      [Symbol(alpncallback)]: null,
+      [Symbol(res)]: [TLSWrap],
+      [Symbol(verified)]: true,
+      [Symbol(pendingSession)]: null,
+      [Symbol(async_id_symbol)]: -1,
+      [Symbol(kHandle)]: [TLSWrap],
+      [Symbol(lastWriteQueueSize)]: 0,
+      [Symbol(timeout)]: Timeout {
+        _idleTimeout: 5000,
+        _idlePrev: [TimersList],
+        _idleNext: [Timeout],
+        _idleStart: 17326,
+        _onTimeout: [Function: bound ],
+        _timerArgs: undefined,
+        _repeat: null,
+        _destroyed: false,
+        [Symbol(refed)]: false,
+        [Symbol(kHasPrimitive)]: false,
+        [Symbol(asyncId)]: 1146,
+        [Symbol(triggerId)]: 1144,
+        [Symbol(kAsyncContextFrame)]: undefined
+      },
+      [Symbol(kBuffer)]: null,
+      [Symbol(kBufferCb)]: null,
+      [Symbol(kBufferGen)]: null,
+      [Symbol(shapeMode)]: true,
+      [Symbol(kCapture)]: false,
+      [Symbol(kSetNoDelay)]: false,
+      [Symbol(kSetKeepAlive)]: true,
+      [Symbol(kSetKeepAliveInitialDelay)]: 1,
+      [Symbol(kBytesRead)]: 0,
+      [Symbol(kBytesWritten)]: 0,
+      [Symbol(connect-options)]: [Object]
+    },
+    [Symbol(kOutHeaders)]: [Object: null prototype] {
+      accept: [Array],
+      'content-type': [Array],
+      'user-agent': [Array],
+      'content-length': [Array],
+      'accept-encoding': [Array],
+      host: [Array]
+    },
+    [Symbol(errored)]: null,
+    [Symbol(kHighWaterMark)]: 65536,
+    [Symbol(kRejectNonStandardBodyWrites)]: false,
+    [Symbol(kUniqueHeaders)]: null
+  },
+  response: {
+    status: 400,
+    statusText: 'Bad Request',
+    headers: Object [AxiosHeaders] {
+      date: 'Sat, 12 Jul 2025 02:21:09 GMT',
+      'content-type': 'application/json',
+      'content-length': '79',
+      connection: 'keep-alive',
+      'cache-control': 'no-store',
+      pragma: 'no-cache',
+      'set-cookie': [Array],
+      'strict-transport-security': 'max-age=31536000; includeSubDomains; preload',
+      'x-discord-features': 'oauth',
+      via: '1.1 google',
+      'alt-svc': 'h3=":443"; ma=86400',
+      'cf-cache-status': 'DYNAMIC',
+      'report-to': '{"endpoints":[{"url":"https:\\/\\/a.nel.cloudflare.com\\/report\\/v4?s=O6Kz1RP7Iw%2FezOj72cC%2FztPnGrrwKVUYaD3mZ7QV2kxzYLazkvd%2Fc6oJLlBnj7sciLrOcK%2BNvG6y6dIioF%2Bu7SxSLMNAu87VDHghakr%2BLUhNbUoHz3HBfinG%2FEk8"}],"group":"cf-nel","max_age":604800}',
+      nel: '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}',
+      'x-content-type-options': 'nosniff',
+      'reporting-endpoints': 'csp-sentry="https://o64374.ingest.sentry.io/api/5441894/security/?sentry_key=8fbbce30bf5244ec9429546beef21870&sentry_environment=stable"',
+      'content-security-policy': "frame-ancestors 'none'; default-src https://o64374.ingest.sentry.io; report-to csp-sentry; report-uri https://o64374.ingest.sentry.io/api/5441894/security/?sentry_key=8fbbce30bf5244ec9429546beef21870&sentry_environment=stable",
+      server: 'cloudflare',
+      'cf-ray': '95dd10c5083db7b9-PDX'
+    },
+    config: {
+      transitional: [Object],
+      adapter: [Array],
+      transformRequest: [Array],
+      transformResponse: [Array],
+      timeout: 0,
+      xsrfCookieName: 'XSRF-TOKEN',
+      xsrfHeaderName: 'X-XSRF-TOKEN',
+      maxContentLength: -1,
+      maxBodyLength: -1,
+      env: [Object],
+      validateStatus: [Function: validateStatus],
+      headers: [Object [AxiosHeaders]],
+      method: 'post',
+      url: 'https://discord.com/api/oauth2/token',
+      data: 'client_id=1392657393724424313&client_secret=P4y9r1pTFi8ux-4UhIlwUdKK0GEphvCb&grant_type=authorization_code&code=AZwggbVCRgZ6RSfU511vtgnridRDJj&redirect_uri=https%3A%2F%2Fleo-database-dgvrp.onrender.com%2Fapi%2Fauth%2Fdiscord%2Fcallback',
+      allowAbsoluteUrls: true
+    },
+    request: <ref *1> ClientRequest {
+      _events: [Object: null prototype],
+      _eventsCount: 7,
+      _maxListeners: undefined,
+      outputData: [],
+      outputSize: 0,
+      writable: true,
+      destroyed: true,
+      _last: false,
+      chunkedEncoding: false,
+      shouldKeepAlive: true,
+      maxRequestsOnConnectionReached: false,
+      _defaultKeepAlive: true,
+      useChunkedEncodingByDefault: true,
+      sendDate: false,
+      _removedConnection: false,
+      _removedContLen: false,
+      _removedTE: false,
+      strictContentLength: false,
+      _contentLength: 235,
+      _hasBody: true,
+      _trailer: '',
+      finished: true,
+      _headerSent: true,
+      _closed: true,
+      _header: 'POST /api/oauth2/token HTTP/1.1\r\n' +
+        'Accept: application/json, text/plain, */*\r\n' +
+        'Content-Type: application/x-www-form-urlencoded\r\n' +
+        'User-Agent: axios/1.10.0\r\n' +
+        'Content-Length: 235\r\n' +
+        'Accept-Encoding: gzip, compress, deflate, br\r\n' +
+        'Host: discord.com\r\n' +
+        'Connection: keep-alive\r\n' +
+        '\r\n',
+      _keepAliveTimeout: 0,
+      _onPendingData: [Function: nop],
+      agent: [Agent],
+      socketPath: undefined,
+      method: 'POST',
+      maxHeaderSize: undefined,
+      insecureHTTPParser: undefined,
+      joinDuplicateHeaders: undefined,
+      path: '/api/oauth2/token',
+      _ended: true,
+      res: [IncomingMessage],
+      aborted: false,
+      timeoutCb: null,
+      upgradeOrConnect: false,
+      parser: null,
+      maxHeadersCount: null,
+      reusedSocket: false,
+      host: 'discord.com',
+      protocol: 'https:',
+      _redirectable: [Writable],
+      [Symbol(shapeMode)]: false,
+      [Symbol(kCapture)]: false,
+      [Symbol(kBytesWritten)]: 0,
+      [Symbol(kNeedDrain)]: false,
+      [Symbol(corked)]: 0,
+      [Symbol(kChunkedBuffer)]: [],
+      [Symbol(kChunkedLength)]: 0,
+      [Symbol(kSocket)]: [TLSSocket],
+      [Symbol(kOutHeaders)]: [Object: null prototype],
+      [Symbol(errored)]: null,
+      [Symbol(kHighWaterMark)]: 65536,
+      [Symbol(kRejectNonStandardBodyWrites)]: false,
+      [Symbol(kUniqueHeaders)]: null
+    },
+    data: {
+      error: 'invalid_grant',
+      error_description: 'Invalid "code" in request.'
+    }
+  },
+  status: 400
+}
+Discord OAuth callback error: Error: Failed to authenticate with Discord
+    at DiscordOAuthServiceImpl.exchangeCode (file:///opt/render/project/src/dist/index.js:816:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async file:///opt/render/project/src/dist/index.js:1144:37
+2:21:09 AM [express] HEAD /api/auth/discord/callback 500 in 172ms
+Discord OAuth error: AxiosError: Request failed with status code 400
+    at settle (file:///opt/render/project/src/node_modules/axios/lib/core/settle.js:19:12)
+    at IncomingMessage.handleStreamEnd (file:///opt/render/project/src/node_modules/axios/lib/adapters/http.js:599:11)
+    at IncomingMessage.emit (node:events:530:35)
+    at endReadableNT (node:internal/streams/readable:1698:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21)
+    at Axios.request (file:///opt/render/project/src/node_modules/axios/lib/core/Axios.js:45:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async DiscordOAuthServiceImpl.exchangeCode (file:///opt/render/project/src/dist/index.js:789:29)
+    at async file:///opt/render/project/src/dist/index.js:1144:37 {
+  code: 'ERR_BAD_REQUEST',
+  config: {
+    transitional: {
+      silentJSONParsing: true,
+      forcedJSONParsing: true,
+      clarifyTimeoutError: false
+    },
+    adapter: [ 'xhr', 'http', 'fetch' ],
+    transformRequest: [ [Function: transformRequest] ],
+    transformResponse: [ [Function: transformResponse] ],
+    timeout: 0,
+    xsrfCookieName: 'XSRF-TOKEN',
+    xsrfHeaderName: 'X-XSRF-TOKEN',
+    maxContentLength: -1,
+    maxBodyLength: -1,
+    env: { FormData: [Function [FormData]], Blob: [class Blob] },
+    validateStatus: [Function: validateStatus],
+    headers: Object [AxiosHeaders] {
+      Accept: 'application/json, text/plain, */*',
+      'Content-Type': 'application/x-www-form-urlencoded',
+      'User-Agent': 'axios/1.10.0',
+      'Content-Length': '235',
+      'Accept-Encoding': 'gzip, compress, deflate, br'
+    },
+    method: 'post',
+    url: 'https://discord.com/api/oauth2/token',
+    data: 'client_id=1392657393724424313&client_secret=P4y9r1pTFi8ux-4UhIlwUdKK0GEphvCb&grant_type=authorization_code&code=AZwggbVCRgZ6RSfU511vtgnridRDJj&redirect_uri=https%3A%2F%2Fleo-database-dgvrp.onrender.com%2Fapi%2Fauth%2Fdiscord%2Fcallback',
+    allowAbsoluteUrls: true
+  },
+  request: <ref *1> ClientRequest {
+    _events: [Object: null prototype] {
+      abort: [Function (anonymous)],
+      aborted: [Function (anonymous)],
+      connect: [Function (anonymous)],
+      error: [Function (anonymous)],
+      socket: [Function (anonymous)],
+      timeout: [Function (anonymous)],
+      finish: [Function: requestOnFinish]
+    },
+    _eventsCount: 7,
+    _maxListeners: undefined,
+    outputData: [],
+    outputSize: 0,
+    writable: true,
+    destroyed: true,
+    _last: false,
+    chunkedEncoding: false,
+    shouldKeepAlive: true,
+    maxRequestsOnConnectionReached: false,
+    _defaultKeepAlive: true,
+    useChunkedEncodingByDefault: true,
+    sendDate: false,
+    _removedConnection: false,
+    _removedContLen: false,
+    _removedTE: false,
+    strictContentLength: false,
+    _contentLength: 235,
+    _hasBody: true,
+    _trailer: '',
+    finished: true,
+    _headerSent: true,
+    _closed: true,
+    _header: 'POST /api/oauth2/token HTTP/1.1\r\n' +
+      'Accept: application/json, text/plain, */*\r\n' +
+      'Content-Type: application/x-www-form-urlencoded\r\n' +
+      'User-Agent: axios/1.10.0\r\n' +
+      'Content-Length: 235\r\n' +
+      'Accept-Encoding: gzip, compress, deflate, br\r\n' +
+      'Host: discord.com\r\n' +
+      'Connection: keep-alive\r\n' +
+      '\r\n',
+    _keepAliveTimeout: 0,
+    _onPendingData: [Function: nop],
+    agent: Agent {
+      _events: [Object: null prototype],
+      _eventsCount: 2,
+      _maxListeners: undefined,
+      defaultPort: 443,
+      protocol: 'https:',
+      options: [Object: null prototype],
+      requests: [Object: null prototype] {},
+      sockets: [Object: null prototype] {},
+      freeSockets: [Object: null prototype],
+      keepAliveMsecs: 1000,
+      keepAlive: true,
+      maxSockets: Infinity,
+      maxFreeSockets: 256,
+      scheduling: 'lifo',
+      maxTotalSockets: Infinity,
+      totalSocketCount: 2,
+      maxCachedSessions: 100,
+      _sessionCache: [Object],
+      [Symbol(shapeMode)]: false,
+      [Symbol(kCapture)]: false
+    },
+    socketPath: undefined,
+    method: 'POST',
+    maxHeaderSize: undefined,
+    insecureHTTPParser: undefined,
+    joinDuplicateHeaders: undefined,
+    path: '/api/oauth2/token',
+    _ended: true,
+    res: IncomingMessage {
+      _events: [Object],
+      _readableState: [ReadableState],
+      _maxListeners: undefined,
+      socket: null,
+      httpVersionMajor: 1,
+      httpVersionMinor: 1,
+      httpVersion: '1.1',
+      complete: true,
+      rawHeaders: [Array],
+      rawTrailers: [],
+      joinDuplicateHeaders: undefined,
+      aborted: false,
+      upgrade: false,
+      url: '',
+      method: null,
+      statusCode: 400,
+      statusMessage: 'Bad Request',
+      client: [TLSSocket],
+      _consuming: false,
+      _dumped: false,
+      req: [Circular *1],
+      _eventsCount: 4,
+      responseUrl: 'https://discord.com/api/oauth2/token',
+      redirects: [],
+      [Symbol(shapeMode)]: true,
+      [Symbol(kCapture)]: false,
+      [Symbol(kHeaders)]: [Object],
+      [Symbol(kHeadersCount)]: 44,
+      [Symbol(kTrailers)]: null,
+      [Symbol(kTrailersCount)]: 0
+    },
+    aborted: false,
+    timeoutCb: null,
+    upgradeOrConnect: false,
+    parser: null,
+    maxHeadersCount: null,
+    reusedSocket: false,
+    host: 'discord.com',
+    protocol: 'https:',
+    _redirectable: Writable {
+      _events: [Object],
+      _writableState: [WritableState],
+      _maxListeners: undefined,
+      _options: [Object],
+      _ended: true,
+      _ending: true,
+      _redirectCount: 0,
+      _redirects: [],
+      _requestBodyLength: 235,
+      _requestBodyBuffers: [],
+      _eventsCount: 3,
+      _onNativeResponse: [Function (anonymous)],
+      _currentRequest: [Circular *1],
+      _currentUrl: 'https://discord.com/api/oauth2/token',
+      [Symbol(shapeMode)]: true,
+      [Symbol(kCapture)]: false
+    },
+    [Symbol(shapeMode)]: false,
+    [Symbol(kCapture)]: false,
+    [Symbol(kBytesWritten)]: 0,
+    [Symbol(kNeedDrain)]: false,
+    [Symbol(corked)]: 0,
+    [Symbol(kChunkedBuffer)]: [],
+    [Symbol(kChunkedLength)]: 0,
+    [Symbol(kSocket)]: TLSSocket {
+      _tlsOptions: [Object],
+      _secureEstablished: true,
+      _securePending: false,
+      _newSessionPending: false,
+      _controlReleased: true,
+      secureConnecting: false,
+      _SNICallback: null,
+      servername: 'discord.com',
+      alpnProtocol: false,
+      authorized: true,
+      authorizationError: null,
+      encrypted: true,
+      _events: [Object: null prototype],
+      _eventsCount: 9,
+      connecting: false,
+      _hadError: false,
+      _parent: null,
+      _host: 'discord.com',
+      _closeAfterHandlingError: false,
+      _readableState: [ReadableState],
+      _writableState: [WritableState],
+      allowHalfOpen: false,
+      _maxListeners: undefined,
+      _sockname: null,
+      _pendingData: null,
+      _pendingEncoding: '',
+      server: undefined,
+      _server: null,
+      ssl: [TLSWrap],
+      _requestCert: true,
+      _rejectUnauthorized: true,
+      timeout: 5000,
+      parser: null,
+      _httpMessage: null,
+      autoSelectFamilyAttemptedAddresses: [Array],
+      [Symbol(alpncallback)]: null,
+      [Symbol(res)]: [TLSWrap],
+      [Symbol(verified)]: true,
+      [Symbol(pendingSession)]: null,
+      [Symbol(async_id_symbol)]: -1,
+      [Symbol(kHandle)]: [TLSWrap],
+      [Symbol(lastWriteQueueSize)]: 0,
+      [Symbol(timeout)]: Timeout {
+        _idleTimeout: 5000,
+        _idlePrev: [TimersList],
+        _idleNext: [Timeout],
+        _idleStart: 17440,
+        _onTimeout: [Function: bound ],
+        _timerArgs: undefined,
+        _repeat: null,
+        _destroyed: false,
+        [Symbol(refed)]: false,
+        [Symbol(kHasPrimitive)]: false,
+        [Symbol(asyncId)]: 1171,
+        [Symbol(triggerId)]: 1169,
+        [Symbol(kAsyncContextFrame)]: undefined
+      },
+      [Symbol(kBuffer)]: null,
+      [Symbol(kBufferCb)]: null,
+      [Symbol(kBufferGen)]: null,
+      [Symbol(shapeMode)]: true,
+      [Symbol(kCapture)]: false,
+      [Symbol(kSetNoDelay)]: false,
+      [Symbol(kSetKeepAlive)]: true,
+      [Symbol(kSetKeepAliveInitialDelay)]: 1,
+      [Symbol(kBytesRead)]: 0,
+      [Symbol(kBytesWritten)]: 0,
+      [Symbol(connect-options)]: [Object]
+    },
+    [Symbol(kOutHeaders)]: [Object: null prototype] {
+      accept: [Array],
+      'content-type': [Array],
+      'user-agent': [Array],
+      'content-length': [Array],
+      'accept-encoding': [Array],
+      host: [Array]
+    },
+    [Symbol(errored)]: null,
+    [Symbol(kHighWaterMark)]: 65536,
+    [Symbol(kRejectNonStandardBodyWrites)]: false,
+    [Symbol(kUniqueHeaders)]: null
+  },
+  response: {
+    status: 400,
+    statusText: 'Bad Request',
+    headers: Object [AxiosHeaders] {
+      date: 'Sat, 12 Jul 2025 02:21:09 GMT',
+      'content-type': 'application/json',
+      'content-length': '79',
+      connection: 'keep-alive',
+      'cache-control': 'no-store',
+      pragma: 'no-cache',
+      'set-cookie': [Array],
+      'strict-transport-security': 'max-age=31536000; includeSubDomains; preload',
+      'x-discord-features': 'oauth',
+      via: '1.1 google',
+      'alt-svc': 'h3=":443"; ma=86400',
+      'cf-cache-status': 'DYNAMIC',
+      'report-to': '{"endpoints":[{"url":"https:\\/\\/a.nel.cloudflare.com\\/report\\/v4?s=gBoRtE358FL7Ci0kSPJeIL4iXIPBFhvL4owLue4VAH7gVKjq9hxYqH%2FWqC8XnEN%2Bfiy7HW1N54xU%2B1paa5B6HlG7F0ygEElrIQ0yPTF%2BKiqAqoT%2Fprjzqg%2Fn1M3E"}],"group":"cf-nel","max_age":604800}',
+      nel: '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}',
+      'x-content-type-options': 'nosniff',
+      'reporting-endpoints': 'csp-sentry="https://o64374.ingest.sentry.io/api/5441894/security/?sentry_key=8fbbce30bf5244ec9429546beef21870&sentry_environment=stable"',
+      'content-security-policy': "frame-ancestors 'none'; default-src https://o64374.ingest.sentry.io; report-to csp-sentry; report-uri https://o64374.ingest.sentry.io/api/5441894/security/?sentry_key=8fbbce30bf5244ec9429546beef21870&sentry_environment=stable",
+      server: 'cloudflare',
+      'cf-ray': '95dd10c50a525ece-PDX'
+    },
+    config: {
+      transitional: [Object],
+      adapter: [Array],
+      transformRequest: [Array],
+      transformResponse: [Array],
+      timeout: 0,
+      xsrfCookieName: 'XSRF-TOKEN',
+      xsrfHeaderName: 'X-XSRF-TOKEN',
+      maxContentLength: -1,
+      maxBodyLength: -1,
+      env: [Object],
+      validateStatus: [Function: validateStatus],
+      headers: [Object [AxiosHeaders]],
+      method: 'post',
+      url: 'https://discord.com/api/oauth2/token',
+      data: 'client_id=1392657393724424313&client_secret=P4y9r1pTFi8ux-4UhIlwUdKK0GEphvCb&grant_type=authorization_code&code=AZwggbVCRgZ6RSfU511vtgnridRDJj&redirect_uri=https%3A%2F%2Fleo-database-dgvrp.onrender.com%2Fapi%2Fauth%2Fdiscord%2Fcallback',
+      allowAbsoluteUrls: true
+    },
+    request: <ref *1> ClientRequest {
+      _events: [Object: null prototype],
+      _eventsCount: 7,
+      _maxListeners: undefined,
+      outputData: [],
+      outputSize: 0,
+      writable: true,
+      destroyed: true,
+      _last: false,
+      chunkedEncoding: false,
+      shouldKeepAlive: true,
+      maxRequestsOnConnectionReached: false,
+      _defaultKeepAlive: true,
+      useChunkedEncodingByDefault: true,
+      sendDate: false,
+      _removedConnection: false,
+      _removedContLen: false,
+      _removedTE: false,
+      strictContentLength: false,
+      _contentLength: 235,
+      _hasBody: true,
+      _trailer: '',
+      finished: true,
+      _headerSent: true,
+      _closed: true,
+      _header: 'POST /api/oauth2/token HTTP/1.1\r\n' +
+        'Accept: application/json, text/plain, */*\r\n' +
+        'Content-Type: application/x-www-form-urlencoded\r\n' +
+        'User-Agent: axios/1.10.0\r\n' +
+        'Content-Length: 235\r\n' +
+        'Accept-Encoding: gzip, compress, deflate, br\r\n' +
+        'Host: discord.com\r\n' +
+        'Connection: keep-alive\r\n' +
+        '\r\n',
+      _keepAliveTimeout: 0,
+      _onPendingData: [Function: nop],
+      agent: [Agent],
+      socketPath: undefined,
+      method: 'POST',
+      maxHeaderSize: undefined,
+      insecureHTTPParser: undefined,
+      joinDuplicateHeaders: undefined,
+      path: '/api/oauth2/token',
+      _ended: true,
+      res: [IncomingMessage],
+      aborted: false,
+      timeoutCb: null,
+      upgradeOrConnect: false,
+      parser: null,
+      maxHeadersCount: null,
+      reusedSocket: false,
+      host: 'discord.com',
+      protocol: 'https:',
+      _redirectable: [Writable],
+      [Symbol(shapeMode)]: false,
+      [Symbol(kCapture)]: false,
+      [Symbol(kBytesWritten)]: 0,
+      [Symbol(kNeedDrain)]: false,
+      [Symbol(corked)]: 0,
+      [Symbol(kChunkedBuffer)]: [],
+      [Symbol(kChunkedLength)]: 0,
+      [Symbol(kSocket)]: [TLSSocket],
+      [Symbol(kOutHeaders)]: [Object: null prototype],
+      [Symbol(errored)]: null,
+      [Symbol(kHighWaterMark)]: 65536,
+      [Symbol(kRejectNonStandardBodyWrites)]: false,
+      [Symbol(kUniqueHeaders)]: null
+    },
+    data: {
+      error: 'invalid_grant',
+      error_description: 'Invalid "code" in request.'
+    }
+  },
+  status: 400
+}
+Discord OAuth callback error: Error: Failed to authenticate with Discord
+    at DiscordOAuthServiceImpl.exchangeCode (file:///opt/render/project/src/dist/index.js:816:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async file:///opt/render/project/src/dist/index.js:1144:37
+2:21:09 AM [express] HEAD /api/auth/discord/callback 500 in 274ms

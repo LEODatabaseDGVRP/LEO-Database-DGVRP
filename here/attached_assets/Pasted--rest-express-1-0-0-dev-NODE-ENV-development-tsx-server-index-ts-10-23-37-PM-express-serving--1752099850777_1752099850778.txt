@@ -1,0 +1,85 @@
+
+> rest-express@1.0.0 dev
+> NODE_ENV=development tsx server/index.ts
+
+10:23:37 PM [express] serving on port 5000
+Browserslist: browsers data (caniuse-lite) is 9 months old. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+Error:   Failed to scan for dependencies from entries:
+  /home/runner/workspace/client/index.html
+
+  ✘ [ERROR] Unexpected closing "CommandItem" tag does not match opening "div" tag
+
+    client/src/pages/citation-form.tsx:522:42:
+      522 │                                         </CommandItem>
+          │                                           ~~~~~~~~~~~
+          ╵                                           div
+
+  The opening "div" tag is here:
+
+    client/src/pages/citation-form.tsx:508:45:
+      508 │ ...                             <div className="flex justify-betw...
+          ╵                                  ~~~
+
+
+✘ [ERROR] The character "}" is not valid inside a JSX element
+
+    client/src/pages/citation-form.tsx:523:40:
+      523 │                                       ))}
+          │                                         ^
+          ╵                                         {'}'}
+
+  Did you mean to escape it as "{'}'}" instead?
+
+
+✘ [ERROR] Unexpected closing "CommandGroup" tag does not match opening "div" tag
+
+    client/src/pages/citation-form.tsx:524:38:
+      524 │                                     </CommandGroup>
+          │                                       ~~~~~~~~~~~~
+          ╵                                       div
+
+  The opening "div" tag is here:
+
+    client/src/pages/citation-form.tsx:507:43:
+      507 │ ...                             <div className="flex flex-col fle...
+          ╵                                  ~~~
+
+
+✘ [ERROR] Unexpected closing "CommandList" tag does not match opening "CommandItem" tag
+
+    client/src/pages/citation-form.tsx:525:36:
+      525 │                                   </CommandList>
+          │                                     ~~~~~~~~~~~
+          ╵                                     CommandItem
+
+  The opening "CommandItem" tag is here:
+
+    client/src/pages/citation-form.tsx:501:41:
+      501 │                                         <CommandItem
+          ╵                                          ~~~~~~~~~~~
+
+
+✘ [ERROR] Unterminated regular expression
+
+    client/src/pages/citation-form.tsx:526:42:
+      526 │                                 </Command>
+          ╵                                           ^
+
+
+    at failureErrorWithLog (/home/runner/workspace/node_modules/vite/node_modules/esbuild/lib/main.js:1472:15)
+    at /home/runner/workspace/node_modules/vite/node_modules/esbuild/lib/main.js:945:25
+    at runOnEndCallbacks (/home/runner/workspace/node_modules/vite/node_modules/esbuild/lib/main.js:1315:45)
+    at buildResponseToResult (/home/runner/workspace/node_modules/vite/node_modules/esbuild/lib/main.js:943:7)
+    at /home/runner/workspace/node_modules/vite/node_modules/esbuild/lib/main.js:955:9
+    at new Promise (<anonymous>)
+    at requestCallbacks.on-end (/home/runner/workspace/node_modules/vite/node_modules/esbuild/lib/main.js:954:54)
+    at handleRequest (/home/runner/workspace/node_modules/vite/node_modules/esbuild/lib/main.js:647:17)
+    at handleIncomingPacket (/home/runner/workspace/node_modules/vite/node_modules/esbuild/lib/main.js:672:7)
+    at Socket.readFromStdout (/home/runner/workspace/node_modules/vite/node_modules/esbuild/lib/main.js:600:7)
+    at Socket.emit (node:events:518:28)
+    at addChunk (node:internal/streams/readable:561:12)
+    at readableAddChunkPushByteMode (node:internal/streams/readable:512:3)
+    at Readable.push (node:internal/streams/readable:392:5)
+    at Pipe.onStreamRead (node:internal/stream_base_commons:191:23)

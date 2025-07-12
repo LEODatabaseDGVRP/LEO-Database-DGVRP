@@ -1,0 +1,34 @@
+{
+  "users": [
+    [
+      5,
+      {
+        "id": 5,
+        "username": "popfork1",
+        "password": "$2b$10$ZGLo3NhD7JO3W8fDc72aHeYXFqZQRt6ruVIVJN9PhfU6m2KybQSue",
+        "isAdmin": "true",
+        "badgeNumber": "2385",
+        "rpName": "P.Popfork1",
+        "rank": "Overseer",
+        "discordId": "1132477120665370674"
+      }
+    ],
+    [
+      8,
+      {
+        "id": 8,
+        "username": "12354",
+        "password": "$2b$10$gOpe1BkUPgNeLeE8d7cIKepI74VEmHWztuVnTfI7dnUazvh55i9rm",
+        "isAdmin": "false",
+        "badgeNumber": "1234",
+        "rpName": "P.P",
+        "rank": "fd",
+        "discordId": "temp_12354_1752206816892"
+      }
+    ]
+  ],
+  "nextUserId": 9,
+  "deletedUsernames": [],
+  "citationCount": 7,
+  "arrestCount": 0
+}
