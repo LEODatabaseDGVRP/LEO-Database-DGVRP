@@ -383,7 +383,27 @@ export function registerRoutes(app: Express) {
   // Arrest routes
   app.post("/api/arrests", requireAuth, async (req, res) => {
     try {
-      const validatedData = insertArrestSchema.parse(req.body);
+      // Transform form data to match database schema
+      const formData = req.body;
+      const transformedData = {
+        ...formData,
+        // Map form fields to database fields
+        arresteeUsername: formData.suspectSignature || "",
+        arresteeSignature: formData.suspectSignature || "",
+        mugshot: formData.mugshotBase64 || null,
+        // Remove form-specific fields
+        suspectSignature: undefined,
+        mugshotBase64: undefined,
+        mugshotFile: undefined,
+        officerSignatures: undefined,
+        timeServed: undefined,
+        courtDate: undefined,
+        courtLocation: undefined,
+        courtPhone: undefined,
+        description: undefined
+      };
+
+      const validatedData = insertArrestSchema.parse(transformedData);
       
       const arrestData = {
         ...validatedData,
@@ -399,12 +419,38 @@ export function registerRoutes(app: Express) {
         await db.insert(arrests).values(arrestData);
       }
 
+      // Send arrest report to Discord bot
+      try {
+        const discordBotToken = process.env.DISCORD_BOT_TOKEN;
+        const discordChannelId = process.env.DISCORD_CHANNEL_ID;
+        
+        if (discordBotToken && discordChannelId) {
+          const discordBot = createDiscordBotService(discordBotToken, discordChannelId);
+          // Use original form data for Discord which has more fields
+          await discordBot.sendArrestReport(formData);
+          console.log("✅ Arrest report sent to Discord successfully");
+        } else {
+          console.log("⚠️ Discord bot credentials not configured, arrest saved locally only");
+        }
+      } catch (discordError) {
+        console.error("❌ Failed to send arrest report to Discord:", discordError);
+        // Don't fail the entire request if Discord fails
+      }
+
       res.json({ 
         message: "Arrest record created successfully",
         arrest: arrestData
       });
     } catch (error) {
       console.error("Arrest creation error:", error);
+      if (error.name === 'ZodError') {
+        console.error("Validation errors:", error.errors);
+        return res.status(400).json({
+          message: "Invalid arrest data",
+          errors: error.errors,
+          details: error.errors.map((e: any) => `${e.path.join('.')}: ${e.message}`).join(', ')
+        });
+      }
       res.status(500).json({ message: "Failed to create arrest record" });
     }
   });
