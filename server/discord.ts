@@ -153,7 +153,7 @@ class DiscordBotServiceImpl implements DiscordBotService {
     const violatorPing = data.violatorUsername && data.violatorUsername.match(/^\d+$/) 
       ? `<@${data.violatorUsername}>` 
       : `**${data.violatorUsername}**`;
-    
+
     // Format violator signature as Discord ping if it's a valid user ID
     const violatorSignaturePing = data.violatorSignature && data.violatorSignature.match(/^\d+$/) 
       ? `<@${data.violatorSignature}>` 
@@ -199,10 +199,10 @@ Please call (262) 785-4700 ext. 7 for further inquiry.`;
       const userId = data.officerUserIds ? data.officerUserIds[index] : '';
       return userId ? `<@${userId}>` : `**${username}**`;
     }).join(', ');
-    
+
     // Format ranks with bold formatting
     const officerRanks = data.officerRanks.map((rank: string) => `**${rank}**`).join(', ');
-    
+
     // Format badge numbers with bold formatting
     const badgeNumbers = data.officerBadges.map((badge: string) => `**${badge}**`).join(', ');
 
@@ -368,7 +368,7 @@ Please call (262) 785-4700 ext. 7 for further inquiry.`;
       const description = arrestPenalCodeDescriptions[code] || "Unknown Offense";
       const jailTime = data.jailTimes[index];
       const amount = data.amountsDue[index];
-      
+
       let line = `**${code}** - **${description}**`;
       if (jailTime && jailTime !== 'None') line += ` - **${jailTime}**`;
       if (amount && amount !== '0.00') {
@@ -379,12 +379,12 @@ Please call (262) 785-4700 ext. 7 for further inquiry.`;
     }).join('\n');
 
     const formattedTotalAmount = parseFloat(data.totalAmount).toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
-    
+
     // Format suspect signature as Discord ping if it's a valid user ID
     const suspectSignature = data.suspectSignature && data.suspectSignature.match(/^\d+$/) 
       ? `<@${data.suspectSignature}>` 
       : `**${data.suspectSignature}**`;
-    
+
     // Format multiple officer signatures based on number of officers and their signatures
     const officerSignatures = data.officerSignatures.map((signature: string, index: number) => {
       const username = data.officerUsernames[index];
@@ -392,7 +392,7 @@ Please call (262) 785-4700 ext. 7 for further inquiry.`;
       const title = index === 0 ? "Arresting officer signature X" : `Assisting officer #${index + 1} signature X`;
       return `${title}: ${formattedSignature}`;
     }).join('\n');
-    
+
     // Calculate warrant information
     const remainingSeconds = !data.timeServed 
       ? parseInt((data.totalJailTime || "0 Seconds").replace(" Seconds", "")) || 0
@@ -402,7 +402,7 @@ Please call (262) 785-4700 ext. 7 for further inquiry.`;
 
     // Check if there's a mugshot but no description
     const shouldIncludeMugshot = data.mugshotBase64 && !data.description;
-    
+
     // Update the description text based on whether we have an image
     const descriptionText = data.description || (shouldIncludeMugshot ? 'See attached mugshot' : 'No description provided');
 
@@ -447,13 +447,13 @@ Please call **${data.courtPhone}** for further inquiry.`;
         // Convert base64 to buffer
         const base64Data = data.mugshotBase64.replace(/^data:image\/[a-z]+;base64,/, '');
         const imageBuffer = Buffer.from(base64Data, 'base64');
-        
+
         // Create attachment
         const attachment = new AttachmentBuilder(imageBuffer, { 
           name: 'mugshot.png',
           description: 'Arrest report mugshot'
         });
-        
+
         messageOptions.files = [attachment];
         console.log("📸 Including mugshot attachment in arrest report");
       } catch (error) {
@@ -465,68 +465,40 @@ Please call **${data.courtPhone}** for further inquiry.`;
     await channel.send(messageOptions);
   }
 
-  async sendDirectMessage(userId: string, message: string): Promise<void> {
-    if (!this.isReady) {
-      await this.initialize();
-    }
-
+  async sendPasswordResetCode(discordUserId: string, resetCode: string): Promise<void> {
     try {
-      const user = await this.client.users.fetch(userId);
-      if (!user) {
-        throw new Error('User not found');
-      }
+      // Send DM to user with reset code
+      const user = await this.client.users.fetch(discordUserId);
 
-      await user.send(message);
-    } catch (error) {
-      console.error('Error sending direct message:', error);
-      throw new Error('Failed to send direct message. User may have DMs disabled.');
-    }
-  }
-
-  async verifyUserInServer(discordId: string, requiredRole?: string): Promise<boolean> {
-    try {
-      if (!this.isReady) {
-        await this.initialize();
-      }
-
-      // Get all guilds the bot is in
-      const guilds = this.client.guilds.cache;
-      
-      for (const guild of guilds.values()) {
-        try {
-          // Try to fetch the user from this guild
-          const member = await guild.members.fetch(discordId);
-          
-          if (member) {
-            // User found in this guild
-            if (!requiredRole) {
-              // No specific role required, just need to be in server
-              return true;
-            }
-            
-            // Check if user has the required role
-            const hasRole = member.roles.cache.some(role => 
-              role.name.toLowerCase() === requiredRole.toLowerCase()
-            );
-            
-            if (hasRole) {
-              return true;
-            }
+      const embed = {
+        color: 0x3498db,
+        title: "🔐 Password Reset Code",
+        description: `Here is your password reset verification code:`,
+        fields: [
+          {
+            name: "Verification Code",
+            value: `\`\`\`${resetCode}\`\`\``,
+            inline: false
+          },
+          {
+            name: "⚠️ Important",
+            value: "• This code expires in 15 minutes\n• Do not share this code with anyone\n• Copy and paste the entire code",
+            inline: false
           }
-        } catch (error) {
-          // User not found in this guild, continue to next
-          continue;
+        ],
+        timestamp: new Date().toISOString(),
+        footer: {
+          text: "Police Department Security System"
         }
-      }
-      
-      // User not found in any guild or doesn't have required role
-      return false;
+      };
+
+      await user.send({ embeds: [embed] });
+      console.log(`✅ Password reset code sent to Discord user ${discordUserId}`);
     } catch (error) {
-      console.error('Error verifying user in Discord server:', error);
-      return false;
+      console.error(`❌ Failed to send password reset code to ${discordUserId}:`, error);
+      throw new Error("Failed to send password reset code via Discord");
     }
   }
-
 }
 
 export function createDiscordBotService(token: string, channelId: string): DiscordBotService {

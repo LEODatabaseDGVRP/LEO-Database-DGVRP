@@ -52,7 +52,7 @@ export class FileStorage implements IStorage {
       this.deletedUsernames = new Set(parsed.deletedUsernames || []);
       this.citationCount = parsed.citationCount || 0;
       this.arrestCount = parsed.arrestCount || 0;
-      
+
       // Sync counts with actual data after loading all files
       setTimeout(() => {
         this.citationCount = Math.max(this.citationCount, this.citations.size);
@@ -217,20 +217,18 @@ export class FileStorage implements IStorage {
     }
   }
 
-  async updateUserAdmin(id: number, isAdmin: boolean): Promise<void> {
-    const user = this.users.get(id);
+  async updateUserAdmin(userId: number, isAdmin: boolean): Promise<void> {
+    const user = this.users.get(userId.toString());
     if (user) {
       user.isAdmin = isAdmin ? "true" : "false";
-      this.users.set(id, user);
       await this.saveUsersToFile();
     }
   }
 
-  async updateUserPassword(id: number, hashedPassword: string): Promise<void> {
-    const user = this.users.get(id);
+  async updateUserPassword(userId: number, hashedPassword: string): Promise<void> {
+    const user = this.users.get(userId.toString());
     if (user) {
       user.password = hashedPassword;
-      this.users.set(id, user);
       await this.saveUsersToFile();
     }
   }

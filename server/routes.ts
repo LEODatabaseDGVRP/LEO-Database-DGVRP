@@ -609,6 +609,121 @@ export function registerRoutes(app: Express) {
     }
   });
 
+  // Password reset routes
+  app.post("/api/auth/forgot-password", async (req, res) => {
+    try {
+      const { discordUsername } = req.body;
+      
+      if (!discordUsername) {
+        return res.status(400).json({ message: "Discord username is required" });
+      }
+
+      // Find user by Discord username or ID
+      let user;
+      if (useFileStorage) {
+        const allUsers = await storage.getAllUsers();
+        user = allUsers.find(u => 
+          u.username?.toLowerCase() === discordUsername.toLowerCase() || 
+          u.discordId === discordUsername ||
+          u.rpName?.toLowerCase() === discordUsername.toLowerCase()
+        );
+      } else {
+        const result = await db.select().from(users).where(
+          or(
+            eq(users.username, discordUsername),
+            eq(users.discordId, discordUsername),
+            eq(users.rpName, discordUsername)
+          )
+        ).limit(1);
+        user = result[0];
+      }
+
+      if (!user || !user.discordId) {
+        return res.status(404).json({ message: "User not found or Discord ID not linked" });
+      }
+
+      // Generate reset token and code
+      const resetToken = nanoid(32);
+      const resetCode = nanoid(32);
+      const expiresAt = new Date(Date.now() + 15 * 60 * 1000); // 15 minutes
+
+      // Store reset token in session
+      req.session.passwordReset = {
+        token: resetToken,
+        code: resetCode,
+        userId: user.id,
+        expiresAt: expiresAt.toISOString()
+      };
+
+      // Send reset code via Discord DM
+      try {
+        const discordBotToken = process.env.DISCORD_BOT_TOKEN;
+        
+        if (discordBotToken) {
+          const discordBot = createDiscordBotService(discordBotToken, "");
+          await discordBot.sendPasswordResetCode(user.discordId, resetCode);
+          console.log("✅ Password reset code sent to Discord successfully");
+        } else {
+          console.log("⚠️ Discord bot token not configured");
+          return res.status(500).json({ message: "Discord messaging not configured" });
+        }
+      } catch (discordError) {
+        console.error("❌ Failed to send reset code to Discord:", discordError);
+        return res.status(500).json({ message: "Failed to send reset code to Discord" });
+      }
+
+      res.json({ 
+        message: "Reset code sent to your Discord DM",
+        resetToken: resetToken
+      });
+    } catch (error) {
+      console.error("Forgot password error:", error);
+      res.status(500).json({ message: "Failed to process password reset request" });
+    }
+  });
+
+  app.post("/api/auth/reset-password", async (req, res) => {
+    try {
+      const { resetToken, resetCode, newPassword } = req.body;
+      
+      if (!resetToken || !resetCode || !newPassword) {
+        return res.status(400).json({ message: "Reset token, code, and new password are required" });
+      }
+
+      // Verify reset token and code
+      const resetData = req.session.passwordReset;
+      if (!resetData || resetData.token !== resetToken || resetData.code !== resetCode) {
+        return res.status(400).json({ message: "Invalid reset token or code" });
+      }
+
+      // Check if reset code has expired
+      if (new Date() > new Date(resetData.expiresAt)) {
+        delete req.session.passwordReset;
+        return res.status(400).json({ message: "Reset code has expired" });
+      }
+
+      // Hash new password
+      const hashedPassword = await bcrypt.hash(newPassword, 10);
+
+      // Update user password
+      if (useFileStorage) {
+        await storage.updateUserPassword(resetData.userId, hashedPassword);
+      } else {
+        await db.update(users)
+          .set({ password: hashedPassword })
+          .where(eq(users.id, resetData.userId));
+      }
+
+      // Clear reset data from session
+      delete req.session.passwordReset;
+
+      res.json({ message: "Password reset successfully" });
+    } catch (error) {
+      console.error("Reset password error:", error);
+      res.status(500).json({ message: "Failed to reset password" });
+    }
+  });
+
   // Health check
   app.get("/api/health", (req, res) => {
     res.json({ status: "ok", timestamp: new Date().toISOString() });
