@@ -66,6 +66,14 @@ export function registerRoutes(app: Express) {
     next();
   };
 
+  // Admin middleware
+  const requireAdmin = (req: any, res: any, next: any) => {
+    if (req.session?.user?.isAdmin !== true) {
+      return res.status(403).json({ message: "Admin access required" });
+    }
+    next();
+  };
+
   // Auth routes
   app.post("/api/auth/login", async (req, res) => {
     try {
@@ -350,6 +358,123 @@ export function registerRoutes(app: Express) {
     } catch (error) {
       console.error("Error fetching arrests:", error);
       res.status(500).json({ message: "Failed to fetch arrests" });
+    }
+  });
+
+  // Admin routes
+  app.get("/api/admin/users", requireAuth, requireAdmin, async (req, res) => {
+    try {
+      const users = await storage.getAllUsers();
+      res.json(users);
+    } catch (error) {
+      console.error("Error fetching users:", error);
+      res.status(500).json({ message: "Failed to fetch users" });
+    }
+  });
+
+  app.get("/api/admin/stats", requireAuth, requireAdmin, async (req, res) => {
+    try {
+      const citationCount = await storage.getCitationCount();
+      const arrestCount = await storage.getArrestCount();
+      const users = await storage.getAllUsers();
+      const userCount = users.length;
+      
+      res.json({
+        userCount,
+        citationCount,
+        arrestCount,
+        adminCount: users.filter(u => u.isAdmin === "true").length
+      });
+    } catch (error) {
+      console.error("Error fetching stats:", error);
+      res.status(500).json({ message: "Failed to fetch stats" });
+    }
+  });
+
+  app.get("/api/admin/blocked-usernames", requireAuth, requireAdmin, async (req, res) => {
+    try {
+      const blockedUsernames = await storage.getBlockedUsernames();
+      res.json(blockedUsernames);
+    } catch (error) {
+      console.error("Error fetching blocked usernames:", error);
+      res.status(500).json({ message: "Failed to fetch blocked usernames" });
+    }
+  });
+
+  app.post("/api/admin/block-username", requireAuth, requireAdmin, async (req, res) => {
+    try {
+      const { username } = req.body;
+      await storage.blockUsername(username);
+      res.json({ message: "Username blocked successfully" });
+    } catch (error) {
+      console.error("Error blocking username:", error);
+      res.status(500).json({ message: "Failed to block username" });
+    }
+  });
+
+  app.post("/api/admin/unblock-username", requireAuth, requireAdmin, async (req, res) => {
+    try {
+      const { username } = req.body;
+      await storage.unblockUsername(username);
+      res.json({ message: "Username unblocked successfully" });
+    } catch (error) {
+      console.error("Error unblocking username:", error);
+      res.status(500).json({ message: "Failed to unblock username" });
+    }
+  });
+
+  app.delete("/api/admin/users/:id", requireAuth, requireAdmin, async (req, res) => {
+    try {
+      const userId = parseInt(req.params.id);
+      await storage.deleteUser(userId);
+      res.json({ message: "User deleted successfully" });
+    } catch (error) {
+      console.error("Error deleting user:", error);
+      res.status(500).json({ message: "Failed to delete user" });
+    }
+  });
+
+  app.post("/api/admin/users/:id/admin", requireAuth, requireAdmin, async (req, res) => {
+    try {
+      const userId = parseInt(req.params.id);
+      const { isAdmin } = req.body;
+      await storage.updateUserAdmin(userId, isAdmin);
+      res.json({ message: "User admin status updated successfully" });
+    } catch (error) {
+      console.error("Error updating user admin status:", error);
+      res.status(500).json({ message: "Failed to update user admin status" });
+    }
+  });
+
+  app.get("/api/admin/terminated-usernames", requireAuth, requireAdmin, async (req, res) => {
+    try {
+      const terminatedUsernames = await storage.getTerminatedUsernames();
+      res.json(terminatedUsernames);
+    } catch (error) {
+      console.error("Error fetching terminated usernames:", error);
+      res.status(500).json({ message: "Failed to fetch terminated usernames" });
+    }
+  });
+
+  app.post("/api/admin/terminate-username", requireAuth, requireAdmin, async (req, res) => {
+    try {
+      const { username } = req.body;
+      await storage.terminateUsername(username);
+      res.json({ message: "Username terminated successfully" });
+    } catch (error) {
+      console.error("Error terminating username:", error);
+      res.status(500).json({ message: "Failed to terminate username" });
+    }
+  });
+
+  app.post("/api/admin/unterminate-username", requireAuth, requireAdmin, async (req, res) => {
+    try {
+      const { username } = req.body;
+      await storage.unterminateUsername(username);
+      res.json({ message: "Username unterminated successfully" });
+    } catch (error) {
+      console.error("Error unterminating username:", error);
+      res.status(500).json({ message: "Failed to unterminate username" });
     }
   });
 
