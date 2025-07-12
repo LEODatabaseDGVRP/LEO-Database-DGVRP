@@ -168,3 +168,33 @@ export function createDiscordOAuthService(
 ): DiscordOAuthService {
   return new DiscordOAuthServiceImpl(clientId, clientSecret, redirectUri, botToken, requiredGuildId);
 }
+
+// Create a default instance for easy use
+const defaultService = createDiscordOAuthService(
+  process.env.DISCORD_CLIENT_ID || '',
+  process.env.DISCORD_CLIENT_SECRET || '',
+  process.env.DISCORD_REDIRECT_URI || `${process.env.REPLIT_DOMAIN || 'http://localhost:5000'}/api/auth/discord/callback`,
+  process.env.DISCORD_BOT_TOKEN || '',
+  process.env.DISCORD_GUILD_ID
+);
+
+// Export helper functions for easy access
+export function getDiscordAuthUrl(mode: string): string {
+  const state = `${mode}_${Date.now()}_${Math.random().toString(36).substring(2, 15)}`;
+  return defaultService.getAuthUrl(state);
+}
+
+export async function handleDiscordCallback(code: string, state: string): Promise<{ mode: string; user: DiscordUser }> {
+  const [mode] = state.split('_');
+  const { accessToken, user } = await defaultService.exchangeCode(code);
+  
+  // If we have a required guild, check if user is in it
+  if (process.env.DISCORD_GUILD_ID) {
+    const hasAccess = await defaultService.checkUserRole(accessToken, process.env.DISCORD_GUILD_ID);
+    if (!hasAccess) {
+      throw new Error('User is not a member of the required Discord server');
+    }
+  }
+  
+  return { mode, user };
+}
