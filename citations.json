@@ -131,6 +131,39 @@
       "issuedBy": 5,
       "createdAt": "2025-07-12T05:32:41.974Z",
       "updatedAt": "2025-07-12T05:32:41.974Z"
+    },
+    {
+      "id": "M0lwH44RGNl7bX7JGTps2",
+      "officerBadges": [
+        "2385"
+      ],
+      "officerUsernames": [
+        "P.Popfork1"
+      ],
+      "officerRanks": [
+        "Overseer"
+      ],
+      "officerUserIds": [
+        "1132477120665370674"
+      ],
+      "violatorUsername": "1132477120665370674",
+      "violatorSignature": "1132477120665370674",
+      "violationType": "Citation",
+      "penalCodes": [
+        "(4)11"
+      ],
+      "amountsDue": [
+        "1000.00"
+      ],
+      "jailTimes": [
+        "None"
+      ],
+      "totalAmount": "1000.00",
+      "totalJailTime": "0 Seconds",
+      "additionalNotes": null,
+      "issuedBy": 5,
+      "createdAt": "2025-07-12T05:33:52.636Z",
+      "updatedAt": "2025-07-12T05:33:52.636Z"
     }
   ],
   "nextCitationId": 1
