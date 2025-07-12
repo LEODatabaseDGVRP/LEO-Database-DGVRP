@@ -20,7 +20,7 @@ export const deletedUsernames = pgTable("deleted_usernames", {
 });
 
 export const citations = pgTable("citations", {
-  id: serial("id").primaryKey(),
+  id: text("id").primaryKey(), // Changed to text to support nanoid
   officerBadges: text("officer_badges").array().notNull(),
   officerUsernames: text("officer_usernames").array().notNull(),
   officerRanks: text("officer_ranks").array().notNull(),

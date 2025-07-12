@@ -21,10 +21,13 @@ export interface IStorage {
 // File-based storage class that persists users without database costs
 export class FileStorage implements IStorage {
   private users: Map<number, User> = new Map();
-  private citations: Map<number, Citation> = new Map();
+  private citations: Map<string, Citation> = new Map(); // Changed to string key for nanoid
+  private arrests: Map<string, any> = new Map(); // Add arrests storage
   private nextUserId = 1;
   private nextCitationId = 1;
   private readonly usersFilePath = path.join(process.cwd(), 'users.json');
+  private readonly citationsFilePath = path.join(process.cwd(), 'citations.json');
+  private readonly arrestsFilePath = path.join(process.cwd(), 'arrests.json');
   private deletedUsernames: Set<string> = new Set();
   private citationCount: number = 0;
   private arrestCount: number = 0; //Simulated arrest count
@@ -36,6 +39,8 @@ export class FileStorage implements IStorage {
 
   constructor() {
     this.loadUsersFromFile();
+    this.loadCitationsFromFile();
+    this.loadArrestsFromFile();
   }
 
   private async loadUsersFromFile() {
@@ -65,6 +70,56 @@ export class FileStorage implements IStorage {
       await fs.writeFile(this.usersFilePath, JSON.stringify(data, null, 2));
     } catch (error) {
       console.error('Failed to save users to file:', error);
+    }
+  }
+
+  private async loadCitationsFromFile() {
+    try {
+      const data = await fs.readFile(this.citationsFilePath, 'utf-8');
+      const parsed = JSON.parse(data);
+      this.citations = new Map(parsed.citations.map((c: any) => [c.id, {
+        ...c,
+        createdAt: new Date(c.createdAt)
+      }]));
+      this.nextCitationId = parsed.nextCitationId || 1;
+    } catch (error) {
+      console.log('No existing citations file found, starting fresh');
+    }
+  }
+
+  private async saveCitationsToFile() {
+    try {
+      const data = {
+        citations: Array.from(this.citations.values()),
+        nextCitationId: this.nextCitationId
+      };
+      await fs.writeFile(this.citationsFilePath, JSON.stringify(data, null, 2));
+    } catch (error) {
+      console.error('Failed to save citations to file:', error);
+    }
+  }
+
+  private async loadArrestsFromFile() {
+    try {
+      const data = await fs.readFile(this.arrestsFilePath, 'utf-8');
+      const parsed = JSON.parse(data);
+      this.arrests = new Map(parsed.arrests.map((a: any) => [a.id, {
+        ...a,
+        createdAt: new Date(a.createdAt)
+      }]));
+    } catch (error) {
+      console.log('No existing arrests file found, starting fresh');
+    }
+  }
+
+  private async saveArrestsToFile() {
+    try {
+      const data = {
+        arrests: Array.from(this.arrests.values())
+      };
+      await fs.writeFile(this.arrestsFilePath, JSON.stringify(data, null, 2));
+    } catch (error) {
+      console.error('Failed to save arrests to file:', error);
     }
   }
 
@@ -122,19 +177,20 @@ export class FileStorage implements IStorage {
   }
 
   async getCitation(id: number): Promise<Citation | undefined> {
-    return this.citations.get(id);
+    return this.citations.get(id.toString());
   }
 
   async createCitation(insertCitation: InsertCitation): Promise<Citation> {
     const citation: Citation = {
-      id: this.nextCitationId++,
+      id: insertCitation.id || this.nextCitationId++, // Use provided id (nanoid) or generate number
       ...insertCitation,
       additionalNotes: insertCitation.additionalNotes || null,
-      createdAt: new Date()
+      createdAt: insertCitation.createdAt || new Date()
     };
-    this.citations.set(citation.id, citation);
-     this.citationCount++;
-    await this.saveUsersToFile();
+    this.citations.set(citation.id.toString(), citation);
+    this.citationCount++;
+    await this.saveCitationsToFile();
+    await this.saveUsersToFile(); // Update citation count
     return citation;
   }
 
@@ -298,16 +354,16 @@ async blockUsername(username: string): Promise<void> {
     await this.saveUsersToFile();
   }
 
-  // Arrest methods (simplified for file storage)
+  // Arrest methods with proper file storage
   async saveArrest(arrestData: any): Promise<void> {
-    // For now, just increment the arrest count
+    this.arrests.set(arrestData.id, arrestData);
     this.arrestCount++;
-    await this.saveUsersToFile();
+    await this.saveArrestsToFile();
+    await this.saveUsersToFile(); // Update arrest count
   }
 
   async getAllArrests(): Promise<any[]> {
-    // Return empty array for now - could be implemented with separate file
-    return [];
+    return Array.from(this.arrests.values());
   }
 }
 
