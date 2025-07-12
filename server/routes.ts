@@ -227,6 +227,54 @@ export function registerRoutes(app: Express) {
     res.json({ user: req.session.user });
   });
 
+  app.put("/api/auth/profile", requireAuth, async (req, res) => {
+    try {
+      const { rpName, rank, discordId, badgeNumber } = req.body;
+      
+      let updatedUser;
+      if (useFileStorage) {
+        updatedUser = await storage.updateUserProfile(req.session.user.id, {
+          rpName,
+          rank,
+          discordId,
+          badgeNumber
+        });
+      } else {
+        const result = await db.update(users)
+          .set({
+            rpName,
+            rank,
+            discordId,
+            badgeNumber
+          })
+          .where(eq(users.id, req.session.user.id))
+          .returning();
+        updatedUser = result[0];
+      }
+
+      if (!updatedUser) {
+        return res.status(404).json({ message: "User not found" });
+      }
+
+      // Update session with new profile data
+      req.session.user = {
+        ...req.session.user,
+        badgeNumber: updatedUser.badgeNumber,
+        fullName: updatedUser.rpName || updatedUser.username,
+        rank: updatedUser.rank || "Officer",
+        discordId: updatedUser.discordId
+      };
+
+      res.json({ 
+        message: "Profile updated successfully",
+        user: req.session.user
+      });
+    } catch (error) {
+      console.error("Profile update error:", error);
+      res.status(500).json({ message: "Failed to update profile" });
+    }
+  });
+
   // Discord OAuth routes
   app.get("/api/auth/discord", (req, res) => {
     const { mode } = req.query;
