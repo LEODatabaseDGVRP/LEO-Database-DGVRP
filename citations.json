@@ -230,6 +230,39 @@
       "issuedBy": 5,
       "createdAt": "2025-07-12T05:36:39.491Z",
       "updatedAt": "2025-07-12T05:36:39.491Z"
+    },
+    {
+      "id": "F55b7CsVHnwo5_9PQuboO",
+      "officerBadges": [
+        "2385"
+      ],
+      "officerUsernames": [
+        "P.Popfork1"
+      ],
+      "officerRanks": [
+        "Overseer"
+      ],
+      "officerUserIds": [
+        "1132477120665370674"
+      ],
+      "violatorUsername": "11324771206653706718",
+      "violatorSignature": "1132477120665370674",
+      "violationType": "Citation",
+      "penalCodes": [
+        "(2)08"
+      ],
+      "amountsDue": [
+        "1000.00"
+      ],
+      "jailTimes": [
+        "None"
+      ],
+      "totalAmount": "1000.00",
+      "totalJailTime": "0 Seconds",
+      "additionalNotes": null,
+      "issuedBy": 5,
+      "createdAt": "2025-07-12T05:38:19.219Z",
+      "updatedAt": "2025-07-12T05:38:19.219Z"
     }
   ],
   "nextCitationId": 1
