@@ -52,6 +52,12 @@ export class FileStorage implements IStorage {
       this.deletedUsernames = new Set(parsed.deletedUsernames || []);
       this.citationCount = parsed.citationCount || 0;
       this.arrestCount = parsed.arrestCount || 0;
+      
+      // Sync counts with actual data after loading all files
+      setTimeout(() => {
+        this.citationCount = Math.max(this.citationCount, this.citations.size);
+        this.arrestCount = Math.max(this.arrestCount, this.arrests.size);
+      }, 100);
     } catch (error) {
       // File doesn't exist or is corrupted, start fresh
       console.log('No existing users file found, starting fresh');
@@ -188,7 +194,7 @@ export class FileStorage implements IStorage {
       createdAt: insertCitation.createdAt || new Date()
     };
     this.citations.set(citation.id.toString(), citation);
-    this.citationCount++;
+    this.citationCount = Math.max(this.citationCount + 1, this.citations.size);
     await this.saveCitationsToFile();
     await this.saveUsersToFile(); // Update citation count
     return citation;
@@ -363,7 +369,7 @@ async blockUsername(username: string): Promise<void> {
   // Arrest methods with proper file storage
   async saveArrest(arrestData: any): Promise<void> {
     this.arrests.set(arrestData.id, arrestData);
-    this.arrestCount++;
+    this.arrestCount = Math.max(this.arrestCount + 1, this.arrests.size);
     await this.saveArrestsToFile();
     await this.saveUsersToFile(); // Update arrest count
   }
