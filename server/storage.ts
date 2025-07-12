@@ -298,7 +298,17 @@ async blockUsername(username: string): Promise<void> {
     await this.saveUsersToFile();
   }
 
-  
+  // Arrest methods (simplified for file storage)
+  async saveArrest(arrestData: any): Promise<void> {
+    // For now, just increment the arrest count
+    this.arrestCount++;
+    await this.saveUsersToFile();
+  }
+
+  async getAllArrests(): Promise<any[]> {
+    // Return empty array for now - could be implemented with separate file
+    return [];
+  }
 }
 
 // Use file-based storage - persists users without database costs

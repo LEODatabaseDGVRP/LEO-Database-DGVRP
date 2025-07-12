@@ -83,7 +83,7 @@ export function registerRoutes(app: Express) {
         return res.status(401).json({ message: "Invalid credentials" });
       }
 
-      const isValid = await bcrypt.compare(validatedData.password, user.passwordHash);
+      const isValid = await bcrypt.compare(validatedData.password, user.password);
       if (!isValid) {
         return res.status(401).json({ message: "Invalid credentials" });
       }
@@ -93,13 +93,13 @@ export function registerRoutes(app: Express) {
         id: user.id,
         username: user.username,
         badgeNumber: user.badgeNumber,
-        fullName: user.fullName,
-        department: user.department,
-        rank: user.rank,
-        email: user.email,
-        phoneNumber: user.phoneNumber,
-        isAdmin: user.isAdmin,
-        avatarUrl: user.avatarUrl,
+        fullName: user.rpName || user.username,
+        department: "Police Department",
+        rank: user.rank || "Officer",
+        email: user.username + "@police.dept",
+        phoneNumber: "555-0000",
+        isAdmin: user.isAdmin === "true",
+        avatarUrl: null,
         discordId: user.discordId
       };
 
@@ -175,17 +175,17 @@ export function registerRoutes(app: Express) {
 
       // Set session
       req.session.user = {
-        id: userData.id,
-        username: userData.username,
-        badgeNumber: userData.badgeNumber,
-        fullName: userData.fullName,
-        department: userData.department,
-        rank: userData.rank,
-        email: userData.email,
-        phoneNumber: userData.phoneNumber,
-        isAdmin: userData.isAdmin,
-        avatarUrl: userData.avatarUrl,
-        discordId: userData.discordId
+        id: createdUser.id,
+        username: createdUser.username,
+        badgeNumber: createdUser.badgeNumber,
+        fullName: createdUser.rpName || createdUser.username,
+        department: "Police Department",
+        rank: createdUser.rank || "Officer",
+        email: createdUser.username + "@police.dept",
+        phoneNumber: "555-0000",
+        isAdmin: createdUser.isAdmin === "true",
+        avatarUrl: null,
+        discordId: createdUser.discordId
       };
 
       res.json({ 
@@ -226,6 +226,17 @@ export function registerRoutes(app: Express) {
     res.json({ url: discordAuthUrl });
   });
 
+  app.get("/api/auth/discord/url", (req, res) => {
+    const { mode } = req.query;
+    const discordAuthUrl = getDiscordAuthUrl(mode as string || 'signup');
+    res.json({ url: discordAuthUrl });
+  });
+
+  app.get("/api/auth/discord/status", (req, res) => {
+    const discordVerified = (req.session as any)?.discordVerified;
+    res.json({ verified: !!discordVerified, user: discordVerified });
+  });
+
   app.get("/api/auth/discord/callback", async (req, res) => {
     try {
       const { code, state } = req.query;
@@ -264,7 +275,7 @@ export function registerRoutes(app: Express) {
       };
 
       if (useFileStorage) {
-        await fileStorage.saveCitation(citationData);
+        await storage.createCitation(citationData);
       } else {
         await db.insert(citations).values(citationData);
       }
@@ -283,8 +294,8 @@ export function registerRoutes(app: Express) {
     try {
       let userCitations;
       if (useFileStorage) {
-        const allCitations = await fileStorage.getCitations();
-        userCitations = allCitations.filter(c => c.issuedBy === req.session.user.id);
+        userCitations = await storage.getAllCitations();
+        userCitations = userCitations.filter(c => c.issuedBy === req.session.user.id);
       } else {
         userCitations = await db.select().from(citations).where(eq(citations.issuedBy, req.session.user.id)).orderBy(desc(citations.createdAt));
       }
@@ -310,7 +321,7 @@ export function registerRoutes(app: Express) {
       };
 
       if (useFileStorage) {
-        await fileStorage.saveArrest(arrestData);
+        await storage.saveArrest(arrestData);
       } else {
         await db.insert(arrests).values(arrestData);
       }
@@ -329,8 +340,8 @@ export function registerRoutes(app: Express) {
     try {
       let userArrests;
       if (useFileStorage) {
-        const allArrests = await fileStorage.getArrests();
-        userArrests = allArrests.filter(a => a.arrestedBy === req.session.user.id);
+        userArrests = await storage.getAllArrests();
+        userArrests = userArrests.filter(a => a.arrestedBy === req.session.user.id);
       } else {
         userArrests = await db.select().from(arrests).where(eq(arrests.arrestedBy, req.session.user.id)).orderBy(desc(arrests.createdAt));
       }
