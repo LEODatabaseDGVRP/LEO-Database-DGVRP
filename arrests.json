@@ -63,6 +63,38 @@
       "arrestedBy": 5,
       "createdAt": "2025-07-12T05:33:15.666Z",
       "updatedAt": "2025-07-12T05:33:15.666Z"
+    },
+    {
+      "officerBadges": [
+        "2385"
+      ],
+      "officerUsernames": [
+        "P.Popfork1"
+      ],
+      "officerRanks": [
+        "Overseer"
+      ],
+      "officerUserIds": [
+        "1132477120665370674"
+      ],
+      "arresteeUsername": "1132477120665370674",
+      "arresteeSignature": "1132477120665370674",
+      "mugshot": "",
+      "penalCodes": [
+        "(1)03"
+      ],
+      "amountsDue": [
+        "10000.00"
+      ],
+      "jailTimes": [
+        "120 Seconds"
+      ],
+      "totalAmount": "10000.00",
+      "totalJailTime": "120 Seconds",
+      "id": "L8uVG1KZ_pelhi-Z9_wHl",
+      "arrestedBy": 5,
+      "createdAt": "2025-07-12T05:34:36.283Z",
+      "updatedAt": "2025-07-12T05:34:36.283Z"
     }
   ]
 }
