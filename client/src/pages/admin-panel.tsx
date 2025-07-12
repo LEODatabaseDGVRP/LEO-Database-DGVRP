@@ -468,7 +468,7 @@ export default function AdminPanel() {
                   <div>
                     <p className="text-sm text-gray-400">Citations Issued</p>
                     <p className="text-2xl font-bold text-white">
-                      {stats?.citations || 0}
+                      {stats?.citationCount || 0}
                     </p>
                   </div>
                 </div>
@@ -482,7 +482,7 @@ export default function AdminPanel() {
                   <div>
                     <p className="text-sm text-gray-400">Arrest Reports</p>
                     <p className="text-2xl font-bold text-white">
-                      {stats?.arrests || 0}
+                      {stats?.arrestCount || 0}
                     </p>
                   </div>
                 </div>
