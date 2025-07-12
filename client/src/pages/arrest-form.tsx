@@ -10,7 +10,7 @@ function debounce<T extends (...args: any[]) => any>(func: T, wait: number): T {
 }
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { useMutation } from "@tanstack/react-query";
+import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { z } from "zod";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -242,6 +242,7 @@ export default function ArrestForm() {
   const [imageFile, setImageFile] = useState<File | null>(null);
   const [showClearDialog, setShowClearDialog] = useState(false);
   const { toast } = useToast();
+  const queryClient = useQueryClient();
 
   const form = useForm<ArrestFormData>({
     resolver: zodResolver(arrestFormSchema),
@@ -435,7 +436,7 @@ export default function ArrestForm() {
     const currentPenalCodes = form.getValues("penalCodes");
     const currentAmounts = form.getValues("amountsDue");
     const currentJailTimes = form.getValues("jailTimes");
-    form.setValue("penalCodes", [...currentPenalCodes, ""]);
+    form.setValue("penalCodes", [...currentPenalcodes, ""]);
     form.setValue("amountsDue", [...currentAmounts, ""]);
     form.setValue("jailTimes", [...currentJailTimes, ""]);
   };
@@ -1281,8 +1282,7 @@ export default function ArrestForm() {
                         <AlertDialogDescription className="text-slate-300">
                           Are you sure you want to go back to the home page? Any unsaved changes will be lost.
                         </AlertDialogDescription>
-                      </AlertDialogHeader>
-                      <AlertDialogFooter>
+                      </AlertDialogHeader><AlertDialogFooter>
                         <AlertDialogCancel className="bg-slate-600 hover:bg-slate-500 text-white border-slate-500">
                           Cancel
                         </AlertDialogCancel>

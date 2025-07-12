@@ -1,7 +1,7 @@
 import { useState, useEffect, useCallback } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { useMutation, useQuery } from "@tanstack/react-query";
+import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { z } from "zod";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -152,6 +152,7 @@ export default function CitationForm() {
   const [openComboboxes, setOpenComboboxes] = useState<{ [key: string]: boolean }>({});
   const [showClearDialog, setShowClearDialog] = useState(false);
   const { toast } = useToast();
+  const queryClient = useQueryClient();
 
   const form = useForm<FormData>({
     resolver: zodResolver(formSchema),
@@ -187,13 +188,13 @@ export default function CitationForm() {
     } else {
       // Auto-populate primary officer with user profile data
       const primaryOfficer = primaryOfficerData;
-      
+
       // Only use meaningful values (more than 1 character) for RP name
       const filteredPrimaryOfficer = {
         ...primaryOfficer,
         username: primaryOfficer.username && primaryOfficer.username.length > 1 ? primaryOfficer.username : ""
       };
-      
+
       if (filteredPrimaryOfficer.badge || filteredPrimaryOfficer.username || filteredPrimaryOfficer.rank || filteredPrimaryOfficer.userId) {
         setOfficerFields([{ id: "1", ...filteredPrimaryOfficer }]);
         form.setValue('officerBadges', [filteredPrimaryOfficer.badge]);
@@ -252,6 +253,11 @@ export default function CitationForm() {
       setTimeout(() => {
         autoClearFormKeepOfficers();
       }, 1000);
+
+          // Invalidate admin queries to refresh the admin panel
+          queryClient.invalidateQueries({ queryKey: ["/api/admin/citations"] });
+          queryClient.invalidateQueries({ queryKey: ["/api/admin/stats"] });
+          queryClient.invalidateQueries({ queryKey: ["/api/citations"] });
     },
     onError: (error: any) => {
       console.error("❌ Mutation error:", error);
@@ -625,7 +631,7 @@ export default function CitationForm() {
                             <FormItem>
                               <FormLabel className="text-white font-medium">Rank:</FormLabel>
                               <FormControl>
-                                <Input
+<Input
                                   className="law-input text-white"
                                   placeholder="Ex: Sergeant"
                                   {...formField}
