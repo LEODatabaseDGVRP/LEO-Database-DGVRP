@@ -32,6 +32,8 @@ function CitationsSection() {
     },
   });
 
+  console.log("Citations data received:", citations);
+
   if (!citations || citations.length === 0) {
     return (
       <div className="text-center py-8">
@@ -56,6 +58,9 @@ function CitationsSection() {
               </p>
               <p className="text-sm text-green-400">
                 Amount: ${citation.totalAmount}
+              </p>
+              <p className="text-sm text-blue-400">
+                Penal Code: {Array.isArray(citation.penalCodes) ? citation.penalCodes.join(', ') : citation.penalCodes}
               </p>
             </div>
             <div className="text-right">
