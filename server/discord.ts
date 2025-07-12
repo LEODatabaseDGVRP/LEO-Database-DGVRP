@@ -149,7 +149,17 @@ class DiscordBotServiceImpl implements DiscordBotService {
     }
 
     const formattedTotalAmount = parseFloat(data.totalAmount).toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
-    const citationMessage = `Ping User Receiving Ticket: <@${data.violatorUsername}>
+    // Format violator username as Discord ping if it's a valid user ID
+    const violatorPing = data.violatorUsername && data.violatorUsername.match(/^\d+$/) 
+      ? `<@${data.violatorUsername}>` 
+      : `**${data.violatorUsername}**`;
+    
+    // Format violator signature as Discord ping if it's a valid user ID
+    const violatorSignaturePing = data.violatorSignature && data.violatorSignature.match(/^\d+$/) 
+      ? `<@${data.violatorSignature}>` 
+      : `**${data.violatorSignature}**`;
+
+    const citationMessage = `Ping User Receiving Ticket: ${violatorPing}
 Type of Ticket: **${ticketType}**
 Penal Code: ${penalCodes}
 Total Amount Due: **$${formattedTotalAmount}**
@@ -163,7 +173,7 @@ By signing this citation, you acknowledge that this is NOT an admission of guilt
 
 You must pay the citation to <@1392657393724424313>
 
-Sign at the X: <@${data.violatorSignature}>
+Sign at the X: ${violatorSignaturePing}
 
 4000 Capitol Drive, Greenville, Wisconsin 54942
 
