@@ -19,48 +19,46 @@ export function useProductionMutation(options: ProductionMutationOptions) {
     mutationFn: async (data: any) => {
       console.log(`🚀 Production mutation starting for ${options.endpoint}`);
       console.log("🌐 Environment:", window.location.hostname);
-
+      
       let attempt = 0;
       const maxAttempts = 3;
-
+      
       while (attempt < maxAttempts) {
         try {
           attempt++;
           console.log(`📡 Attempt ${attempt}/${maxAttempts} for ${options.endpoint}`);
-
+          
           const response = await apiRequest(options.method, options.endpoint, data);
           console.log(`📡 API Response status (attempt ${attempt}):`, response.status);
-
+          
           if (!response.ok) {
             const errorText = await response.text();
             console.error(`❌ API Error response (attempt ${attempt}):`, errorText);
-
+            
             let errorData;
             try {
               errorData = JSON.parse(errorText);
             } catch {
               errorData = { message: errorText || `Failed to process ${options.endpoint}` };
             }
-
+            
             // On last attempt, throw the error
             if (attempt === maxAttempts) {
               throw new Error(errorData.message || `Failed to process ${options.endpoint}`);
             }
-
+            
             // Wait before retry
             await new Promise(resolve => setTimeout(resolve, 1000 * attempt));
             continue;
           }
-
+          
           const result = await response.json();
           console.log(`✅ API Success response (attempt ${attempt}):`, result);
           return result;
-
+          
         } catch (error) {
           console.error(`🔥 Mutation error (attempt ${attempt}):`, error);
-          console.error('Error message:', error instanceof Error ? error.message : String(error));
-          console.error('Error stack:', error instanceof Error ? error.stack : 'No stack trace');
-
+          
           // If it's the last attempt, throw the error
           if (attempt === maxAttempts) {
             console.error("🔥 Error details:", {
@@ -70,7 +68,7 @@ export function useProductionMutation(options: ProductionMutationOptions) {
             });
             throw error;
           }
-
+          
           // Wait before retry
           await new Promise(resolve => setTimeout(resolve, 1000 * attempt));
         }
@@ -90,14 +88,14 @@ export function useProductionMutation(options: ProductionMutationOptions) {
         description: options.successMessage,
         duration: 5000,
       });
-
+      
       // Invalidate queries
       if (options.invalidateQueries) {
         options.invalidateQueries.forEach(queryKey => {
           queryClient.invalidateQueries({ queryKey: [queryKey] });
         });
       }
-
+      
       // Run custom success callback
       if (options.onSuccess) {
         options.onSuccess(data);

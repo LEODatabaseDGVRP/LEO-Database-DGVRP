@@ -311,19 +311,19 @@ export default function ArrestForm() {
     mutationFn: async (data: ArrestFormData) => {
       console.log("🚀 Arrest mutation starting with data:", data);
       console.log("🌐 Environment:", window.location.hostname);
-
+      
       try {
         // Include the base64 image data if there's an uploaded image but no description
         const submitData = {
           ...data,
           mugshotBase64: (!data.description && uploadedImage) ? uploadedImage : undefined
         };
-
+        
         console.log("📡 Sending arrest data:", submitData);
         const response = await apiRequest("POST", "/api/arrests", submitData);
         console.log("📡 API Response status:", response.status);
         console.log("📡 API Response headers:", Object.fromEntries(response.headers.entries()));
-
+        
         if (!response.ok) {
           const errorText = await response.text();
           console.error("❌ API Error response:", errorText);
@@ -335,14 +335,17 @@ export default function ArrestForm() {
           }
           throw new Error(errorData.message || "Failed to submit arrest report");
         }
-
+        
         const result = await response.json();
         console.log("✅ API Success response:", result);
         return result;
       } catch (error) {
-        console.error('Arrest form submission error:', error);
-        console.error('Error message:', error instanceof Error ? error.message : String(error));
-        console.error('Error stack:', error instanceof Error ? error.stack : 'No stack trace');
+        console.error("🔥 Arrest mutation error:", error);
+        console.error("🔥 Error details:", {
+          name: error.name,
+          message: error.message,
+          stack: error.stack
+        });
         throw error;
       }
     },
@@ -364,7 +367,7 @@ export default function ArrestForm() {
       setTimeout(() => {
         autoClearFormKeepOfficers();
       }, 1000);
-
+      
       // Invalidate admin queries to refresh the admin panel
       queryClient.invalidateQueries({ queryKey: ["/api/admin/arrests"] });
       queryClient.invalidateQueries({ queryKey: ["/api/admin/stats"] });
