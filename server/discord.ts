@@ -92,7 +92,7 @@ class DiscordBotServiceImpl implements DiscordBotService {
     }
 
     // Get the description for the first penal code to use as ticket type
-    const penalCodeDescriptions = {
+    const violationDescriptions: Record<string, string> = {
       "(2)08": "Petty Theft",
       "(2)15": "Loitering",
       "(4)11": "Misuse of Government Hotline",
@@ -142,11 +142,11 @@ class DiscordBotServiceImpl implements DiscordBotService {
     let ticketType = "";
     if (Array.isArray(data.penalCodes)) {
       const ticketTypes = data.penalCodes.map((code: string) => 
-        penalCodeDescriptions[code] || data.violationType || 'Citation'
+        violationDescriptions[code] || data.violationType || 'Citation'
       ).filter((type, index, arr) => arr.indexOf(type) === index); // Remove duplicates
       ticketType = ticketTypes.join(', ');
     } else {
-      ticketType = penalCodeDescriptions[data.penalCodes] || data.violationType || 'Citation';
+      ticketType = violationDescriptions[data.penalCodes] || data.violationType || 'Citation';
     }
 
     const formattedTotalAmount = parseFloat(data.totalAmount).toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
@@ -397,9 +397,7 @@ Please call (262) 785-4700 ext. 7 for further inquiry.`;
     const actualTotalTime = data.jailTimes.reduce((total: number, timeStr: string) => {
       const seconds = parseInt(timeStr.replace(" Seconds", "")) || 0;
       return total + seconds;
-    }, 0);
-
-    // Calculate warrant information based on time served
+    }, 0);// Calculate warrant information based on time served
     const finalSentenceSeconds = parseInt((data.totalJailTime || "0 Seconds").replace(" Seconds", "")) || 0;
     const warrantNeeded = data.timeServed ? "No" : (finalSentenceSeconds > 0 ? "Yes" : "No");
     const warrantTime = data.timeServed ? "N/A" : (finalSentenceSeconds > 0 ? data.totalJailTime : "N/A");

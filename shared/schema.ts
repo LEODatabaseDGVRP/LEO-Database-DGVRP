@@ -1,5 +1,5 @@
 import { pgTable, text, serial, integer, decimal, timestamp, boolean } from "drizzle-orm/pg-core";
-import { createInsertSchema } from "drizzle-zod";
+import { createInsertSchema, createSelectSchema } from "drizzle-zod";
 import { z } from "zod";
 
 export const users = pgTable("users", {
@@ -67,7 +67,14 @@ export const arrests = pgTable("arrests", {
   updatedAt: timestamp("updated_at").defaultNow().notNull(),
 });
 
-export const insertUserSchema = createInsertSchema(users).pick({
+export const insertUserSchema = createInsertSchema(users);
+export const selectUserSchema = createSelectSchema(users);
+export const insertCitationSchema = createInsertSchema(citations);
+export const selectCitationSchema = createSelectSchema(citations);
+export const insertArrestSchema = createInsertSchema(arrests);
+export const selectArrestSchema = createSelectSchema(arrests);
+
+export const insertUserSchema2 = createInsertSchema(users).pick({
   username: true,
   password: true,
   badgeNumber: true,
@@ -87,7 +94,7 @@ export const updateUserProfileSchema = createInsertSchema(users).pick({
   badgeNumber: true,
 });
 
-export const insertCitationSchema = z.object({
+export const insertCitationSchema2 = z.object({
   officerBadges: z.array(z.string().min(1)).min(1, "At least one officer badge is required"),
   officerUsernames: z.array(z.string().min(1)).min(1, "At least one officer username is required"),
   officerRanks: z.array(z.string().min(1)).min(1, "At least one officer rank is required"),
@@ -103,9 +110,10 @@ export const insertCitationSchema = z.object({
   additionalNotes: z.string().optional().default(""),
 });
 
-export const insertArrestSchema = createInsertSchema(arrests).omit({
+export const insertArrestSchema2 = createInsertSchema(arrests).omit({
   id: true,
   createdAt: true,
+  updatedAt: true,
 }).extend({
   // Officer data as arrays
   officerBadges: z.array(z.string().min(1, "Badge number is required")).min(1, "At least one officer badge is required"),
@@ -121,8 +129,9 @@ export const insertArrestSchema = createInsertSchema(arrests).omit({
 
   // Single values
   arresteeUsername: z.string().min(1, "Arrestee username is required"),
-  arresteeSignature: z.string().min(1, "Arrestee signature is required"),
-  mugshot: z.string().optional().nullable(),
+  suspectSignature: z.string().min(1, "Arrestee signature is required"),
+  officerSignatures: z.array(z.string()).min(1, "Officer signature is required"),
+  mugshotBase64: z.string().optional().nullable(),
   totalAmount: z.string().regex(/^\d+(\.\d{1,2})?$/, "Invalid total amount format"),
   additionalNotes: z.string().optional(),
 });
@@ -145,10 +154,25 @@ export const signUpSchema = z.object({
 export type SignUpData = z.infer<typeof signUpSchema>;
 
 export type InsertUser = z.infer<typeof insertUserSchema>;
-export type SelectUser = typeof users.$inferSelect;
-export type User = SelectUser; // Alias for compatibility
+export type SelectUser = z.infer<typeof selectUserSchema>;
 export type InsertCitation = z.infer<typeof insertCitationSchema>;
-export type SelectCitation = typeof citations.$inferSelect;
-export type Citation = SelectCitation; // Alias for compatibility
+export type SelectCitation = z.infer<typeof selectCitationSchema>;
 export type InsertArrest = z.infer<typeof insertArrestSchema>;
-export type SelectArrest = typeof arrests.$inferSelect;
+export type SelectArrest = z.infer<typeof selectArrestSchema>;
+
+// Session extensions
+declare module 'express-session' {
+  interface SessionData {
+    user?: SelectUser;
+    passwordReset?: {
+      username: string;
+      code: string;
+      expiresAt: number;
+    };
+    discordVerification?: {
+      username: string;
+      discordId: string;
+      expiresAt: number;
+    };
+  }
+}
