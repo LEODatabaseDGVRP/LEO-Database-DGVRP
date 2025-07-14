@@ -1,0 +1,119 @@
+client/src/hooks/useOfficerProfile.ts(31,22): error TS2339: Property 'fullName' does not exist on type 'User'.
+client/src/hooks/useOfficerProfile.ts(120,44): error TS2345: Argument of type '{ badgeNumber: string; rpName: string | null; rank: string | null; discordId: string | null; }' is not assignable to parameter of type 'OfficerProfile'.
+  Types of property 'rpName' are incompatible.
+    Type 'string | null' is not assignable to type 'string | undefined'.
+      Type 'null' is not assignable to type 'string | undefined'.
+client/src/hooks/useProductionMutation.ts(65,21): error TS18046: 'error' is of type 'unknown'.
+client/src/hooks/useProductionMutation.ts(66,24): error TS18046: 'error' is of type 'unknown'.
+client/src/hooks/useProductionMutation.ts(67,22): error TS18046: 'error' is of type 'unknown'.
+client/src/lib/queryClient.ts(33,9): error TS18046: 'error' is of type 'unknown'.
+client/src/pages/arrest-form.tsx(345,17): error TS18046: 'error' is of type 'unknown'.
+client/src/pages/arrest-form.tsx(346,20): error TS18046: 'error' is of type 'unknown'.
+client/src/pages/arrest-form.tsx(347,18): error TS18046: 'error' is of type 'unknown'.
+client/src/pages/citation-form.tsx(178,24): error TS2345: Argument of type 'OfficerData[]' is not assignable to parameter of type 'SetStateAction<OfficerField[]>'.
+  Type 'OfficerData[]' is not assignable to type 'OfficerField[]'.
+    Property 'id' is missing in type 'OfficerData' but required in type 'OfficerField'.
+client/src/pages/citation-form.tsx(238,17): error TS18046: 'error' is of type 'unknown'.
+client/src/pages/citation-form.tsx(239,20): error TS18046: 'error' is of type 'unknown'.
+client/src/pages/citation-form.tsx(240,18): error TS18046: 'error' is of type 'unknown'.
+server/discord.ts(64,17): error TS7006: Parameter 'info' implicitly has an 'any' type.
+server/discord.ts(85,17): error TS7006: Parameter 'rank' implicitly has an 'any' type.
+server/discord.ts(145,9): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type '{ "(2)08": string; "(2)15": string; "(4)11": string; "(4)12": string; "(5)01": string; "(8)01": string; "(8)02": string; "(8)04": string; "(8)06": string; "(8)07": string; "(8)08": string; "(8)09": string; "(8)10": string; "(8)11": string; ... 28 more ...; "(8)55": string; }'.
+  No index signature with a parameter of type 'string' was found on type '{ "(2)08": string; "(2)15": string; "(4)11": string; "(4)12": string; "(5)01": string; "(8)01": string; "(8)02": string; "(8)04": string; "(8)06": string; "(8)07": string; "(8)08": string; "(8)09": string; "(8)10": string; "(8)11": string; ... 28 more ...; "(8)55": string; }'.
+server/discord.ts(146,17): error TS7006: Parameter 'type' implicitly has an 'any' type.
+server/discord.ts(146,23): error TS7006: Parameter 'index' implicitly has an 'any' type.
+server/discord.ts(146,30): error TS7006: Parameter 'arr' implicitly has an 'any' type.
+server/discord.ts(149,20): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type '{ "(2)08": string; "(2)15": string; "(4)11": string; "(4)12": string; "(5)01": string; "(8)01": string; "(8)02": string; "(8)04": string; "(8)06": string; "(8)07": string; "(8)08": string; "(8)09": string; "(8)10": string; "(8)11": string; ... 28 more ...; "(8)55": string; }'.
+server/discord.ts(365,17): error TS7006: Parameter 'sig' implicitly has an 'any' type.
+server/discord.ts(426,17): error TS7006: Parameter 'sig' implicitly has an 'any' type.
+server/index.ts(78,26): error TS2345: Argument of type 'Express' is not assignable to parameter of type 'Server<typeof IncomingMessage, typeof ServerResponse>'.
+  Type 'Express' is missing the following properties from type 'Server<typeof IncomingMessage, typeof ServerResponse>': setTimeout, maxHeadersCount, maxRequestsPerSocket, timeout, and 14 more.
+server/routes.ts(3,28): error TS2724: '"../shared/schema"' has no exported member named 'selectUserSchema'. Did you mean 'insertUserSchema'?
+server/routes.ts(3,68): error TS2724: '"../shared/schema"' has no exported member named 'selectCitationSchema'. Did you mean 'insertCitationSchema'?
+server/routes.ts(3,110): error TS2724: '"../shared/schema"' has no exported member named 'selectArrestSchema'. Did you mean 'insertArrestSchema'?
+server/routes.ts(6,10): error TS2300: Duplicate identifier 'createDiscordBotService'.
+server/routes.ts(11,10): error TS2305: Module '"./discord"' has no exported member 'getRandomSystemUsername'.
+server/routes.ts(11,35): error TS2300: Duplicate identifier 'createDiscordBotService'.
+server/routes.ts(25,3): error TS1378: Top-level 'await' expressions are only allowed when the 'module' option is set to 'es2022', 'esnext', 'system', 'node16', 'node18', 'nodenext', or 'preserve', and the 'target' option is set to 'es2017' or higher.
+server/routes.ts(93,19): error TS2339: Property 'user' does not exist on type 'Session & Partial<SessionData>'.
+server/routes.ts(114,70): error TS2339: Property 'user' does not exist on type 'Session & Partial<SessionData>'.
+server/routes.ts(117,29): error TS2339: Property 'user' does not exist on type 'Session & Partial<SessionData>'.
+server/routes.ts(164,56): error TS2345: Argument of type 'string | undefined' is not assignable to parameter of type 'string'.
+  Type 'undefined' is not assignable to type 'string'.
+server/routes.ts(166,60): error TS2769: No overload matches this call.
+  Overload 1 of 3, '(left: PgColumn<{ name: "username"; tableName: "users"; dataType: "string"; columnType: "PgText"; data: string; driverParam: string; notNull: true; hasDefault: false; isPrimaryKey: false; isAutoincrement: false; ... 4 more ...; generated: undefined; }, {}, {}>, right: string | SQLWrapper): SQL<...>', gave the following error.
+    Argument of type 'string | undefined' is not assignable to parameter of type 'string | SQLWrapper'.
+      Type 'undefined' is not assignable to type 'string | SQLWrapper'.
+  Overload 2 of 3, '(left: Aliased<string | undefined>, right: string | SQLWrapper | undefined): SQL<unknown>', gave the following error.
+    Argument of type 'PgColumn<{ name: "username"; tableName: "users"; dataType: "string"; columnType: "PgText"; data: string; driverParam: string; notNull: true; hasDefault: false; isPrimaryKey: false; isAutoincrement: false; ... 4 more ...; generated: undefined; }, {}, {}>' is not assignable to parameter of type 'Aliased<string | undefined>'.
+      Type 'PgColumn<{ name: "username"; tableName: "users"; dataType: "string"; columnType: "PgText"; data: string; driverParam: string; notNull: true; hasDefault: false; isPrimaryKey: false; isAutoincrement: false; ... 4 more ...; generated: undefined; }, {}, {}>' is missing the following properties from type 'Aliased<string | undefined>': sql, fieldAlias
+  Overload 3 of 3, '(left: never, right: unknown): SQL<unknown>', gave the following error.
+    Argument of type 'PgColumn<{ name: "username"; tableName: "users"; dataType: "string"; columnType: "PgText"; data: string; driverParam: string; notNull: true; hasDefault: false; isPrimaryKey: false; isAutoincrement: false; ... 4 more ...; generated: undefined; }, {}, {}>' is not assignable to parameter of type 'never'.
+server/routes.ts(189,54): error TS2769: No overload matches this call.
+  Overload 1 of 2, '(value: { password: string | SQL<unknown> | Placeholder<string, any>; username: string | SQL<unknown> | Placeholder<string, any>; badgeNumber: string | SQL<...> | Placeholder<...>; ... 4 more ...; isAdmin?: string | ... 2 more ... | undefined; }): PgInsertBase<...>', gave the following error.
+    Argument of type '{ username: string | undefined; password: string; badgeNumber: string; isAdmin: string; rpName: string; rank: string; discordId: any; }' is not assignable to parameter of type '{ password: string | SQL<unknown> | Placeholder<string, any>; username: string | SQL<unknown> | Placeholder<string, any>; badgeNumber: string | SQL<unknown> | Placeholder<...>; ... 4 more ...; isAdmin?: string | ... 2 more ... | undefined; }'.
+      Types of property 'username' are incompatible.
+        Type 'string | undefined' is not assignable to type 'string | SQL<unknown> | Placeholder<string, any>'.
+          Type 'undefined' is not assignable to type 'string | SQL<unknown> | Placeholder<string, any>'.
+  Overload 2 of 2, '(values: { password: string | SQL<unknown> | Placeholder<string, any>; username: string | SQL<unknown> | Placeholder<string, any>; badgeNumber: string | SQL<...> | Placeholder<...>; ... 4 more ...; isAdmin?: string | ... 2 more ... | undefined; }[]): PgInsertBase<...>', gave the following error.
+    Argument of type '{ username: string | undefined; password: string; badgeNumber: string; isAdmin: string; rpName: string; rank: string; discordId: any; }' is not assignable to parameter of type '{ password: string | SQL<unknown> | Placeholder<string, any>; username: string | SQL<unknown> | Placeholder<string, any>; badgeNumber: string | SQL<unknown> | Placeholder<...>; ... 4 more ...; isAdmin?: string | ... 2 more ... | undefined; }[]'.
+      Type '{ username: string | undefined; password: string; badgeNumber: string; isAdmin: string; rpName: string; rank: string; discordId: any; }' is missing the following properties from type '{ password: string | SQL<unknown> | Placeholder<string, any>; username: string | SQL<unknown> | Placeholder<string, any>; badgeNumber: string | SQL<unknown> | Placeholder<...>; ... 4 more ...; isAdmin?: string | ... 2 more ... | undefined; }[]': length, pop, push, concat, and 35 more.
+server/routes.ts(197,19): error TS2339: Property 'user' does not exist on type 'Session & Partial<SessionData>'.
+server/routes.ts(213,27): error TS2339: Property 'user' does not exist on type 'Session & Partial<SessionData>'.
+server/routes.ts(254,47): error TS2339: Property 'user' does not exist on type 'Session & Partial<SessionData>'.
+server/routes.ts(257,23): error TS2339: Property 'user' does not exist on type 'Session & Partial<SessionData>'.
+server/routes.ts(260,34): error TS2339: Property 'user' does not exist on type 'Session & Partial<SessionData>'.
+server/routes.ts(269,67): error TS2339: Property 'user' does not exist on type 'Session & Partial<SessionData>'.
+server/routes.ts(283,43): error TS2339: Property 'user' does not exist on type 'Session & Partial<SessionData>'.
+server/routes.ts(293,19): error TS2339: Property 'user' does not exist on type 'Session & Partial<SessionData>'.
+server/routes.ts(294,24): error TS2339: Property 'user' does not exist on type 'Session & Partial<SessionData>'.
+server/routes.ts(303,27): error TS2339: Property 'user' does not exist on type 'Session & Partial<SessionData>'.
+server/routes.ts(403,31): error TS2339: Property 'user' does not exist on type 'Session & Partial<SessionData>'.
+server/routes.ts(420,45): error TS2353: Object literal may only specify known properties, and 'discordMessageId' does not exist in type '{ id: string; issuedBy: any; createdAt: Date; updatedAt: Date; officerBadges: string[]; officerUsernames: string[]; officerRanks: string[]; officerUserIds: string[]; violatorUsername: string; ... 7 more ...; additionalNotes: string; }'.
+server/routes.ts(451,78): error TS2339: Property 'user' does not exist on type 'Session & Partial<SessionData>'.
+server/routes.ts(453,100): error TS2339: Property 'user' does not exist on type 'Session & Partial<SessionData>'.
+server/routes.ts(481,31): error TS2339: Property 'user' does not exist on type 'Session & Partial<SessionData>'.
+server/routes.ts(492,31): error TS2339: Property 'user' does not exist on type 'Session & Partial<SessionData>'.
+server/routes.ts(493,33): error TS2339: Property 'user' does not exist on type 'Session & Partial<SessionData>'.
+server/routes.ts(653,66): error TS7006: Parameter 'code' implicitly has an 'any' type.
+server/routes.ts(653,72): error TS7006: Parameter 'index' implicitly has an 'any' type.
+server/routes.ts(687,11): error TS18046: 'error' is of type 'unknown'.
+server/routes.ts(688,45): error TS18046: 'error' is of type 'unknown'.
+server/routes.ts(691,19): error TS18046: 'error' is of type 'unknown'.
+server/routes.ts(692,20): error TS18046: 'error' is of type 'unknown'.
+server/routes.ts(704,74): error TS2339: Property 'user' does not exist on type 'Session & Partial<SessionData>'.
+server/routes.ts(706,94): error TS2339: Property 'user' does not exist on type 'Session & Partial<SessionData>'.
+server/routes.ts(813,81): error TS2339: Property 'user' does not exist on type 'Session & Partial<SessionData>'.
+server/routes.ts(820,34): error TS2339: Property 'user' does not exist on type 'Session & Partial<SessionData>'.
+server/routes.ts(821,21): error TS2339: Property 'user' does not exist on type 'Session & Partial<SessionData>'.
+server/routes.ts(821,45): error TS2339: Property 'user' does not exist on type 'Session & Partial<SessionData>'.
+server/routes.ts(836,91): error TS2339: Property 'user' does not exist on type 'Session & Partial<SessionData>'.
+server/routes.ts(880,81): error TS2339: Property 'user' does not exist on type 'Session & Partial<SessionData>'.
+server/routes.ts(896,11): error TS7034: Variable 'citations' implicitly has type 'any[]' in some locations where its type cannot be determined.
+server/routes.ts(903,40): error TS2345: Argument of type 'any[]' is not assignable to parameter of type 'PgTable<TableConfig>'.
+  Type 'any[]' is missing the following properties from type 'PgTable<TableConfig>': _, $inferSelect, $inferInsert, getSQL
+server/routes.ts(903,40): error TS7005: Variable 'citations' implicitly has an 'any[]' type.
+server/routes.ts(914,34): error TS7005: Variable 'citations' implicitly has an 'any[]' type.
+server/routes.ts(1093,19): error TS2339: Property 'passwordReset' does not exist on type 'Session & Partial<SessionData>'.
+server/routes.ts(1106,28): error TS2339: Property 'sendPasswordResetCode' does not exist on type 'DiscordBotService'.
+server/routes.ts(1136,37): error TS2339: Property 'passwordReset' does not exist on type 'Session & Partial<SessionData>'.
+server/routes.ts(1143,28): error TS2339: Property 'passwordReset' does not exist on type 'Session & Partial<SessionData>'.
+server/routes.ts(1160,26): error TS2339: Property 'passwordReset' does not exist on type 'Session & Partial<SessionData>'.
+server/storage.ts(158,24): error TS2802: Type 'MapIterator<{ id: number; password: string; username: string; badgeNumber: string; rpName: string | null; rank: string | null; discordId: string | null; isAdmin: string; }>' can only be iterated through when using the '--downlevelIteration' flag or with a '--target' of 'es2015' or higher.
+server/storage.ts(169,7): error TS2322: Type 'string | undefined' is not assignable to type 'string'.
+  Type 'undefined' is not assignable to type 'string'.
+server/storage.ts(171,37): error TS2345: Argument of type 'string | undefined' is not assignable to parameter of type 'string'.
+  Type 'undefined' is not assignable to type 'string'.
+server/storage.ts(206,11): error TS2739: Type '{ additionalNotes: string | null; createdAt: any; officerBadges: string[]; officerUsernames: string[]; officerRanks: string[]; officerUserIds: string[]; violatorUsername: string; violatorSignature: string; ... 6 more ...; id: any; }' is missing the following properties from type '{ id: string; officerBadges: string[]; officerUsernames: string[]; officerRanks: string[]; officerUserIds: string[]; violatorUsername: string; violatorSignature: string; violationType: string; penalCodes: string[]; ... 8 more ...; updatedAt: Date; }': discordMessageId, issuedBy, updatedAt
+server/storage.ts(207,26): error TS2339: Property 'id' does not exist on type '{ officerBadges: string[]; officerUsernames: string[]; officerRanks: string[]; officerUserIds: string[]; violatorUsername: string; violatorSignature: string; violationType: string; penalCodes: string[]; ... 4 more ...; additionalNotes: string; }'.
+server/storage.ts(210,33): error TS2339: Property 'createdAt' does not exist on type '{ officerBadges: string[]; officerUsernames: string[]; officerRanks: string[]; officerUserIds: string[]; violatorUsername: string; violatorSignature: string; violationType: string; penalCodes: string[]; ... 4 more ...; additionalNotes: string; }'.
+server/storage.ts(251,7): error TS2322: Type '{ id: number; password: string; username: string; badgeNumber: string; rpName: string | null; rank: string | null; discordId: string | null; isAdmin: string; }' is not assignable to type 'void'.
+server/storage.ts(253,5): error TS2322: Type 'null' is not assignable to type 'void'.
+server/vite.ts(39,5): error TS2322: Type '{ middlewareMode: boolean; hmr: { server: Server<typeof IncomingMessage, typeof ServerResponse>; }; allowedHosts: boolean; }' is not assignable to type 'ServerOptions'.
+  Types of property 'allowedHosts' are incompatible.
+    Type 'boolean' is not assignable to type 'true | string[] | undefined'.
+vite.config.ts(36,5): error TS2769: No overload matches this call.
+  The last overload gave the following error.
+    Object literal may only specify known properties, and 'historyApiFallback' does not exist in type 'ServerOptions'.
+==> Build failed 😞
+==> Common ways to troubleshoot your deploy: https://render.com/docs/troubleshooting-deploys
