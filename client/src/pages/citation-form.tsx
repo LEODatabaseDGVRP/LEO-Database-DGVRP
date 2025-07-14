@@ -209,11 +209,13 @@ export default function CitationForm() {
 
   const submitMutation = useMutation({
     mutationFn: async (data: FormData) => {
-      console.log("🚀 Mutation starting with data:", data);
+      console.log("🚀 Citation mutation starting with data:", data);
+      console.log("🌐 Environment:", window.location.hostname);
 
       try {
         const response = await apiRequest("POST", "/api/citations", data);
         console.log("📡 API Response status:", response.status);
+        console.log("📡 API Response headers:", Object.fromEntries(response.headers.entries()));
 
         if (!response.ok) {
           const errorText = await response.text();
@@ -231,7 +233,12 @@ export default function CitationForm() {
         console.log("✅ API Success response:", result);
         return result;
       } catch (error) {
-        console.error("🔥 Mutation error:", error);
+        console.error("🔥 Citation mutation error:", error);
+        console.error("🔥 Error details:", {
+          name: error.name,
+          message: error.message,
+          stack: error.stack
+        });
         throw error;
       }
     },

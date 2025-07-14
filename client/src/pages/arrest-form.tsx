@@ -310,6 +310,7 @@ export default function ArrestForm() {
   const submitMutation = useMutation({
     mutationFn: async (data: ArrestFormData) => {
       console.log("🚀 Arrest mutation starting with data:", data);
+      console.log("🌐 Environment:", window.location.hostname);
       
       try {
         // Include the base64 image data if there's an uploaded image but no description
@@ -321,6 +322,7 @@ export default function ArrestForm() {
         console.log("📡 Sending arrest data:", submitData);
         const response = await apiRequest("POST", "/api/arrests", submitData);
         console.log("📡 API Response status:", response.status);
+        console.log("📡 API Response headers:", Object.fromEntries(response.headers.entries()));
         
         if (!response.ok) {
           const errorText = await response.text();
@@ -339,6 +341,11 @@ export default function ArrestForm() {
         return result;
       } catch (error) {
         console.error("🔥 Arrest mutation error:", error);
+        console.error("🔥 Error details:", {
+          name: error.name,
+          message: error.message,
+          stack: error.stack
+        });
         throw error;
       }
     },

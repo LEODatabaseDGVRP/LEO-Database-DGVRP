@@ -17,6 +17,14 @@ Preferred communication style: Simple, everyday language.
 
 ## Recent Changes (July 2025)
 
+### Production Form Submission Fix (July 14, 2025)
+- **Production-Specific Issue**: Fixed citation and arrest forms getting stuck in pending state specifically on Render production deployment
+- **Timeout Handling**: Added 30-second timeout to API requests with proper abort controller implementation
+- **Enhanced Error Handling**: Improved error handling in both citation and arrest form mutations with detailed logging
+- **Retry Logic**: Implemented intelligent retry logic for network-related failures in production environment
+- **Production Debugging**: Added comprehensive environment-specific logging to identify production vs development differences
+- **Query Client Improvements**: Enhanced query client with production-specific retry logic and timeout handling
+
 ### Signup Form Fix (July 14, 2025)
 - **Schema Mismatch Resolution**: Fixed critical mismatch between frontend signup form and backend validation schema
 - **Frontend Data Structure**: Updated signup form to send `rpName` instead of `fullName`, `department`, `email`, `phoneNumber`
