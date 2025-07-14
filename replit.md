@@ -17,6 +17,15 @@ Preferred communication style: Simple, everyday language.
 
 ## Recent Changes (July 2025)
 
+### Signup Form Fix (July 14, 2025)
+- **Schema Mismatch Resolution**: Fixed critical mismatch between frontend signup form and backend validation schema
+- **Frontend Data Structure**: Updated signup form to send `rpName` instead of `fullName`, `department`, `email`, `phoneNumber`
+- **Backend Schema Update**: Modified `signUpSchema` to match frontend form fields exactly
+- **Production Deployment**: Resolved signup errors on Render deployment with proper field mapping
+- **Enhanced Debug Logging**: Added comprehensive debugging for signup process to identify production issues
+
+## Recent Changes (July 2025)
+
 ### Admin Panel Enhancements
 - **Background Consistency**: Fixed admin panel background to match other pages using var(--law-primary) with p-4 padding
 - **User Management UI**: Updated user management section with dark theme styling - changed white backgrounds to slate-800 with proper text colors

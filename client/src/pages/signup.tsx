@@ -129,7 +129,13 @@ export default function SignupPage() {
 
       const { confirmPassword, ...signupData } = data;
       // Use Discord username from verification as the username for account creation
-      const finalData = { ...signupData, username: discordUser.username };
+      const finalData = { 
+        username: discordUser.username,
+        badgeNumber: signupData.badgeNumber,
+        rpName: signupData.rpName,
+        rank: signupData.rank,
+        password: signupData.password
+      };
       const response = await apiRequest("POST", "/api/auth/signup", finalData);
       if (!response.ok) {
         const error = await response.json();
