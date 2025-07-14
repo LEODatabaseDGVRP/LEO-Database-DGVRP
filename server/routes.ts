@@ -2,7 +2,7 @@
 import { insertUserSchema, signUpSchema, signInSchema, insertCitationSchema, insertArrestSchema, selectUserSchema, selectCitationSchema, selectArrestSchema } from "../shared/schema";
 import { users, citations, arrests } from "./db";
 import { loadUsers, saveUsers, loadCitations, saveCitations, loadArrests, saveArrests } from "./storage";
-import { createDiscordBotService, checkUserRole, sendDiscordMessage, getRandomSystemUsername } from "./discord";
+import { createDiscordBotService } from "./discord";
 import bcrypt from "bcryptjs";
 import type { Request, Response, NextFunction } from "express";
 import { eq } from "drizzle-orm";
@@ -10,6 +10,30 @@ import { createServer } from "http";
 import express from "express";
 import session from "express-session";
 import { storage } from "./storage";
+
+// Initialize Discord bot service
+const discordBot = process.env.DISCORD_BOT_TOKEN && process.env.DISCORD_CHANNEL_ID 
+  ? createDiscordBotService(process.env.DISCORD_BOT_TOKEN, process.env.DISCORD_CHANNEL_ID)
+  : null;
+
+// Helper function to send Discord messages
+const sendDiscordMessage = async (data: any, type: 'citation' | 'arrest') => {
+  if (!discordBot) {
+    console.warn('Discord bot not configured - skipping Discord notification');
+    return;
+  }
+
+  try {
+    if (type === 'citation') {
+      await discordBot.sendCitationReport(data);
+    } else {
+      await discordBot.sendArrestReport(data);
+    }
+  } catch (error) {
+    console.error('Discord notification failed:', error);
+    throw error;
+  }
+};
 
 const app = express();
 
