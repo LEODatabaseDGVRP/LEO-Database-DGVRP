@@ -92,7 +92,7 @@ app.use((req, res, next) => {
       return next();
     } else {
       // In production, serve index.html for client-side routing
-      res.sendFile(path.resolve('dist/client/index.html'));
+      res.sendFile(path.resolve('dist/public/index.html'));
     }
   });
 
