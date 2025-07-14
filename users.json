@@ -12,19 +12,6 @@
         "rank": "Overseer",
         "discordId": "1132477120665370674"
       }
-    ],
-    [
-      6,
-      {
-        "id": 6,
-        "username": "test",
-        "password": "$2b$10$afb9az0F5xG2cQqCV53T/.Im9Gt/BRRrkOA9Sv0fA5Gx7iSQpD09a",
-        "isAdmin": "true",
-        "badgeNumber": "1234",
-        "rpName": "Test Officer",
-        "rank": "Officer",
-        "discordId": null
-      }
     ]
   ],
   "nextUserId": 8,

@@ -134,20 +134,21 @@ export const loginSchema = z.object({
 });
 
 export const signUpSchema = z.object({
-  username: z.string().min(1, "Username is required"),
-  password: z.string().min(8, "Password must be at least 8 characters"),
+  username: z.string().optional(), // Optional since it comes from Discord
+  password: z.string().min(6, "Password must be at least 6 characters"),
   badgeNumber: z.string().min(1, "Badge number is required"),
-  fullName: z.string().min(1, "Full name is required"),
-  department: z.string().min(1, "Department is required"),
+  rpName: z.string().min(1, "RP name is required"),
   rank: z.string().min(1, "Rank is required"),
-  email: z.string().email("Valid email is required"),
-  phoneNumber: z.string().min(1, "Phone number is required"),
   discordId: z.string().optional(),
 });
 
+export type SignUpData = z.infer<typeof signUpSchema>;
+
 export type InsertUser = z.infer<typeof insertUserSchema>;
 export type SelectUser = typeof users.$inferSelect;
+export type User = SelectUser; // Alias for compatibility
 export type InsertCitation = z.infer<typeof insertCitationSchema>;
 export type SelectCitation = typeof citations.$inferSelect;
+export type Citation = SelectCitation; // Alias for compatibility
 export type InsertArrest = z.infer<typeof insertArrestSchema>;
 export type SelectArrest = typeof arrests.$inferSelect;

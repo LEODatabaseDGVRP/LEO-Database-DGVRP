@@ -167,7 +167,7 @@ export function registerRoutes(app: Express) {
         password: hashedPassword,
         badgeNumber: validatedData.badgeNumber,
         isAdmin: "false",
-        rpName: validatedData.fullName,
+        rpName: validatedData.rpName,
         rank: validatedData.rank,
         discordId: discordVerification.id,
       };
