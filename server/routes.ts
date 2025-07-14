@@ -125,9 +125,13 @@ export function registerRoutes(app: Express) {
 
   app.post("/api/auth/signup", async (req, res) => {
     try {
-      console.log("Signup data received:", req.body);
+      console.log("=== SIGNUP REQUEST DEBUG ===");
+      console.log("Raw request body:", JSON.stringify(req.body, null, 2));
+      console.log("Request headers:", req.headers);
+      console.log("Session data:", JSON.stringify(req.session, null, 2));
 
       const validatedData = signUpSchema.parse(req.body);
+      console.log("Validation successful, validated data:", JSON.stringify(validatedData, null, 2));
 
       // Check if Discord verification is required and available
       const discordVerification = (req.session as any)?.discordVerified;
@@ -203,16 +207,28 @@ export function registerRoutes(app: Express) {
         user: req.session.user
       });
     } catch (error: any) {
-      console.error("Signup error:", error);
+      console.error("=== SIGNUP ERROR DEBUG ===");
+      console.error("Error type:", error.constructor.name);
+      console.error("Error message:", error.message);
+      console.error("Error stack:", error.stack);
+      
       if (error.name === 'ZodError') {
-        console.error("Validation errors:", error.errors);
+        console.error("Zod validation errors:", JSON.stringify(error.errors, null, 2));
+        const errorDetails = error.errors.map((e: any) => `${e.path.join('.')}: ${e.message}`).join(', ');
+        console.error("Error details:", errorDetails);
         return res.status(400).json({
           message: "Invalid input data",
           errors: error.errors,
-          details: error.errors.map((e: any) => `${e.path.join('.')}: ${e.message}`).join(', ')
+          details: errorDetails,
+          received: req.body
         });
       }
-      res.status(500).json({ message: "Failed to create account" });
+      
+      console.error("Non-validation error occurred");
+      res.status(500).json({ 
+        message: "Failed to create account",
+        error: error.message
+      });
     }
   });
 
