@@ -1,0 +1,120 @@
+> rest-express@1.0.0 dev
+> NODE_ENV=development tsx server/index.ts
+
+Loaded 1 users from file
+10:49:44 PM [express] serving on port 5000
+Discord bot logged in as DGVRP Citation Payoff#2062
+[2025-07-14T22:49:44.677Z] GET /
+Session ID: _D7bYH6Cd-i3xXncmC417l8KtHrqiqVA
+Session data: {
+  "cookie": {
+    "originalMaxAge": 604800000,
+    "expires": "2025-07-21T22:49:44.677Z",
+    "secure": false,
+    "httpOnly": true,
+    "path": "/",
+    "sameSite": "lax"
+  }
+}
+[2025-07-14T22:49:45.416Z] GET /src/main.tsx?v=rjxV33yMk0nMFQ-8MRNvf
+Session ID: c1OX0YvQPMLWTAH8HGLBxFf0cryYH0Cr
+Session data: {
+  "cookie": {
+    "originalMaxAge": 604800000,
+    "expires": "2025-07-21T22:49:45.416Z",
+    "secure": false,
+    "httpOnly": true,
+    "path": "/",
+    "sameSite": "lax"
+  }
+}
+[2025-07-14T22:49:45.418Z] GET /@vite/client
+Session ID: sOfH0ziSrvJoaJJutPfyrQLmvoQqBBM-
+Session data: {
+  "cookie": {
+    "originalMaxAge": 604800000,
+    "expires": "2025-07-21T22:49:45.418Z",
+    "secure": false,
+    "httpOnly": true,
+    "path": "/",
+    "sameSite": "lax"
+  }
+}
+[2025-07-14T22:49:45.420Z] GET /@react-refresh
+Session ID: 667Gm-b4LwWzKp6AgX_8RwQLs46LeAb1
+Session data: {
+  "cookie": {
+    "originalMaxAge": 604800000,
+    "expires": "2025-07-21T22:49:45.420Z",
+    "secure": false,
+    "httpOnly": true,
+    "path": "/",
+    "sameSite": "lax"
+  }
+}
+[2025-07-14T22:49:45.602Z] GET /src/App.tsx?v=rjxV33yMk0nMFQ-8MRNvf
+Session ID: WwVDEb5vV8bWMCZXJpOYOkwTYEB5oNSJ
+Session data: {
+  "cookie": {
+    "originalMaxAge": 604800000,
+    "expires": "2025-07-21T22:49:45.602Z",
+    "secure": false,
+    "httpOnly": true,
+    "path": "/",
+    "sameSite": "lax"
+  }
+}
+[2025-07-14T22:49:45.603Z] GET /src/index.css?v=rjxV33yMk0nMFQ-8MRNvf
+Session ID: w4mZquE4oP6H3_HafqV6T5IYt3hLs7kk
+Session data: {
+  "cookie": {
+    "originalMaxAge": 604800000,
+    "expires": "2025-07-21T22:49:45.603Z",
+    "secure": false,
+    "httpOnly": true,
+    "path": "/",
+    "sameSite": "lax"
+  }
+}
+[2025-07-14T22:49:45.813Z] GET /@fs/home/runner/workspace/node_modules/vite/dist/client/env.mjs
+Session ID: EoAgAFHli7WXcs28cbAVWJuSHnek0fl7
+Session data: {
+  "cookie": {
+    "originalMaxAge": 604800000,
+    "expires": "2025-07-21T22:49:45.813Z",
+    "secure": false,
+    "httpOnly": true,
+    "path": "/",
+    "sameSite": "lax"
+  }
+}
+[2025-07-14T22:49:46.892Z] GET /src/hooks/useAuth.ts
+Session ID: Ba0BBIWwUD5DH4XH3Dlo50MNAITCgNET
+Session data: {
+  "cookie": {
+    "originalMaxAge": 604800000,
+    "expires": "2025-07-21T22:49:46.891Z",
+    "secure": false,
+    "httpOnly": true,
+    "path": "/",
+    "sameSite": "lax"
+  }
+}
+[2025-07-14T22:49:46.894Z] GET /src/components/ui/tooltip.tsx
+Session ID: w8JB3Zggj5lZvI_oLai0lGGWjjbLa3b-
+Session data: {
+  "cookie": {
+    "originalMaxAge": 604800000,
+    "expires": "2025-07-21T22:49:46.894Z",
+    "secure": false,
+    "httpOnly": true,
+    "path": "/",
+    "sameSite": "lax"
+  }
+}
+10:49:47 PM [vite] Pre-transform error: /home/runner/workspace/client/src/pages/citation-form.tsx: Unexpected token (626:52)
+
+  624 |                         <FormField
+  625 |                           control={form.control}
+> 626 |                           name={`officerUsernames.${
+      |                                                     ^
