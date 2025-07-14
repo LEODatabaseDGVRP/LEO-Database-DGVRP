@@ -130,6 +130,12 @@ export function registerRoutes(app: Express) {
       console.log("Request headers:", req.headers);
       console.log("Session data:", JSON.stringify(req.session, null, 2));
 
+      // Temporary backward compatibility - handle both old and new field names
+      if (req.body.fullName && !req.body.rpName) {
+        req.body.rpName = req.body.fullName;
+        console.log("Applied backward compatibility: fullName -> rpName");
+      }
+
       const validatedData = signUpSchema.parse(req.body);
       console.log("Validation successful, validated data:", JSON.stringify(validatedData, null, 2));
 
