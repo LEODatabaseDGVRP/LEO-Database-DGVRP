@@ -309,29 +309,68 @@ export default function ArrestForm() {
 
   const submitMutation = useMutation({
     mutationFn: async (data: ArrestFormData) => {
-      // Include the base64 image data if there's an uploaded image but no description
-      const submitData = {
-        ...data,
-        mugshotBase64: (!data.description && uploadedImage) ? uploadedImage : undefined
-      };
-      const response = await apiRequest("POST", "/api/arrests", submitData);
-      return response.json();
+      console.log("🚀 Arrest mutation starting with data:", data);
+      
+      try {
+        // Include the base64 image data if there's an uploaded image but no description
+        const submitData = {
+          ...data,
+          mugshotBase64: (!data.description && uploadedImage) ? uploadedImage : undefined
+        };
+        
+        console.log("📡 Sending arrest data:", submitData);
+        const response = await apiRequest("POST", "/api/arrests", submitData);
+        console.log("📡 API Response status:", response.status);
+        
+        if (!response.ok) {
+          const errorText = await response.text();
+          console.error("❌ API Error response:", errorText);
+          let errorData;
+          try {
+            errorData = JSON.parse(errorText);
+          } catch {
+            errorData = { message: errorText || "Failed to submit arrest report" };
+          }
+          throw new Error(errorData.message || "Failed to submit arrest report");
+        }
+        
+        const result = await response.json();
+        console.log("✅ API Success response:", result);
+        return result;
+      } catch (error) {
+        console.error("🔥 Arrest mutation error:", error);
+        throw error;
+      }
     },
-    onSuccess: () => {
+    onMutate: (data) => {
+      console.log("🔄 Arrest mutation starting...", data);
       toast({
-        title: "Arrest Report Submitted",
-        description: "The arrest report has been successfully submitted.",
+        title: "Submitting Arrest Report",
+        description: "Processing your arrest report submission...",
+      });
+    },
+    onSuccess: (data) => {
+      console.log("✅ Arrest mutation successful:", data);
+      toast({
+        title: "Arrest Report Submitted Successfully!",
+        description: "The arrest report has been processed and sent to Discord.",
         duration: 5000, // Auto-dismiss after 5 seconds
       });
       // Clear form after successful submission but keep officer info
       setTimeout(() => {
         autoClearFormKeepOfficers();
       }, 1000);
+      
+      // Invalidate admin queries to refresh the admin panel
+      queryClient.invalidateQueries({ queryKey: ["/api/admin/arrests"] });
+      queryClient.invalidateQueries({ queryKey: ["/api/admin/stats"] });
+      queryClient.invalidateQueries({ queryKey: ["/api/arrests"] });
     },
     onError: (error: any) => {
+      console.error("❌ Arrest mutation error:", error);
       toast({
         title: "Submission Failed",
-        description: error.message || "Failed to submit arrest report. Please try again.",
+        description: error.message || "Failed to submit arrest report. Please check your connection and try again.",
         variant: "destructive",
       });
     },
