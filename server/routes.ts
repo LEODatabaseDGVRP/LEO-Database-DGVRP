@@ -5,5 +5,5 @@ import { createDiscordBotService, checkUserRole, sendDiscordMessage } from "./di
 import bcrypt from "bcryptjs";
 import type { Request, Response, NextFunction } from "express";
 import { eq } from "drizzle-orm";
-import { getRandomSystemUsername, createDiscordBotService } from "./discord";
+import { getRandomSystemUsername } from "./discord";
 ```
