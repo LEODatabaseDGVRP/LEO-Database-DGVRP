@@ -8,8 +8,8 @@ import { Input } from "@/components/ui/input";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
 import { useToast } from "@/hooks/use-toast";
-import { apiRequest } from "@/lib/queryClient";
-import { Link } from "wouter";
+import { apiRequest, queryClient } from "@/lib/queryClient";
+import { Link, useLocation } from "wouter";
 
 const signupSchema = z.object({
   badgeNumber: z.string()
@@ -38,6 +38,7 @@ export default function SignupPage() {
   const [discordVerified, setDiscordVerified] = useState(false);
   const [discordUser, setDiscordUser] = useState<{ id: string; username: string; discriminator: string } | null>(null);
   const { toast } = useToast();
+  const [, setLocation] = useLocation();
 
   // Check for Discord verification status on component mount
   useEffect(() => {
@@ -143,15 +144,19 @@ export default function SignupPage() {
       }
       return response.json();
     },
-    onSuccess: (data) => {
+    onSuccess: async (data) => {
       toast({
         title: "Account Created Successfully!",
         description: `Welcome, ${data.user.username}! You are now signed in.`,
       });
-      // Redirect to selection page (user is already logged in)
+      
+      // Invalidate auth cache to immediately update authentication state
+      await queryClient.invalidateQueries({ queryKey: ["/api/auth/me"] });
+      
+      // Use router navigation instead of window.location to avoid 404 flash
       setTimeout(() => {
-        window.location.href = "/";
-      }, 1500);
+        setLocation("/");
+      }, 1000);
     },
     onError: (error: any) => {
       let errorMessage = "Unable to create account. Please try again.";
