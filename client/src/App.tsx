@@ -26,17 +26,28 @@ function Router() {
   useEffect(() => {
     if (!isLoading && !isAuthenticated) {
       if (location === "/" || location === "") {
-        console.log("Redirecting from root to login - forcing page reload");
-        window.location.replace("/login");
+        console.log("Redirecting from root to login - using router navigation");
+        setLocation("/login");
       }
     }
-  }, [isLoading, isAuthenticated, location]);
+  }, [isLoading, isAuthenticated, location, setLocation]);
 
   // Show loading screen while checking authentication
   if (isLoading) {
     return (
       <div className="min-h-screen flex items-center justify-center" style={{ backgroundColor: "var(--law-primary)" }}>
         <div className="text-white text-xl">Loading authentication...</div>
+      </div>
+    );
+  }
+
+  // Handle the transition period when authentication state is changing
+  if (isAuthenticated && (location.startsWith("/login") || location.startsWith("/signup"))) {
+    // User is authenticated but still on login/signup page, redirect to home
+    setLocation("/");
+    return (
+      <div className="min-h-screen flex items-center justify-center" style={{ backgroundColor: "var(--law-primary)" }}>
+        <div className="text-white text-xl">Redirecting...</div>
       </div>
     );
   }

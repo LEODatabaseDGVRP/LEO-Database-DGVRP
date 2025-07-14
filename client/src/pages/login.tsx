@@ -8,8 +8,8 @@ import { Input } from "@/components/ui/input";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
 import { useToast } from "@/hooks/use-toast";
-import { apiRequest } from "@/lib/queryClient";
-import { Link } from "wouter";
+import { apiRequest, queryClient } from "@/lib/queryClient";
+import { Link, useLocation } from "wouter";
 
 const loginSchema = z.object({
   username: z.string().min(1, "Username is required"),
@@ -21,6 +21,7 @@ type LoginFormData = z.infer<typeof loginSchema>;
 export default function LoginPage() {
   const [showPassword, setShowPassword] = useState(false);
   const { toast } = useToast();
+  const [, setLocation] = useLocation();
 
   const form = useForm<LoginFormData>({
     resolver: zodResolver(loginSchema),
@@ -39,17 +40,22 @@ export default function LoginPage() {
       }
       return response.json();
     },
-    onSuccess: (data) => {
+    onSuccess: async (data) => {
+      // Invalidate auth cache to immediately update authentication state
+      await queryClient.invalidateQueries({ queryKey: ["/api/auth/me"] });
+      
+      // Force refetch to ensure immediate state update
+      await queryClient.refetchQueries({ queryKey: ["/api/auth/me"] });
+      
       toast({
-        title: "✅ Login Successful!",
+        title: "Login Successful!",
         description: `Welcome back, ${data.user.username}!`,
       });
-      // Store user session and redirect to selection page
-      localStorage.setItem('userSession', JSON.stringify(data));
-      // Use a small delay to ensure the toast shows, then navigate
+      
+      // Use router navigation instead of window.location to avoid 404 flash
       setTimeout(() => {
-        window.location.href = "/";
-      }, 1000);
+        setLocation("/");
+      }, 800);
     },
     onError: (error: any) => {
       toast({
