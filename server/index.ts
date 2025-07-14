@@ -1,5 +1,6 @@
 import express, { type Request, Response, NextFunction } from "express";
 import session from "express-session";
+import path from "path";
 import { registerRoutes } from "./routes";
 import { setupVite, serveStatic, log } from "./vite";
 
@@ -91,7 +92,6 @@ app.use((req, res, next) => {
       return next();
     } else {
       // In production, serve index.html for client-side routing
-      const path = require('path');
       res.sendFile(path.resolve('dist/client/index.html'));
     }
   });
