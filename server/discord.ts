@@ -538,14 +538,19 @@ Please call **${data.courtPhone}** for further inquiry.`;
       throw new Error('Discord channel not found');
     }
     try {
+      // Format officers list
+      const officersText = shiftData.officers?.map((officer: any, index: number) => 
+        `**Officer ${index + 1}:** ${officer.username} - Badge #${officer.badgeNumber} - ${officer.rank}`
+      ).join('\n') || "Not provided";
+
       const embed = {
         title: "📋 Shift Log Report",
         color: 0x10B981,
         fields: [
           {
-            name: "Username & Badge Number",
-            value: shiftData.usernameAndBadge || "Not provided",
-            inline: true
+            name: "Officers",
+            value: officersText,
+            inline: false
           },
           {
             name: "Callsign",
@@ -555,11 +560,6 @@ Please call **${data.courtPhone}** for further inquiry.`;
           {
             name: "Shift Duration",
             value: shiftData.shiftDuration || "Not provided",
-            inline: true
-          },
-          {
-            name: "Rank",
-            value: shiftData.rank || "Not provided",
             inline: true
           },
           {

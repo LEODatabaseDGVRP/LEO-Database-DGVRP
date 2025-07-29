@@ -1,6 +1,3 @@
-The code adds a callsign field to the officer profile data structure and updates the corresponding logic.
-```
-```replit_final_file
 import { useState, useEffect } from 'react';
 import { useQuery } from '@tanstack/react-query';
 import { apiRequest } from '@/lib/queryClient';

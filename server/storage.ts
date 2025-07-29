@@ -172,6 +172,7 @@ export class FileStorage implements IStorage {
       badgeNumber: insertUser.badgeNumber,
       rpName: insertUser.rpName || null,
       rank: insertUser.rank || null,
+      callsign: insertUser.callsign || "",
       discordId: insertUser.discordId || null
     };
     this.users.set(user.id, user);

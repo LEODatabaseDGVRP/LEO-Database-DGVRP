@@ -1,5 +1,5 @@
 import { Link } from "wouter";
-import { FileText, UserX, LogOut } from "lucide-react";
+import { FileText, UserX, LogOut, Shield } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useAuth } from "@/hooks/useAuth";
 import { useMutation, useQueryClient } from "@tanstack/react-query";
@@ -122,7 +122,7 @@ export default function SelectionPage() {
               <Button 
                 className="w-full bg-amber-600 hover:bg-amber-700 text-white py-6 rounded-lg text-lg font-semibold flex items-center justify-center space-x-3 transition-colors border-0"
               >
-                <UserX className="w-5 h-5" />
+                <Shield className="w-5 h-5" />
                 <span>Admin Panel</span>
               </Button>
             </Link>

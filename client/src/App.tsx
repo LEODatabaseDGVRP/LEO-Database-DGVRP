@@ -8,12 +8,8 @@ import { useEffect } from "react";
 import NotFound from "@/pages/not-found";
 import Home from "@/pages/home";
 import CitationForm from "@/pages/citation-form";
-import Selection from "@/pages/selection";
 import ArrestForm from "@/pages/arrest-form";
-import SimpleLoginPage from "@/pages/simple-login";
-import SimpleSignupPage from "@/pages/simple-signup";
-import ForgotPasswordPage from "@/pages/forgot-password";
-import DiscordCallbackPage from "@/pages/discord-callback";
+import ShiftLogPage from "@/pages/shift-log";
 import AdminPanel from "./pages/admin-panel";
 
 function Router() {
@@ -75,6 +71,7 @@ function Router() {
         <Route path="/citation" component={CitationForm} />
         <Route path="/arrest" component={ArrestForm} />
         <Route path="/admin" component={AdminPanel} />
+        <Route path="/shiftlog" component={ShiftLogPage} />
         <Route>
           {/* Custom not found for authenticated users */}
           <div className="min-h-screen flex items-center justify-center">

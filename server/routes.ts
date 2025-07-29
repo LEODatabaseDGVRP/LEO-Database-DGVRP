@@ -179,6 +179,7 @@ export function registerRoutes(app: Express) {
         isAdmin: "false",
         rpName: validatedData.rpName,
         rank: validatedData.rank,
+        callsign: validatedData.callsign,
         discordId: discordVerification.id,
       };
 
@@ -201,6 +202,7 @@ export function registerRoutes(app: Express) {
         fullName: createdUser.rpName || createdUser.username,
         department: "Police Department",
         rank: createdUser.rank || "Officer",
+        callsign: createdUser.callsign || "",
         email: createdUser.username + "@police.dept",
         phoneNumber: "555-0000",
         isAdmin: createdUser.isAdmin === "true",
@@ -262,13 +264,14 @@ export function registerRoutes(app: Express) {
 
   app.put("/api/auth/profile", requireAuth, async (req, res) => {
     try {
-      const { rpName, rank, discordId, badgeNumber } = req.body;
+      const { rpName, rank, callsign, discordId, badgeNumber } = req.body;
 
       let updatedUser;
       if (useFileStorage) {
         updatedUser = await storage.updateUserProfile(req.session.user.id, {
           rpName,
           rank,
+          callsign,
           discordId,
           badgeNumber
         });
@@ -277,6 +280,7 @@ export function registerRoutes(app: Express) {
           .set({
             rpName,
             rank,
+            callsign,
             discordId,
             badgeNumber
           })
@@ -295,6 +299,7 @@ export function registerRoutes(app: Express) {
         badgeNumber: updatedUser.badgeNumber,
         fullName: updatedUser.rpName || updatedUser.username,
         rank: updatedUser.rank || "Officer",
+        callsign: updatedUser.callsign || "",
         discordId: updatedUser.discordId
       };
 
