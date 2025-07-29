@@ -191,10 +191,10 @@ export default function SimpleSignupPage() {
                       <Input
                         {...field}
                         type="text"
-                        placeholder="Your username"
+                        placeholder={discordVerified ? "Discord username verified" : "Verify Discord first"}
                         className="law-input"
-                        disabled={signupMutation.isPending || discordVerified}
-                        readOnly={discordVerified}
+                        disabled={true}
+                        readOnly={true}
                       />
                     </FormControl>
                     <FormMessage />
