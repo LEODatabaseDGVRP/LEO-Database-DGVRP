@@ -172,6 +172,11 @@ export default function SimpleSignupPage() {
           <CardDescription className="text-gray-300">
             Join the law enforcement database system
           </CardDescription>
+          <div className="mt-4 p-4 bg-yellow-500/20 border-2 border-yellow-400 rounded-lg shadow-lg">
+            <p className="text-yellow-100 text-center font-semibold">
+              ⚠️ Please verify your Discord account below before filling out the information.
+            </p>
+          </div>
         </CardHeader>
         <CardContent>
           <Form {...form}>
