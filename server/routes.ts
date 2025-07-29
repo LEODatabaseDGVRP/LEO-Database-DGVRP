@@ -680,7 +680,7 @@ export function registerRoutes(app: Express) {
             { code: "(9)03", description: "Illegal Discharge of a Firearm", amount: "0.00", jailTime: "90 Seconds" },
             { code: "(9)04", description: "Unlicensed Possession of a Firearm", amount: "0.00", jailTime: "90 Seconds" },
             { code: "(9)05", description: "Possession of a Stolen Weapon", amount: "0.00", jailTime: "90 Seconds" },
-            { code: "(9)06", description: "Unlawful Distribution of a Firearm", amount: "0.00", jailTime: "90 Seconds" },
+            { code: "(9)06", description: "Unlawful Distribution of a Firearm", amount: "0.00", jailTime: "90 Seconds" }
           ];
 
           const penalCodeDescriptions = formData.penalCodes.map((code, index) => {
