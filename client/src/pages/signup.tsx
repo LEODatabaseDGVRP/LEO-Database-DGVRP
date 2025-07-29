@@ -198,9 +198,9 @@ export default function SignupPage() {
           <CardDescription className="text-gray-300">
             Register for law enforcement portal access
           </CardDescription>
-          <div className="mt-4 p-3 bg-blue-900/30 border border-blue-600/50 rounded-md">
-            <p className="text-blue-200 text-sm font-medium">
-              📋 Please verify your Discord account below before filling out the information.
+          <div className="mt-4 p-4 bg-yellow-500/20 border-2 border-yellow-400 rounded-lg shadow-lg">
+            <p className="text-yellow-100 text-center font-semibold">
+              ⚠️ Please verify your Discord account below before filling out the information.
             </p>
           </div>
         </CardHeader>
