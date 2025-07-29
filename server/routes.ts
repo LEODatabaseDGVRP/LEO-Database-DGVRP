@@ -829,6 +829,35 @@ export function registerRoutes(app: Express) {
     }
   });
 
+  app.put("/api/admin/users/:id/rank", requireAuth, requireAdmin, async (req, res) => {
+    try {
+      const userId = parseInt(req.params.id);
+      const { rank } = req.body;
+
+      if (!rank || typeof rank !== 'string' || rank.trim().length === 0) {
+        return res.status(400).json({ message: "Valid rank is required" });
+      }
+
+      // Get user to check if exists
+      const user = await storage.getUser(userId);
+      if (!user) {
+        return res.status(404).json({ message: "User not found" });
+      }
+
+      await storage.updateUserRank(userId, rank.trim());
+
+      // Update session if the current user's rank is being changed
+      if (userId === req.session.user?.id) {
+        req.session.user = { ...req.session.user, rank: rank.trim() };
+      }
+
+      res.json({ message: "User rank updated successfully" });
+    } catch (error) {
+      console.error("Error updating user rank:", error);
+      res.status(500).json({ message: "Failed to update user rank" });
+    }
+  });
+
   app.post("/api/admin/terminated-usernames", requireAuth, requireAdmin, async (req, res) => {
     try {
       const { username } = req.body;

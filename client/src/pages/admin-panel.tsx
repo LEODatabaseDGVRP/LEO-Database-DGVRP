@@ -7,7 +7,7 @@ import { Input } from "@/components/ui/input";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { useToast } from "@/hooks/use-toast";
 import { apiRequest } from "@/lib/queryClient";
-import { Users, Shield, ShieldCheck, Trash2, ArrowLeft, Search, Eye, Calendar, Filter } from "lucide-react";
+import { Users, Shield, ShieldCheck, Trash2, ArrowLeft, Search, Eye, Calendar, Filter, Edit } from "lucide-react";
 import { Link } from "wouter";
 import {
   AlertDialog,
@@ -714,6 +714,8 @@ export default function AdminPanel() {
   const [deleteDialog, setDeleteDialog] = useState<{ open: boolean; userId: number; username: string }>({ open: false, userId: 0, username: "" });
   const [terminateDialog, setTerminateDialog] = useState<{ open: boolean; username: string }>({ open: false, username: "" });
   const [blockUsernameInput, setBlockUsernameInput] = useState("");
+  const [editRankDialog, setEditRankDialog] = useState<{ open: boolean; userId: number; username: string; currentRank: string }>({ open: false, userId: 0, username: "", currentRank: "" });
+  const [newRank, setNewRank] = useState("");
 
   const { data: currentUser } = useQuery({
     queryKey: ["/api/auth/me"],
@@ -832,7 +834,34 @@ export default function AdminPanel() {
         variant: "destructive",
       });
     },
-    });
+  });
+
+  const updateRankMutation = useMutation({
+    mutationFn: async ({ userId, rank }: { userId: number; rank: string }) => {
+      const response = await apiRequest("PUT", `/api/admin/users/${userId}/rank`, { rank });
+      if (!response.ok) {
+        const error = await response.json();
+        throw new Error(error.message || "Failed to update rank");
+      }
+      return response.json();
+    },
+    onSuccess: (data) => {
+      queryClient.invalidateQueries({ queryKey: ["/api/admin/users"] });
+      setEditRankDialog({ open: false, userId: 0, username: "", currentRank: "" });
+      setNewRank("");
+      toast({
+        title: "Success",
+        description: data.message,
+      });
+    },
+    onError: (error) => {
+      toast({
+        title: "Error",
+        description: error.message,
+        variant: "destructive",
+      });
+    },
+  });
 
   const blockUsernameMutation = useMutation({
     mutationFn: async (username: string) => {
@@ -1086,10 +1115,30 @@ export default function AdminPanel() {
                               <Badge variant="outline">You</Badge>
                             )}
                           </div>
-                          <div className="text-sm text-gray-300">ID: {user.id}</div>
+                          <div className="text-sm text-gray-300">
+                            ID: {user.id} | Rank: {user.rank || "Officer"}
+                          </div>
                         </div>
                       </div>
                       <div className="flex gap-2">
+                        <Button
+                          variant="outline"
+                          size="sm"
+                          onClick={() => {
+                            setEditRankDialog({ 
+                              open: true, 
+                              userId: user.id, 
+                              username: user.username, 
+                              currentRank: user.rank || "Officer" 
+                            });
+                            setNewRank(user.rank || "Officer");
+                          }}
+                          title="Edit user rank"
+                        >
+                          <Edit className="h-4 w-4 mr-1" />
+                          Edit Rank
+                        </Button>
+
                         {user.isAdmin === "true" ? (
                           <Button
                             variant="outline"
@@ -1260,6 +1309,52 @@ export default function AdminPanel() {
           </AlertDialogFooter>
         </AlertDialogContent>
       </AlertDialog>
+
+      {/* Edit Rank Dialog */}
+      <Dialog open={editRankDialog.open} onOpenChange={(open) => setEditRankDialog(prev => ({ ...prev, open }))}>
+        <DialogContent className="bg-slate-900 border-slate-700 text-white">
+          <DialogHeader>
+            <DialogTitle className="text-white">Edit User Rank</DialogTitle>
+            <DialogDescription className="text-slate-300">
+              Update the rank for user "{editRankDialog.username}"
+            </DialogDescription>
+          </DialogHeader>
+          <div className="space-y-4">
+            <div>
+              <label className="text-sm font-medium text-white">Current Rank:</label>
+              <p className="text-slate-300">{editRankDialog.currentRank}</p>
+            </div>
+            <div>
+              <label className="text-sm font-medium text-white">New Rank:</label>
+              <Input
+                value={newRank}
+                onChange={(e) => setNewRank(e.target.value)}
+                placeholder="Enter new rank (e.g., Master Trooper, Sergeant)"
+                className="bg-slate-800 border-slate-600 text-white"
+              />
+            </div>
+          </div>
+          <div className="flex justify-end gap-2 mt-4">
+            <Button
+              variant="outline"
+              onClick={() => {
+                setEditRankDialog({ open: false, userId: 0, username: "", currentRank: "" });
+                setNewRank("");
+              }}
+              className="bg-slate-800 border-slate-700 text-white hover:bg-slate-700"
+            >
+              Cancel
+            </Button>
+            <Button
+              onClick={() => updateRankMutation.mutate({ userId: editRankDialog.userId, rank: newRank })}
+              disabled={updateRankMutation.isPending || !newRank.trim()}
+              className="bg-blue-600 hover:bg-blue-700 text-white"
+            >
+              {updateRankMutation.isPending ? "Updating..." : "Update Rank"}
+            </Button>
+          </div>
+        </DialogContent>
+      </Dialog>
     </div>
   );
 }

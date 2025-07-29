@@ -419,6 +419,15 @@ async blockUsername(username: string): Promise<void> {
     await this.saveArrestsToFile();
     await this.saveUsersToFile(); // Update arrest count
   }
+
+  async updateUserRank(userId: number, rank: string): Promise<void> {
+    const user = this.users.get(userId);
+    if (user) {
+      user.rank = rank;
+      this.users.set(userId, user);
+      await this.saveUsersToFile();
+    }
+  }
 }
 
 // Use file-based storage - persists users without database costs
