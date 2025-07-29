@@ -1,5 +1,6 @@
 import express, { type Request, Response, NextFunction } from "express";
 import session from "express-session";
+import path from "path";
 import { registerRoutes } from "./routes";
 import { setupVite, serveStatic, log } from "./vite";
 
@@ -76,7 +77,8 @@ app.use((req, res, next) => {
   if (app.get("env") === "development") {
     await setupVite(app, server);
   } else {
-    serveStatic(app);
+    // Serve static files in production without using the problematic serveStatic function
+    app.use(express.static(path.resolve('dist/public')));
   }
 
   // Add catch-all route for client-side routing
@@ -91,8 +93,7 @@ app.use((req, res, next) => {
       return next();
     } else {
       // In production, serve index.html for client-side routing
-      const path = require('path');
-      res.sendFile(path.resolve('dist/client/index.html'));
+      res.sendFile(path.resolve('dist/public/index.html'));
     }
   });
 

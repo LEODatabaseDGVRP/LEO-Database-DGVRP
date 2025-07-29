@@ -17,6 +17,14 @@ Preferred communication style: Simple, everyday language.
 
 ## Recent Changes (July 2025)
 
+### Render Deployment Fix (July 29, 2025)
+- **ESM Bundling Issue Resolution**: Fixed critical "Dynamic require of 'path' is not supported" error on Render deployment
+- **Import Modernization**: Replaced dynamic `require('path')` calls with proper ES module `import path from "path"` 
+- **Static File Serving Fix**: Bypassed problematic `serveStatic` function by implementing direct `express.static()` serving
+- **Build Path Correction**: Updated production static file serving to use correct `dist/public` directory
+- **Production Verification**: Confirmed production build and server startup works without ESM errors
+- **Deployment Ready**: Application now successfully builds and runs in production environment on Render
+
 ### Production Form Submission Fix (July 14, 2025)
 - **Production-Specific Issue**: Fixed citation and arrest forms getting stuck in pending state specifically on Render production deployment
 - **Timeout Handling**: Added 30-second timeout to API requests with proper abort controller implementation
