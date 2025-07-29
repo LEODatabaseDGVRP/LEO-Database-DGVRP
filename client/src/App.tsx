@@ -11,6 +11,11 @@ import CitationForm from "@/pages/citation-form";
 import ArrestForm from "@/pages/arrest-form";
 import ShiftLogPage from "@/pages/shift-log";
 import AdminPanel from "./pages/admin-panel";
+import Selection from "./pages/selection";
+import SimpleLoginPage from "./pages/simple-login";
+import SimpleSignupPage from "./pages/simple-signup";
+import ForgotPasswordPage from "./pages/forgot-password";
+import DiscordCallbackPage from "./pages/discord-callback";
 
 function Router() {
   const { isAuthenticated, isLoading } = useAuth();
@@ -21,7 +26,7 @@ function Router() {
   // Force redirect to login if on root and not authenticated
   useEffect(() => {
     if (!isLoading && !isAuthenticated) {
-      if (location === "/" || location === "") {
+      if (location === "/") {
         console.log("Redirecting from root to login - using router navigation");
         setLocation("/login");
       }
@@ -71,7 +76,7 @@ function Router() {
         <Route path="/citation" component={CitationForm} />
         <Route path="/arrest" component={ArrestForm} />
         <Route path="/admin" component={AdminPanel} />
-        <Route path="/shiftlog" component={ShiftLogPage} />
+        <Route path="/shift-log" component={ShiftLogPage} />
         <Route>
           {/* Custom not found for authenticated users */}
           <div className="min-h-screen flex items-center justify-center">
