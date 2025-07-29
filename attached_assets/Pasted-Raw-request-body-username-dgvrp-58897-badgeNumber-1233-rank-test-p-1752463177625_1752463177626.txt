@@ -1,0 +1,103 @@
+Raw request body: {
+  "username": "dgvrp_58897",
+  "badgeNumber": "1233",
+  "rank": "test",
+  "password": "dairyqueen12",
+  "fullName": "dgvrp_58897",
+  "department": "Police Department",
+  "email": "dgvrp_58897@police.dept",
+  "phoneNumber": "555-0000"
+}
+Request headers: {
+  host: 'leo-database-dgvrp.onrender.com',
+  'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36',
+  'content-length': '204',
+  accept: '*/*',
+  'accept-encoding': 'gzip, br',
+  'accept-language': 'en-US,en;q=0.9',
+  'cdn-loop': 'cloudflare; loops=1',
+  'cf-connecting-ip': '24.216.221.127',
+  'cf-ipcountry': 'US',
+  'cf-ray': '95ede0389d550bcd-PDX',
+  'cf-visitor': '{"scheme":"https"}',
+  'content-type': 'application/json',
+  cookie: 'connect.sid=s%3AVZ4yGbJieBr7lhp81S1QacfTb6TBD8Ih.L0Y2zwRIFshpdXhsGiFAiaKkAwjolf497OY813w6pI4',
+  origin: 'https://leo-database-dgvrp.onrender.com',
+  priority: 'u=1, i',
+  referer: 'https://leo-database-dgvrp.onrender.com/signup',
+  'render-proxy-ttl': '4',
+  'rndr-id': '7d438c7c-592e-4efe',
+  'sec-ch-ua': '"Not)A;Brand";v="8", "Chromium";v="138", "Google Chrome";v="138"',
+  'sec-ch-ua-mobile': '?0',
+  'sec-ch-ua-platform': '"Windows"',
+  'sec-fetch-dest': 'empty',
+  'sec-fetch-mode': 'cors',
+  'sec-fetch-site': 'same-origin',
+  'true-client-ip': '24.216.221.127',
+  'x-forwarded-for': '24.216.221.127, 172.68.175.76, 10.220.67.222',
+  'x-forwarded-proto': 'https',
+  'x-request-start': '1752463138713739'
+}
+Session data: {
+  "cookie": {
+    "originalMaxAge": 604800000,
+    "expires": "2025-07-21T03:18:40.707Z",
+    "secure": false,
+    "httpOnly": true,
+    "path": "/",
+    "sameSite": "lax"
+  },
+  "discordVerified": {
+    "id": "1378267677134422016",
+    "username": "dgvrp_58897",
+    "discriminator": "0",
+    "verifiedAt": "2025-07-14T03:18:39.972Z"
+  }
+}
+=== SIGNUP ERROR DEBUG ===
+Error type: ZodError
+Error message: [
+  {
+    "code": "invalid_type",
+    "expected": "string",
+    "received": "undefined",
+    "path": [
+      "rpName"
+    ],
+    "message": "Required"
+  }
+]
+Error stack: ZodError: [
+  {
+    "code": "invalid_type",
+    "expected": "string",
+    "received": "undefined",
+    "path": [
+      "rpName"
+    ],
+    "message": "Required"
+  }
+]
+    at get error (file:///opt/render/project/src/node_modules/zod/v3/types.js:39:31)
+    at ZodObject.parse (file:///opt/render/project/src/node_modules/zod/v3/types.js:114:22)
+    at file:///opt/render/project/src/dist/index.js:1283:42
+    at Layer.handle [as handle_request] (/opt/render/project/src/node_modules/express/lib/router/layer.js:95:5)
+    at next (/opt/render/project/src/node_modules/express/lib/router/route.js:149:13)
+    at Route.dispatch (/opt/render/project/src/node_modules/express/lib/router/route.js:119:3)
+    at Layer.handle [as handle_request] (/opt/render/project/src/node_modules/express/lib/router/layer.js:95:5)
+    at /opt/render/project/src/node_modules/express/lib/router/index.js:284:15
+    at Function.process_params (/opt/render/project/src/node_modules/express/lib/router/index.js:346:12)
+    at next (/opt/render/project/src/node_modules/express/lib/router/index.js:280:10)
+Zod validation errors: [
+  {
+    "code": "invalid_type",
+    "expected": "string",
+    "received": "undefined",
+    "path": [
+      "rpName"
+    ],
+    "message": "Required"
+  }
+]
+Error details: rpName: Required
+3:18:58 AM [express] POST /api/auth/signup 400 in 9ms :: {"message":"Invalid input data","errors":[{…

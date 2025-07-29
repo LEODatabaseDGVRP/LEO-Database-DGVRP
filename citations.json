@@ -1,0 +1,73 @@
+{
+  "citations": [
+    {
+      "id": "8uEiMWYzSFMxpuFHPQ0Mp",
+      "officerBadges": [
+        "2385"
+      ],
+      "officerUsernames": [
+        "P.Popfork1"
+      ],
+      "officerRanks": [
+        "Overseer"
+      ],
+      "officerUserIds": [
+        "1132477120665370674"
+      ],
+      "violatorUsername": "1132477120665370674",
+      "violatorSignature": "1132477120665370674",
+      "violationType": "Citation",
+      "penalCodes": [
+        "(4)12"
+      ],
+      "amountsDue": [
+        "1000.00"
+      ],
+      "jailTimes": [
+        "None"
+      ],
+      "totalAmount": "1000.00",
+      "totalJailTime": "0 Seconds",
+      "additionalNotes": null,
+      "issuedBy": 5,
+      "createdAt": "2025-07-21T20:50:40.259Z",
+      "updatedAt": "2025-07-21T20:50:40.259Z",
+      "discordMessageId": "1396957579099246693"
+    },
+    {
+      "id": "od860m212XiQJartdj7xy",
+      "officerBadges": [
+        "2385"
+      ],
+      "officerUsernames": [
+        "P.Popfork1"
+      ],
+      "officerRanks": [
+        "Overseer"
+      ],
+      "officerUserIds": [
+        "1132477120665370674"
+      ],
+      "violatorUsername": "1132477120665370674",
+      "violatorSignature": "1132477120665370674",
+      "violationType": "Citation",
+      "penalCodes": [
+        "(8)16"
+      ],
+      "amountsDue": [
+        "360.00"
+      ],
+      "jailTimes": [
+        "None"
+      ],
+      "totalAmount": "360.00",
+      "totalJailTime": "0 Seconds",
+      "additionalNotes": "dsf",
+      "issuedBy": 5,
+      "createdAt": "2025-07-21T20:50:56.126Z",
+      "updatedAt": "2025-07-21T20:50:56.126Z",
+      "discordMessageId": "1396957645004603453"
+    }
+  ],
+  "nextCitationId": 1
+}

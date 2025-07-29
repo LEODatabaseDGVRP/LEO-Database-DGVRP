@@ -1,0 +1,47 @@
+{
+  "arrests": [
+    {
+      "officerBadges": [
+        "2385"
+      ],
+      "officerUsernames": [
+        "P.Popfork1"
+      ],
+      "officerRanks": [
+        "Overseer"
+      ],
+      "officerUserIds": [
+        "1132477120665370674"
+      ],
+      "arresteeUsername": "1132477120665370674",
+      "suspectSignature": "1132477120665370674",
+      "officerSignatures": [
+        "1132477120665370674"
+      ],
+      "description": "dfsfdsf",
+      "penalCodes": [
+        "(1)04"
+      ],
+      "amountsDue": [
+        "1000.00"
+      ],
+      "jailTimes": [
+        "60 Seconds"
+      ],
+      "totalAmount": "1000.00",
+      "totalJailTime": "32 Seconds",
+      "timeServed": false,
+      "courtLocation": "4000 Capitol Drive, Greenville, Wisconsin 54942",
+      "courtDate": "XX/XX/XX",
+      "courtPhone": "(262) 785-4700 ext. 7",
+      "issuedBy": 5,
+      "arresteeSignature": "1132477120665370674",
+      "mugshot": "",
+      "id": "MBshahuE-UKtlnhfYZ5Fy",
+      "arrestedBy": 5,
+      "createdAt": "2025-07-21T20:51:34.671Z",
+      "updatedAt": "2025-07-21T20:51:34.671Z",
+      "discordMessageId": "1396957806917058716"
+    }
+  ]
+}

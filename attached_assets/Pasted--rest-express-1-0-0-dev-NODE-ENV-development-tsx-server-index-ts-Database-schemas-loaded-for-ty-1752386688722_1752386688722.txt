@@ -1,0 +1,175 @@
+
+> rest-express@1.0.0 dev
+> NODE_ENV=development tsx server/index.ts
+
+Database schemas loaded for type safety - using file-based storage
+Database not available, using file storage
+Loaded 1 users from file
+6:04:25 AM [express] serving on port 5000
+[2025-07-13T06:04:26.228Z] GET /
+Session ID: 3NHGMiXUWksKrY-6TiV2_drddeXBAxT5
+Session data: {
+  "cookie": {
+    "originalMaxAge": 604799999,
+    "expires": "2025-07-20T06:04:26.227Z",
+    "secure": false,
+    "httpOnly": true,
+    "path": "/"
+  }
+}
+[2025-07-13T06:04:26.619Z] GET /@vite/client
+Session ID: 6peKkvnawU2WJ8QXqdbPMrk1weCogNgi
+Session data: {
+  "cookie": {
+    "originalMaxAge": 604800000,
+    "expires": "2025-07-20T06:04:26.619Z",
+    "secure": false,
+    "httpOnly": true,
+    "path": "/"
+  }
+}
+[2025-07-13T06:04:26.622Z] GET /src/main.tsx?v=jUQGgGUpMx4inCkWPGGQ5
+Session ID: fQZIjINfcIeRgddCfAHDInn4vQvh5ZlC
+Session data: {
+  "cookie": {
+    "originalMaxAge": 604800000,
+    "expires": "2025-07-20T06:04:26.622Z",
+    "secure": false,
+    "httpOnly": true,
+    "path": "/"
+  }
+}
+[2025-07-13T06:04:26.785Z] GET /@react-refresh
+Session ID: Gx4LnNfsLVaZ9Mg0W99JImkUdB6DbOD6
+Session data: {
+  "cookie": {
+    "originalMaxAge": 604800000,
+    "expires": "2025-07-20T06:04:26.785Z",
+    "secure": false,
+    "httpOnly": true,
+    "path": "/"
+  }
+}
+[2025-07-13T06:04:26.789Z] GET /@fs/home/runner/workspace/node_modules/vite/dist/client/env.mjs
+Session ID: uzJwakAW6qZQjjx06-dgDKOpxhS5psUf
+Session data: {
+  "cookie": {
+    "originalMaxAge": 604800000,
+    "expires": "2025-07-20T06:04:26.788Z",
+    "secure": false,
+    "httpOnly": true,
+    "path": "/"
+  }
+}
+[2025-07-13T06:04:26.838Z] GET /src/App.tsx?v=jUQGgGUpMx4inCkWPGGQ5
+Session ID: gualhZaN2dDJwYc8t8sIMHM4OHGd58xD
+Session data: {
+  "cookie": {
+    "originalMaxAge": 604800000,
+    "expires": "2025-07-20T06:04:26.838Z",
+    "secure": false,
+    "httpOnly": true,
+    "path": "/"
+  }
+}
+[2025-07-13T06:04:26.894Z] GET /src/index.css?v=jUQGgGUpMx4inCkWPGGQ5
+Session ID: 6OA52YI2ycWnI9bCC72d-DiziKN-69Y_
+Session data: {
+  "cookie": {
+    "originalMaxAge": 604800000,
+    "expires": "2025-07-20T06:04:26.894Z",
+    "secure": false,
+    "httpOnly": true,
+    "path": "/"
+  }
+}
+[2025-07-13T06:04:27.902Z] GET /src/lib/queryClient.ts
+Session ID: 3bxwH8NW7Vqstjd7iTowqxU3xa2Hvml8
+Session data: {
+  "cookie": {
+    "originalMaxAge": 604800000,
+    "expires": "2025-07-20T06:04:27.902Z",
+    "secure": false,
+    "httpOnly": true,
+    "path": "/"
+  }
+}
+[2025-07-13T06:04:27.903Z] GET /?token=R1ucHR3-Du-e
+Session ID: SztmZGLCvojETBH3nqoyyG-5_h5uM-o7
+Session data: {
+  "cookie": {
+    "originalMaxAge": 604800000,
+    "expires": "2025-07-20T06:04:27.903Z",
+    "secure": false,
+    "httpOnly": true,
+    "path": "/"
+  }
+}
+[2025-07-13T06:04:27.909Z] GET /src/pages/not-found.tsx
+Session ID: ckRCt3uP471yPtgq-R-9jxBenlQ7Gm1B
+Session data: {
+  "cookie": {
+    "originalMaxAge": 604800000,
+    "expires": "2025-07-20T06:04:27.909Z",
+    "secure": false,
+    "httpOnly": true,
+    "path": "/"
+  }
+}
+[2025-07-13T06:04:29.490Z] GET /src/components/ui/tooltip.tsx
+Session ID: 7W2xyCXv6NG8p_ezf_NwF3xGqB0skNIY
+Session data: {
+  "cookie": {
+    "originalMaxAge": 604800000,
+    "expires": "2025-07-20T06:04:29.490Z",
+    "secure": false,
+    "httpOnly": true,
+    "path": "/"
+  }
+}
+[2025-07-13T06:04:30.940Z] GET /src/hooks/useAuth.ts
+Session ID: Zj9Cr9_58f4ZqWkEQsM5VDBufjDF2aug
+Session data: {
+  "cookie": {
+    "originalMaxAge": 604800000,
+    "expires": "2025-07-20T06:04:30.940Z",
+    "secure": false,
+    "httpOnly": true,
+    "path": "/"
+  }
+}
+[2025-07-13T06:04:30.946Z] GET /src/components/ui/toaster.tsx
+Session ID: ZnoneCCxCuXCylWhdC8rkuZavhIyWfFr
+Session data: {
+  "cookie": {
+    "originalMaxAge": 604800000,
+    "expires": "2025-07-20T06:04:30.946Z",
+    "secure": false,
+    "httpOnly": true,
+    "path": "/"
+  }
+}
+[2025-07-13T06:04:31.000Z] GET /src/pages/home.tsx
+Session ID: IU-7F1W-A4YsYZZP3WJfI6hYJGdb0YbT
+Session data: {
+  "cookie": {
+    "originalMaxAge": 604800000,
+    "expires": "2025-07-20T06:04:31.000Z",
+    "secure": false,
+    "httpOnly": true,
+    "path": "/"
+  }
+}
+[2025-07-13T06:04:31.001Z] GET /src/pages/selection.tsx
+Session ID: 960m5o0xrEKBSCtLxEr_drH54DoIkXaF
+Session data: {
+  "cookie": {
+    "originalMaxAge": 604800000,
+    "expires": "2025-07-20T06:04:31.001Z",
+    "secure": false,
+    "httpOnly": true,
+    "path": "/"
+  }
+}
+6:04:31 AM [vite] Pre-transform error: Transform failed with 1 error:
+/home/runner/workspace/client/src/pages/arrest-form.tsx:1239:170: ERROR: The character ">" is not valid inside a JSX element

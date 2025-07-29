@@ -1,0 +1,123 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: hsl(0, 0%, 100%);
+  --foreground: hsl(20, 14.3%, 4.1%);
+  --muted: hsl(60, 4.8%, 95.9%);
+  --muted-foreground: hsl(25, 5.3%, 44.7%);
+  --popover: hsl(0, 0%, 100%);
+  --popover-foreground: hsl(20, 14.3%, 4.1%);
+  --card: hsl(0, 0%, 100%);
+  --card-foreground: hsl(20, 14.3%, 4.1%);
+  --border: hsl(20, 5.9%, 90%);
+  --input: hsl(20, 5.9%, 90%);
+  --primary: hsl(207, 90%, 54%);
+  --primary-foreground: hsl(211, 100%, 99%);
+  --secondary: hsl(60, 4.8%, 95.9%);
+  --secondary-foreground: hsl(24, 9.8%, 10%);
+  --accent: hsl(60, 4.8%, 95.9%);
+  --accent-foreground: hsl(24, 9.8%, 10%);
+  --destructive: hsl(0, 84.2%, 60.2%);
+  --destructive-foreground: hsl(60, 9.1%, 97.8%);
+  --ring: hsl(20, 14.3%, 4.1%);
+  --radius: 0.5rem;
+  
+  /* Law enforcement theme colors */
+  --law-primary: hsl(217, 33%, 17%);
+  --law-secondary: hsl(215, 16%, 27%);
+  --law-input: hsl(212, 13%, 37%);
+  --law-accent: hsl(262, 83%, 58%);
+}
+
+.dark {
+  --background: hsl(217, 33%, 17%);
+  --foreground: hsl(0, 0%, 98%);
+  --muted: hsl(215, 16%, 27%);
+  --muted-foreground: hsl(217, 9%, 61%);
+  --popover: hsl(217, 33%, 17%);
+  --popover-foreground: hsl(0, 0%, 98%);
+  --card: hsl(215, 16%, 27%);
+  --card-foreground: hsl(0, 0%, 98%);
+  --border: hsl(212, 13%, 37%);
+  --input: hsl(212, 13%, 37%);
+  --primary: hsl(262, 83%, 58%);
+  --primary-foreground: hsl(0, 0%, 98%);
+  --secondary: hsl(215, 16%, 27%);
+  --secondary-foreground: hsl(0, 0%, 98%);
+  --accent: hsl(215, 16%, 27%);
+  --accent-foreground: hsl(0, 0%, 98%);
+  --destructive: hsl(0, 84.2%, 60.2%);
+  --destructive-foreground: hsl(0, 0%, 98%);
+  --ring: hsl(212, 13%, 37%);
+  --radius: 0.5rem;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased;
+    background-color: var(--law-primary);
+    color: hsl(0, 0%, 98%);
+  }
+}
+
+.law-input {
+  background-color: var(--law-input);
+  color: hsl(0, 0%, 98%);
+}
+
+.law-input:focus {
+  outline: none;
+  ring: 2px;
+  ring-color: var(--law-accent);
+}
+
+.law-card {
+  background-color: var(--law-secondary);
+}
+
+.law-accent-btn {
+  background-color: var(--law-accent);
+}
+
+.law-accent-btn:hover {
+  background-color: hsl(262, 83%, 48%);
+}
+
+.law-bg {
+  background-color: var(--law-primary);
+}
+
+/* Command component styling for law enforcement theme */
+[data-cmdk-root] {
+  background-color: var(--law-secondary);
+  color: hsl(0, 0%, 98%);
+}
+
+[data-cmdk-input] {
+  background-color: var(--law-input);
+  color: hsl(0, 0%, 98%);
+  border: 1px solid var(--law-input);
+}
+
+[data-cmdk-input]:focus {
+  outline: none;
+  border-color: var(--law-accent);
+}
+
+[data-cmdk-item] {
+  color: hsl(0, 0%, 98%);
+}
+
+[data-cmdk-item][data-selected="true"] {
+  background-color: hsl(212, 13%, 47%);
+}
+
+[data-cmdk-item]:hover {
+  background-color: hsl(212, 13%, 47%);
+}
