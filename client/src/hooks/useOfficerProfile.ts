@@ -7,7 +7,6 @@ interface OfficerField {
   username: string;
   rank: string;
   userId: string;
-  callsign: string;
 }
 
 export function useOfficerProfile() {
@@ -15,8 +14,7 @@ export function useOfficerProfile() {
     badge: "",
     username: "",
     rank: "",
-    userId: "",
-    callsign: ""
+    userId: ""
   });
 
   const [savedOfficerList, setSavedOfficerList] = useState<OfficerField[]>([]);
@@ -62,8 +60,7 @@ export function useOfficerProfile() {
     if (currentUser?.user && primaryOfficerData.userId === currentUser.user.discordId) {
       const updatedProfile = {
         ...primaryOfficerData,
-        rank: currentUser.user.rank || "Officer",
-        callsign: currentUser.user.callsign || "" //Added callsign to updatedProfile
+        rank: currentUser.user.rank || "Officer"
       };
       setPrimaryOfficerData(updatedProfile);
       localStorage.setItem('officerProfile', JSON.stringify(updatedProfile));
@@ -73,8 +70,7 @@ export function useOfficerProfile() {
         const updatedList = [...savedOfficerList];
         updatedList[0] = {
           ...updatedList[0],
-          rank: currentUser.user.rank || "Officer",
-          callsign: currentUser.user.callsign || "" //Added callsign to updatedList[0]
+          rank: currentUser.user.rank || "Officer"
         };
         setSavedOfficerList(updatedList);
         localStorage.setItem('savedOfficerList', JSON.stringify(updatedList));

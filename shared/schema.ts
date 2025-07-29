@@ -140,7 +140,6 @@ export const signUpSchema = z.object({
   rpName: z.string().min(1, "RP name is required"),
   rank: z.string().min(1, "Rank is required"),
   discordId: z.string().optional(),
-  callsign: z.string().min(1, "Callsign is required"),
 });
 
 export type SignUpData = z.infer<typeof signUpSchema>;
