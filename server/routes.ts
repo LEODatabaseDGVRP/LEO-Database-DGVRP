@@ -461,6 +461,37 @@ export function registerRoutes(app: Express) {
     }
   });
 
+  // Shift log routes
+  app.post("/api/shift-logs", requireAuth, async (req, res) => {
+    try {
+      const formData = req.body;
+      
+      // Send shift log to Discord bot
+      try {
+        const discordBotToken = process.env.DISCORD_BOT_TOKEN;
+        const discordChannelId = process.env.DISCORD_SHIFT_LOG_CHANNEL_ID || process.env.DISCORD_CHANNEL_ID;
+
+        if (discordBotToken && discordChannelId) {
+          const discordBot = createDiscordBotService(discordBotToken, discordChannelId);
+          await discordBot.sendShiftLog(formData);
+          console.log("✅ Shift log sent to Discord successfully");
+        } else {
+          console.log("⚠️ Discord bot credentials not configured for shift logs");
+        }
+      } catch (discordError) {
+        console.error("❌ Failed to send shift log to Discord:", discordError);
+        // Continue without Discord - we still want to respond successfully
+      }
+
+      res.json({ 
+        message: "Shift log submitted successfully"
+      });
+    } catch (error) {
+      console.error("Shift log creation error:", error);
+      res.status(500).json({ message: "Failed to submit shift log" });
+    }
+  });
+
   // Arrest routes
   app.post("/api/arrests", requireAuth, async (req, res) => {
     try {

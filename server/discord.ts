@@ -331,15 +331,7 @@ Please call (262) 785-4700 ext. 7 for further inquiry.`;
       { code: "(8)52", description: "Failure to Control Vehicle", amount: "250.00", jailTime: "None" },
       { code: "(8)53", description: "Unsafe Parking (Parking Ticket)", amount: "100.00", jailTime: "None" },
       { code: "(8)54", description: "Failure to Use Turn Signal", amount: "100.00", jailTime: "None" },
-      { code: "(8)55", description: "Failure to Display License Plate (W/ only)", amount: "300.00", jailTime: "None" },
-
-      // Section 9 - Weapons
-      { code: "(9)01", description: "Possession of an Illegal Weapon", amount: "1000.00", jailTime: "60 Seconds" },
-      { code: "(9)02", description: "Brandishing a Firearm", amount: "1000.00", jailTime: "60 Seconds" },
-      { code: "(9)03", description: "Illegal Discharge of a Firearm", amount: "0.00", jailTime: "90 Seconds" },
-      { code: "(9)04", description: "Unlicensed Possession of a Firearm", amount: "0.00", jailTime: "90 Seconds" },
-      { code: "(9)05", description: "Possession of a Stolen Weapon", amount: "0.00", jailTime: "90 Seconds" },
-      { code: "(9)06", description: "Unlawful Distribution of a Firearm", amount: "0.00", jailTime: "90 Seconds" },
+      { code: "(8)55", description: "Failure to Display License Plate (W/ only)", amount: "300.00", jailTime: "None" }
     ];
 
     // Format multiple officers
@@ -515,38 +507,93 @@ Please call **${data.courtPhone}** for further inquiry.`;
     }
   }
 
-  async sendPasswordResetCode(discordUserId: string, resetCode: string): Promise<void> {
+  async sendPasswordResetCode(discordId: string, resetCode: string): Promise<void> {
     try {
-      // Send DM to user with reset code
-      const user = await this.client.users.fetch(discordUserId);
+      const user = await this.client.users.fetch(discordId);
 
       const embed = {
-        color: 0x3498db,
-        title: "🔐 Password Reset Code",
-        description: `Here is your password reset verification code:`,
+        title: "🔐 Password Reset Request",
+        description: `Your password reset code is: **${resetCode}**\n\nThis code will expire in 15 minutes.`,
+        color: 0x3B82F6,
+        timestamp: new Date().toISOString(),
+        footer: {
+          text: "Law Enforcement System"
+        }
+      };
+
+      await user.send({ embeds: [embed] });
+    } catch (error) {
+      console.error("Failed to send password reset code:", error);
+      throw new Error("Failed to send password reset code to Discord");
+    }
+  }
+
+  async sendShiftLog(shiftData: any): Promise<string> {
+    if (!this.isReady) {
+      await this.initialize();
+    }
+
+    const channel = await this.client.channels.fetch(this.channelId) as TextChannel;
+    if (!channel) {
+      throw new Error('Discord channel not found');
+    }
+    try {
+      const embed = {
+        title: "📋 Shift Log Report",
+        color: 0x10B981,
         fields: [
           {
-            name: "Verification Code",
-            value: `\`\`\`${resetCode}\`\`\``,
-            inline: false
+            name: "Username & Badge Number",
+            value: shiftData.usernameAndBadge || "Not provided",
+            inline: true
           },
           {
-            name: "⚠️ Important",
-            value: "• This code expires in 15 minutes\n• Do not share this code with anyone\n• Copy and paste the entire code",
+            name: "Callsign",
+            value: shiftData.callsign || "Not provided",
+            inline: true
+          },
+          {
+            name: "Shift Duration",
+            value: shiftData.shiftDuration || "Not provided",
+            inline: true
+          },
+          {
+            name: "Rank",
+            value: shiftData.rank || "Not provided",
+            inline: true
+          },
+          {
+            name: "Traffic Stops",
+            value: shiftData.trafficStops || "0",
+            inline: true
+          },
+          {
+            name: "Citations",
+            value: shiftData.citations || "0",
+            inline: true
+          },
+          {
+            name: "Arrests",
+            value: shiftData.arrests || "0",
+            inline: true
+          },
+          {
+            name: "Additional Notes",
+            value: shiftData.additionalNotes || "None",
             inline: false
           }
         ],
         timestamp: new Date().toISOString(),
         footer: {
-          text: "Police Department Security System"
+          text: "Law Enforcement System - Shift Log"
         }
       };
 
-      await user.send({ embeds: [embed] });
-      console.log(`✅ Password reset code sent to Discord user ${discordUserId}`);
+      const message = await channel.send({ embeds: [embed] });
+      return message.id;
     } catch (error) {
-      console.error(`❌ Failed to send password reset code to ${discordUserId}:`, error);
-      throw new Error("Failed to send password reset code via Discord");
+      console.error("Failed to send shift log to Discord:", error);
+      throw new Error("Failed to send shift log to Discord");
     }
   }
 
