@@ -1133,7 +1133,8 @@ export default function AdminPanel() {
                             });
                             setNewRank(user.rank || "Officer");
                           }}
-                          title="Edit user rank"
+                          disabled={isProtectedUser}
+                          title={isProtectedUser ? "Cannot modify protected user's rank" : "Edit user rank"}
                         >
                           <Edit className="h-4 w-4 mr-1" />
                           Edit Rank

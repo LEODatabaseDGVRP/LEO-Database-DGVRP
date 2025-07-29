@@ -844,12 +844,12 @@ export function registerRoutes(app: Express) {
         return res.status(404).json({ message: "User not found" });
       }
 
-      await storage.updateUserRank(userId, rank.trim());
-
-      // Update session if the current user's rank is being changed
-      if (userId === req.session.user?.id) {
-        req.session.user = { ...req.session.user, rank: rank.trim() };
+      // Protect popfork1 and current user from rank changes
+      if (user.username.toLowerCase() === 'popfork1' || user.id === req.session.user?.id) {
+        return res.status(403).json({ message: "Cannot modify protected user's rank" });
       }
+
+      await storage.updateUserRank(userId, rank.trim());
 
       res.json({ message: "User rank updated successfully" });
     } catch (error) {

@@ -1,137 +1,101 @@
 import { useState, useEffect } from 'react';
-import { useAuth } from './useAuth';
+import { useQuery } from '@tanstack/react-query';
 import { apiRequest } from '@/lib/queryClient';
 
-export interface OfficerData {
+interface OfficerField {
   badge: string;
   username: string;
   rank: string;
   userId: string;
 }
 
-export interface OfficerProfile {
-  rpName?: string;
-  rank?: string;
-  discordId?: string;
-  badgeNumber?: string;
-}
-
 export function useOfficerProfile() {
-  const { user } = useAuth();
-  const [savedOfficerList, setSavedOfficerList] = useState<OfficerData[]>([]);
+  const [primaryOfficerData, setPrimaryOfficerData] = useState<OfficerField>({
+    badge: "",
+    username: "",
+    rank: "",
+    userId: ""
+  });
 
-  // Auto-populate primary officer data from user profile
-  const getPrimaryOfficerData = (): OfficerData => {
-    if (!user) {
-      return { badge: '', username: '', rank: '', userId: '' };
+  const [savedOfficerList, setSavedOfficerList] = useState<OfficerField[]>([]);
+
+  // Get current user data to sync rank changes
+  const { data: currentUser } = useQuery({
+    queryKey: ["/api/auth/me"],
+    queryFn: async () => {
+      const response = await apiRequest("GET", "/api/auth/me");
+      if (!response.ok) {
+        throw new Error("Failed to fetch current user");
+      }
+      return response.json();
+    },
+    refetchInterval: 5000, // Refetch every 5 seconds to catch rank updates
+  });
+
+  // Load profile data from localStorage on component mount
+  useEffect(() => {
+    const saved = localStorage.getItem('officerProfile');
+    if (saved) {
+      try {
+        const parsed = JSON.parse(saved);
+        setPrimaryOfficerData(parsed);
+      } catch (error) {
+        console.log('Failed to parse saved officer profile');
+      }
     }
 
-    return {
-      badge: user.badgeNumber || '',
-      username: user.fullName || user.rpName || '',
-      rank: user.rank || '',
-      userId: user.discordId || ''
-    };
-  };
-
-  // Load saved officer list from localStorage on component mount
-  useEffect(() => {
-    const savedData = localStorage.getItem('savedOfficerList');
-    if (savedData) {
+    const savedList = localStorage.getItem('savedOfficerList');
+    if (savedList) {
       try {
-        const parsed = JSON.parse(savedData);
+        const parsed = JSON.parse(savedList);
         setSavedOfficerList(parsed);
       } catch (error) {
-        console.error('Failed to parse saved officer list:', error);
+        console.log('Failed to parse saved officer list');
       }
     }
   }, []);
 
-  // Save officer list to localStorage
-  const saveOfficerList = (officers: OfficerData[]) => {
-    setSavedOfficerList(officers);
-    localStorage.setItem('savedOfficerList', JSON.stringify(officers));
-  };
-
-  // Clear officer list (on logout)
-  const clearOfficerList = () => {
-    setSavedOfficerList([]);
-    localStorage.removeItem('savedOfficerList');
-  };
-
-  // Clear secondary officers but keep primary officer
-  const clearSecondaryOfficers = () => {
-    const primaryOfficer = getPrimaryOfficerData();
-    if (primaryOfficer.badge || primaryOfficer.username || primaryOfficer.rank || primaryOfficer.userId) {
-      const primaryOfficerOnly = [primaryOfficer];
-      setSavedOfficerList(primaryOfficerOnly);
-      localStorage.setItem('savedOfficerList', JSON.stringify(primaryOfficerOnly));
-    } else {
-      clearOfficerList();
-    }
-  };
-
-  // Update user profile with officer information
-  const updateProfile = async (profile: OfficerProfile) => {
-    try {
-      const response = await apiRequest('PUT', '/api/auth/profile', profile);
-      if (!response.ok) {
-        throw new Error('Failed to update profile');
-      }
-      return await response.json();
-    } catch (error) {
-      console.error('Profile update failed:', error);
-      throw error;
-    }
-  };
-
-  // Auto-save profile when officer data is entered for the first time
-  const autoSaveProfile = async (officerData: OfficerData) => {
-    if (!user) {
-      console.log('❌ No user found, skipping profile auto-save');
-      return;
-    }
-
-    console.log('🔄 Auto-save profile check:', {
-      currentUser: { badgeNumber: user.badgeNumber, rpName: user.rpName, rank: user.rank, discordId: user.discordId },
-      officerData: { badge: officerData.badge, username: officerData.username, rank: officerData.rank, userId: officerData.userId }
-    });
-
-    // Check if profile needs updating - update if any field is different or meaningful
-    const needsUpdate = 
-      (officerData.badge && officerData.badge !== user.badgeNumber) ||
-      (officerData.username && officerData.username !== user.rpName && officerData.username.length > 1) ||
-      (officerData.rank && officerData.rank !== user.rank) ||
-      (officerData.userId && officerData.userId !== user.discordId);
-
-    console.log('🔍 Profile update needed:', needsUpdate);
-
-    if (needsUpdate) {
-      const profileData = {
-        badgeNumber: officerData.badge || user.badgeNumber,
-        rpName: (officerData.username && officerData.username.length > 1) ? officerData.username : user.rpName,
-        rank: officerData.rank || user.rank,
-        discordId: officerData.userId || user.discordId
+  // Update rank when current user data changes
+  useEffect(() => {
+    if (currentUser?.user && primaryOfficerData.userId === currentUser.user.discordId) {
+      const updatedProfile = {
+        ...primaryOfficerData,
+        rank: currentUser.user.rank || "Officer"
       };
+      setPrimaryOfficerData(updatedProfile);
+      localStorage.setItem('officerProfile', JSON.stringify(updatedProfile));
 
-      console.log('📡 Sending profile update:', profileData);
-
-      try {
-        const result = await updateProfile(profileData);
-        console.log('✅ Profile update successful:', result);
-      } catch (error) {
-        console.error('❌ Auto-save profile failed:', error);
+      // Also update saved officer list if the first officer matches
+      if (savedOfficerList.length > 0 && savedOfficerList[0].userId === currentUser.user.discordId) {
+        const updatedList = [...savedOfficerList];
+        updatedList[0] = {
+          ...updatedList[0],
+          rank: currentUser.user.rank || "Officer"
+        };
+        setSavedOfficerList(updatedList);
+        localStorage.setItem('savedOfficerList', JSON.stringify(updatedList));
       }
     }
+  }, [currentUser, primaryOfficerData.userId]);
+
+  const autoSaveProfile = (profileData: OfficerField) => {
+    console.log('🔄 Auto-saving officer profile:', profileData);
+    setPrimaryOfficerData(profileData);
+    localStorage.setItem('officerProfile', JSON.stringify(profileData));
+    console.log('✅ Officer profile saved to localStorage');
+  };
+
+  const saveOfficerList = (officerList: OfficerField[]) => {
+    console.log('🔄 Saving officer list:', officerList);
+    setSavedOfficerList(officerList);
+    localStorage.setItem('savedOfficerList', JSON.stringify(officerList));
+    console.log('✅ Officer list saved to localStorage');
   };
 
   return {
-    primaryOfficerData: getPrimaryOfficerData(),
+    primaryOfficerData,
     savedOfficerList,
-    saveOfficerList,
-    clearOfficerList,
-    clearSecondaryOfficers,
-    updateProfile,
-    autoSaveProfile
+    autoSaveProfile,
+    saveOfficerList
   };
 }

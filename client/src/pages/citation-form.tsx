@@ -205,6 +205,19 @@ export default function CitationForm() {
     }
   }, []);
 
+  // Update officer fields when primary officer data changes (rank updates)
+  useEffect(() => {
+    if (primaryOfficerData.userId && officerFields.length > 0 && officerFields[0].userId === primaryOfficerData.userId) {
+      const updatedFields = [...officerFields];
+      updatedFields[0] = { ...updatedFields[0], rank: primaryOfficerData.rank };
+      setOfficerFields(updatedFields);
+      
+      const currentRanks = form.getValues('officerRanks');
+      currentRanks[0] = primaryOfficerData.rank;
+      form.setValue('officerRanks', currentRanks);
+    }
+  }, [primaryOfficerData.rank]);
+
   // Save officer data only on form submission to prevent infinite loops
 
   const submitMutation = useMutation({
