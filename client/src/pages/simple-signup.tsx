@@ -38,7 +38,7 @@ export default function SimpleSignupPage() {
             setDiscordVerified(true);
             setDiscordUser({
               id: data.user.id,
-              username: data.user.username,
+              username: data.user.displayName || data.user.username,
               discriminator: data.user.discriminator || '0000'
             });
           }
@@ -61,7 +61,7 @@ export default function SimpleSignupPage() {
     },
   });
 
-  // Auto-fill Discord username when verification is complete
+  // Auto-fill Discord display name when verification is complete
   useEffect(() => {
     if (discordVerified && discordUser) {
       form.setValue("username", discordUser.username);

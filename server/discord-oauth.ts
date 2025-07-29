@@ -6,6 +6,7 @@ export interface DiscordOAuthService {
   exchangeCode: (code: string) => Promise<{ accessToken: string; user: DiscordUser }>;
   getUserGuilds: (accessToken: string) => Promise<DiscordGuild[]>;
   checkUserRole: (accessToken: string, guildId: string, requiredRole?: string) => Promise<boolean>;
+  getUserDisplayName: (accessToken: string, guildId: string) => Promise<string | null>;
 }
 
 export interface DiscordUser {
@@ -14,6 +15,7 @@ export interface DiscordUser {
   discriminator: string;
   avatar?: string;
   email?: string;
+  displayName?: string;
 }
 
 export interface DiscordGuild {
@@ -172,6 +174,38 @@ class DiscordOAuthServiceImpl implements DiscordOAuthService {
       return false;
     }
   }
+
+  async getUserDisplayName(accessToken: string, guildId: string): Promise<string | null> {
+    try {
+      console.log("🔍 Getting user display name for guild:", guildId);
+      
+      // Get user info to get their ID
+      const userResponse = await axios.get(`https://discord.com/api/users/@me`, {
+        headers: {
+          Authorization: `Bearer ${accessToken}`,
+        },
+      });
+
+      const userId = userResponse.data.id;
+      console.log("👤 User ID:", userId);
+
+      // Get guild member info using bot token to get nickname/display name
+      const memberResponse = await axios.get(`https://discord.com/api/guilds/${guildId}/members/${userId}`, {
+        headers: {
+          Authorization: `Bot ${this.botToken}`,
+        },
+      });
+
+      // Discord nickname (display name) takes priority over username
+      const displayName = memberResponse.data.nick || userResponse.data.username;
+      console.log("📝 User display name:", displayName);
+      
+      return displayName;
+    } catch (error) {
+      console.error('❌ Failed to get user display name:', error);
+      return null;
+    }
+  }
 }
 
 export function createDiscordOAuthService(
@@ -238,6 +272,13 @@ export async function handleDiscordCallback(code: string, state: string): Promis
         console.log("❌ User is not a member of the required Discord server");
         throw new Error('User is not a member of the required Discord server');
       }
+    }
+
+    // Get the user's display name (nickname) in the server
+    const displayName = await defaultService.getUserDisplayName(accessToken, process.env.DISCORD_GUILD_ID);
+    if (displayName) {
+      user.displayName = displayName;
+      console.log("📝 Using display name:", displayName, "instead of username:", user.username);
     }
   } else {
     console.log("⚠️ No DISCORD_GUILD_ID set - skipping guild verification");

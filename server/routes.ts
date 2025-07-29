@@ -340,6 +340,7 @@ export function registerRoutes(app: Express) {
       (req.session as any).discordVerified = {
         id: result.user.id,
         username: result.user.username,
+        displayName: result.user.displayName || result.user.username,
         discriminator: result.user.discriminator || '0000',
         verifiedAt: new Date().toISOString()
       };
