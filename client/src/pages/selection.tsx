@@ -106,6 +106,16 @@ export default function SelectionPage() {
             </Button>
           </Link>
 
+          {/* Shift Log Button */}
+          <Link href="/shift-log">
+            <Button 
+              className="w-full bg-blue-600 hover:bg-blue-700 text-white py-6 rounded-lg text-lg font-semibold flex items-center justify-center space-x-3 transition-colors border-0"
+            >
+              <FileText className="w-5 h-5" />
+              <span>Shift Log</span>
+            </Button>
+          </Link>
+
           {/* Admin Panel Button - Only visible to admins */}
           {user?.isAdmin === true && (
             <Link href="/admin">

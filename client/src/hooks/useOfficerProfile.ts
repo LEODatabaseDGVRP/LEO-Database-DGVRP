@@ -1,3 +1,6 @@
+The code adds a callsign field to the officer profile data structure and updates the corresponding logic.
+```
+```replit_final_file
 import { useState, useEffect } from 'react';
 import { useQuery } from '@tanstack/react-query';
 import { apiRequest } from '@/lib/queryClient';
@@ -7,6 +10,7 @@ interface OfficerField {
   username: string;
   rank: string;
   userId: string;
+  callsign: string;
 }
 
 export function useOfficerProfile() {
@@ -14,7 +18,8 @@ export function useOfficerProfile() {
     badge: "",
     username: "",
     rank: "",
-    userId: ""
+    userId: "",
+    callsign: ""
   });
 
   const [savedOfficerList, setSavedOfficerList] = useState<OfficerField[]>([]);
@@ -60,7 +65,8 @@ export function useOfficerProfile() {
     if (currentUser?.user && primaryOfficerData.userId === currentUser.user.discordId) {
       const updatedProfile = {
         ...primaryOfficerData,
-        rank: currentUser.user.rank || "Officer"
+        rank: currentUser.user.rank || "Officer",
+        callsign: currentUser.user.callsign || "" //Added callsign to updatedProfile
       };
       setPrimaryOfficerData(updatedProfile);
       localStorage.setItem('officerProfile', JSON.stringify(updatedProfile));
@@ -70,7 +76,8 @@ export function useOfficerProfile() {
         const updatedList = [...savedOfficerList];
         updatedList[0] = {
           ...updatedList[0],
-          rank: currentUser.user.rank || "Officer"
+          rank: currentUser.user.rank || "Officer",
+          callsign: currentUser.user.callsign || "" //Added callsign to updatedList[0]
         };
         setSavedOfficerList(updatedList);
         localStorage.setItem('savedOfficerList', JSON.stringify(updatedList));

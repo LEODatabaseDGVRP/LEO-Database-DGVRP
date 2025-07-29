@@ -19,6 +19,9 @@ const signupSchema = z.object({
   rpName: z.string()
     .min(1, "RP name is required")
     .max(50, "RP name must be less than 50 characters"),
+  callsign: z.string()
+    .min(1, "Callsign is required")
+    .max(20, "Callsign must be less than 20 characters"),
   rank: z.string()
     .min(1, "Rank is required")
     .max(30, "Rank must be less than 30 characters"),
@@ -69,6 +72,7 @@ export default function SignupPage() {
     defaultValues: {
       badgeNumber: "",
       rpName: "",
+      callsign: "",
       rank: "",
       password: "",
       confirmPassword: "",
@@ -134,6 +138,7 @@ export default function SignupPage() {
         username: discordUser.username,
         badgeNumber: signupData.badgeNumber,
         rpName: signupData.rpName,
+        callsign: signupData.callsign,
         rank: signupData.rank,
         password: signupData.password
       };
@@ -238,6 +243,26 @@ export default function SignupPage() {
                         {...field}
                         type="text"
                         placeholder="Ex: P.Popfork1"
+                        className="law-input"
+                        disabled={signupMutation.isPending}
+                      />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+
+              <FormField
+                control={form.control}
+                name="callsign"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel className="text-white">Callsign:</FormLabel>
+                    <FormControl>
+                      <Input
+                        {...field}
+                        type="text"
+                        placeholder="Ex: Alpha-1, Bravo-2"
                         className="law-input"
                         disabled={signupMutation.isPending}
                       />

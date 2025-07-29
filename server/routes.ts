@@ -110,7 +110,7 @@ export function registerRoutes(app: Express) {
           console.error("Session save error:", err);
           return res.status(500).json({ message: "Session error" });
         }
-        
+
         console.log("Session saved successfully, user:", req.session.user?.username);
         res.json({ 
           message: "Login successful",
@@ -217,7 +217,7 @@ export function registerRoutes(app: Express) {
       console.error("Error type:", error.constructor.name);
       console.error("Error message:", error.message);
       console.error("Error stack:", error.stack);
-      
+
       if (error.name === 'ZodError') {
         console.error("Zod validation errors:", JSON.stringify(error.errors, null, 2));
         const errorDetails = error.errors.map((e: any) => `${e.path.join('.')}: ${e.message}`).join(', ');
@@ -229,7 +229,7 @@ export function registerRoutes(app: Express) {
           received: req.body
         });
       }
-      
+
       console.error("Non-validation error occurred");
       res.status(500).json({ 
         message: "Failed to create account",
@@ -253,7 +253,7 @@ export function registerRoutes(app: Express) {
     console.log("Session exists:", !!req.session);
     console.log("Session user:", req.session?.user);
     console.log("Session data:", JSON.stringify(req.session, null, 2));
-    
+
     if (!req.session?.user) {
       return res.status(401).json({ message: "Not authenticated" });
     }
@@ -355,7 +355,7 @@ export function registerRoutes(app: Express) {
       });
     } catch (error) {
       console.error("Discord callback error:", error);
-      
+
       // Extract meaningful error message
       let errorMessage = 'discord_failed';
       if (error instanceof Error) {
@@ -367,7 +367,7 @@ export function registerRoutes(app: Express) {
           errorMessage = 'auth_failed';
         }
       }
-      
+
       res.redirect(`/discord-callback?error=${errorMessage}`);
     }
   });
@@ -607,7 +607,8 @@ export function registerRoutes(app: Express) {
             { code: "(8)17", description: "Speeding (26+ MPH Over)", amount: "500.00", jailTime: "None" },
             { code: "(8)18", description: "Felony Speeding (100 MPH+)", amount: "5000.00", jailTime: "30 Seconds" },
             { code: "(8)19", description: "Unreasonably Slow / Stopped", amount: "250.00", jailTime: "None" },
-            { code: "(8)20", description: "Failure to Obey Stop Sign / RED LIGHT", amount: "250.00", jailTime: "None" },
+            Applying code changes for shift log and callsign.```tool_code
+{ code: "(8)20", description: "Failure to Obey Stop Sign / RED LIGHT", amount: "250.00", jailTime: "None" },
             { code: "(8)21", description: "Illegally Parked", amount: "250.00", jailTime: "None" },
             { code: "(8)22", description: "Reckless Driving", amount: "1000.00", jailTime: "30 Seconds" },
             { code: "(8)23", description: "Street Racing", amount: "1000.00", jailTime: "30 Seconds" },
@@ -1195,8 +1196,6 @@ export function registerRoutes(app: Express) {
       res.status(500).json({ message: "Failed to reset password" });
     }
   });
-
-
 
   // Health check
   app.get("/api/health", (req, res) => {
