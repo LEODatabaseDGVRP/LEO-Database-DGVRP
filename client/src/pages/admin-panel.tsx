@@ -1206,7 +1206,7 @@ export default function AdminPanel() {
               <div className="space-y-4">
                 <div className="flex gap-2">
                   <Input
-                    placeholder="Username to block..."
+                    placeholder="User to block..."
                     value={blockUsernameInput}
                     onChange={(e) => setBlockUsernameInput(e.target.value)}
                   />
