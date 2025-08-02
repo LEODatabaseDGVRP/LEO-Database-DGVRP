@@ -755,7 +755,7 @@ export default function AdminPanel() {
     queryFn: async () => {
       const response = await apiRequest("GET", "/api/admin/blocked-usernames");
       if (!response.ok) {
-        throw new Error("Failed to fetch blocked usernames");
+        throw new Error("Failed to fetch blocked users");
       }
       return response.json();
     },
@@ -766,7 +766,7 @@ export default function AdminPanel() {
     queryFn: async () => {
       const response = await apiRequest("GET", "/api/admin/terminated-usernames");
       if (!response.ok) {
-        throw new Error("Failed to fetch terminated usernames");
+        throw new Error("Failed to fetch terminated users");
       }
       return response.json();
     },
@@ -1194,12 +1194,12 @@ export default function AdminPanel() {
 
         {/* Username Management */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {/* Blocked Usernames */}
+          {/* Blocked Users */}
           <Card>
             <CardHeader>
-              <CardTitle>Blocked Usernames</CardTitle>
+              <CardTitle>Blocked Users</CardTitle>
               <CardDescription>
-                Usernames that cannot be registered
+                Users that cannot sign up.
               </CardDescription>
             </CardHeader>
             <CardContent>
@@ -1236,10 +1236,10 @@ export default function AdminPanel() {
             </CardContent>
           </Card>
 
-          {/* Terminated Usernames */}
+          {/* Terminated Users */}
           <Card>
             <CardHeader>
-              <CardTitle>Terminated Usernames</CardTitle>
+              <CardTitle>Terminated Users</CardTitle>
               <CardDescription>
                 Users that have been terminated from service
               </CardDescription>
