@@ -1,14 +1,10 @@
 import type { Express } from "express";
-import { db } from "./db";
-import { insertUserSchema, selectUserSchema, insertCitationSchema, selectCitationSchema, insertArrestSchema, selectArrestSchema, signUpSchema, loginSchema, type SelectUser, type InsertUser, type SelectCitation, type InsertCitation, type SelectArrest, type InsertArrest } from "../shared/schema";
-import { eq, desc, and, or, like, sql } from "drizzle-orm";
-import { users, citations, arrests } from "./db";
-import { createDiscordBotService } from "./discord";
+import { insertUserSchema, insertCitationSchema, insertArrestSchema, signUpSchema, loginSchema, type SelectUser } from "../shared/schema";
+import { createDiscordBotService, getRandomSystemUsername } from "./discord";
 import bcrypt from "bcryptjs";
 import { z } from "zod";
 import { nanoid } from "nanoid";
 import { storage } from "./storage";
-import { getRandomSystemUsername, createDiscordBotService } from "./discord";
 import { getDiscordAuthUrl, handleDiscordCallback } from "./discord-oauth";
 
 import fs from "fs";
@@ -17,17 +13,6 @@ import { fileURLToPath } from "url";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
-
-// Check if we have a proper database connection
-let useFileStorage = false;
-try {
-  // Test if the database is properly configured
-  await db.select().from(users).limit(1);
-  console.log("Database connected successfully");
-} catch (error) {
-  console.log("Database not available, using file storage");
-  useFileStorage = true;
-}
 
 export function registerRoutes(app: Express) {
 

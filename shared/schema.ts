@@ -19,6 +19,12 @@ export const deletedUsernames = pgTable("deleted_usernames", {
   deletedAt: timestamp("deleted_at").defaultNow().notNull(),
 });
 
+export const terminatedUsernames = pgTable("terminated_usernames", {
+  id: serial("id").primaryKey(),
+  username: text("username").notNull().unique(),
+  terminatedAt: timestamp("terminated_at").defaultNow().notNull(),
+});
+
 export const citations = pgTable("citations", {
   id: text("id").primaryKey(), // Changed to text to support nanoid
   officerBadges: text("officer_badges").array().notNull(),

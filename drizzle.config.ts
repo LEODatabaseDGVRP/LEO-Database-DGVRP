@@ -1,2 +1,10 @@
+import { defineConfig } from "drizzle-kit";
 
-// This file can be deleted - database not needed for file-based storage
+export default defineConfig({
+  out: "./migrations",
+  schema: "./shared/schema.ts",
+  dialect: "postgresql",
+  dbCredentials: {
+    url: process.env.NEON_DATABASE_URL || process.env.DATABASE_URL!,
+  },
+});
