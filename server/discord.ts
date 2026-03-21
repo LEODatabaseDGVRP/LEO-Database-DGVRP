@@ -613,3 +613,18 @@ Please call **${data.courtPhone}** for further inquiry.`;
 export function createDiscordBotService(token: string, channelId: string): DiscordBotService {
   return new DiscordBotServiceImpl(token, channelId);
 }
+
+let _globalBotInstance: DiscordBotService | null = null;
+
+export function getGlobalBotService(): DiscordBotService | null {
+  return _globalBotInstance;
+}
+
+export function initializeGlobalBot(): void {
+  const token = process.env.DISCORD_BOT_TOKEN;
+  const channelId = process.env.DISCORD_CHANNEL_ID || '';
+  if (token && !_globalBotInstance) {
+    console.log('🤖 Initializing persistent Discord bot...');
+    _globalBotInstance = new DiscordBotServiceImpl(token, channelId);
+  }
+}

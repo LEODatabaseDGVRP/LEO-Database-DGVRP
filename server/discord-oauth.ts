@@ -218,11 +218,20 @@ export function createDiscordOAuthService(
   return new DiscordOAuthServiceImpl(clientId, clientSecret, redirectUri, botToken, requiredGuildId);
 }
 
+function getRedirectUri(): string {
+  // When running on Replit, always use the auto-detected Replit URL
+  // to avoid stale redirect URIs from old deployments
+  if (process.env.REPLIT_DOMAINS) {
+    return `https://${process.env.REPLIT_DOMAINS}/api/auth/discord/callback`;
+  }
+  return process.env.DISCORD_REDIRECT_URI || getDefaultRedirectUri();
+}
+
 // Create a default instance for easy use
 const defaultService = createDiscordOAuthService(
   process.env.DISCORD_CLIENT_ID || '',
   process.env.DISCORD_CLIENT_SECRET || '',
-  process.env.DISCORD_REDIRECT_URI || getDefaultRedirectUri(),
+  getRedirectUri(),
   process.env.DISCORD_BOT_TOKEN || '',
   process.env.DISCORD_GUILD_ID
 );
