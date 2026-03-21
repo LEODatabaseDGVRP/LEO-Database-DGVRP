@@ -234,8 +234,8 @@ function getDefaultRedirectUri(): string {
   }
   
   // Check for Replit deployment
-  if (process.env.REPLIT_DOMAIN) {
-    return `${process.env.REPLIT_DOMAIN}/api/auth/discord/callback`;
+  if (process.env.REPLIT_DOMAINS) {
+    return `https://${process.env.REPLIT_DOMAINS}/api/auth/discord/callback`;
   }
   
   // Default to localhost for development
